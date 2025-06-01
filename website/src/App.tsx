@@ -2,6 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import * as motion from "motion/react-client"
+
+function Rotate() {
+    return (
+        <motion.div
+            style={box}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1 }}
+        />
+    )
+}
+const box = {
+    width: 100,
+    height: 100,
+    backgroundColor: "#ff0088",
+    borderRadius: 5,
+}
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +34,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1><Rotate/></h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
