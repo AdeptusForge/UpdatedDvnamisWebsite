@@ -1,8 +1,35 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import * as motion from "motion/react-client"
+import TrackElementWithinViewport from './Scroll'
+//import Parallax from './Parallax'
+//<Parallax/>
+// <a href="https://vite.dev" target="_blank">
+//   <img src={viteLogo} className="logo" alt="Vite logo" />
+// </a>
+// <a href="https://react.dev" target="_blank">
+//   <img src={reactLogo} className="logo react" alt="React logo" />
+// </a>
+
+
+function CoolButton()
+{
+  return (
+    <motion.button
+      className="CoolButton"
+      style={box}
+      // animate={{ rotateX: 60 }}
+      // transition={{ duration: 0.5 }}
+
+      >
+      <div className="buttonText">Succesfully Aligned Text</div>
+      <div className="buttonImage"><img src={viteLogo} className="buttonImage" alt="Vite logo" /></div>
+      
+    </motion.button>
+  )
+}
 
 function Rotate() {
     return (
@@ -14,11 +41,15 @@ function Rotate() {
     )
 }
 const box = {
-    width: 100,
-    height: 100,
+   
+    width: 140,
     backgroundColor: "#ff0088",
-    borderRadius: 5,
+    borderRadius: 1,
 }
+
+
+
+
 
 
 function App() {
@@ -26,15 +57,13 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <CoolButton/>
+      <div className="PortfolioTable">
+        <div><TrackElementWithinViewport/></div>
+        <div><TrackElementWithinViewport/></div>
+        <div><TrackElementWithinViewport/></div>
       </div>
-      <h1><Rotate/></h1>
+    
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
