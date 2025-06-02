@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import './App.css'
 import * as motion from "motion/react-client"
@@ -31,15 +30,15 @@ function CoolButton()
   )
 }
 
-function Rotate() {
-    return (
-        <motion.div
-            style={box}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1 }}
-        />
-    )
-}
+// function Rotate() {
+//     return (
+//         <motion.div
+//             style={box}
+//             animate={{ rotate: 360 }}
+//             transition={{ duration: 1 }}
+//         />
+//     )
+// }
 const box = {
    
     width: 140,
