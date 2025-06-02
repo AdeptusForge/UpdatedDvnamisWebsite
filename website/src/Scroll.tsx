@@ -1,17 +1,7 @@
-import { motion, useScroll } from "motion/react"
+import { motion, useScroll, motionValue } from "motion/react"
 import { useRef } from "react"
 
-function Item() {
-    const ref = useRef(null)
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["end end", "start start"],
-    })
-
-    return (
-        <section style={itemContainer}>
-            <div ref={ref} style={item}>
-                <figure style={progressIconContainer}>
+{/* <figure style={progressIconContainer}>
                     <svg
                         style={progressIcon}
                         width="75"
@@ -37,28 +27,20 @@ function Item() {
                             }}
                         />
                     </svg>
-                </figure>
-            </div>
-        </section>
-    )
-}
+                </figure> */}
 
-export default function TrackElementWithinViewport() {
+
+export default function Item({title = ""}) {
+    const ref = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["end end", "start start"],
+    })
+
     return (
-        <>
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-        </>
+      <motion.div ref={ref} style={item}>
+          {title}
+      </motion.div>
     )
 }
 
@@ -66,13 +48,7 @@ export default function TrackElementWithinViewport() {
  * ==============   Styles   ================
  */
 
-const itemContainer: React.CSSProperties = {
-    height: "100vh",
-    maxHeight: "400px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-}
+
 
 const progressIconContainer: React.CSSProperties = {
     position: "sticky",
@@ -107,8 +83,11 @@ const progressIconBg: React.CSSProperties = {
 }
 
 const item: React.CSSProperties = {
-    width: 200,
-    height: 250,
+    width: 400,
+    height: 400,
     border: "2px dotted #ff0088",
     position: "relative",
+    marginLeft: 30,
+    padding: 0,
+    boxSizing: "border-box"
 }

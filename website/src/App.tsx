@@ -2,7 +2,7 @@ import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import './App.css'
 import * as motion from "motion/react-client"
-import TrackElementWithinViewport from './Scroll'
+import Item from './Scroll'
 //import Parallax from './Parallax'
 //<Parallax/>
 // <a href="https://vite.dev" target="_blank">
@@ -13,15 +13,12 @@ import TrackElementWithinViewport from './Scroll'
 // </a>
 
 
-function CoolButton()
+function HeaderButton()
 {
   return (
     <motion.button
-      className="CoolButton"
+      className="HeaderButton"
       style={box}
-      // animate={{ rotateX: 60 }}
-      // transition={{ duration: 0.5 }}
-
       >
       <div className="buttonText">Succesfully Aligned Text</div>
       <div className="buttonImage"><img src={viteLogo} className="buttonImage" alt="Vite logo" /></div>
@@ -30,24 +27,24 @@ function CoolButton()
   )
 }
 
-// function Rotate() {
-//     return (
-//         <motion.div
-//             style={box}
-//             animate={{ rotate: 360 }}
-//             transition={{ duration: 1 }}
-//         />
-//     )
-// }
 const box = {
-   
-    width: 140,
-    backgroundColor: "#ff0088",
     borderRadius: 1,
+    paddingLeft:40,
+    paddingRight:40
 }
 
 
-
+// <div className="card">
+//   <button onClick={() => setCount((count) => count + 1)}>
+//     count is {count}
+//   </button>
+//   <p>
+//     Edit <code>src/App.tsx</code> and save to test HMR
+//   </p>
+// </div>
+// <p className="read-the-docs">
+//   Click on the Vite and React logos to learn more
+// </p>
 
 
 
@@ -56,24 +53,44 @@ function App() {
 
   return (
     <>
-    <CoolButton/>
-      <div className="PortfolioTable">
-        <div><TrackElementWithinViewport/></div>
-        <div><TrackElementWithinViewport/></div>
-        <div><TrackElementWithinViewport/></div>
+    <div className="HeaderBar">
+      <HeaderButton/>
+      <HeaderButton/>
+      <HeaderButton/>
+    </div>
+    <div className="PortfolioTable">
+      <section className="PortfolioRow">
+        <Item title="Hello"/>
+          <div className="MiddleHolder"><div className="MiddleOffset">
+        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+      </section>
+      <section className="PortfolioRow">
+        <Item title="Hello"/>
+          <div className="MiddleHolder"><div className="MiddleOffset">
+        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+      </section>
+      <section className="PortfolioRow">
+        <Item title="Hello"/>
+          <div className="MiddleHolder"><div className="MiddleOffset">
+        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+      </section>
+            <section className="PortfolioRow">
+        <Item title="Hello"/>
+          <div className="MiddleHolder"><div className="MiddleOffset">
+        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+      </section>
+            <section className="PortfolioRow">
+        <Item title="Hello"/>
+          <div className="MiddleHolder"><div className="MiddleOffset">
+        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+      </section>
+            <section className="PortfolioRow">
+        <Item title="Hello"/>
+          <div className="MiddleHolder"><div className="MiddleOffset">
+        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+      </section>
       </div>
     
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
