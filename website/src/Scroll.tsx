@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 import viteLogo from '/vite.svg'
 import { motion, useScroll, motionValue, number } from "motion/react"
 import { useRef } from "react"
@@ -33,7 +33,7 @@ import './Scroll.css'
                 </figure> */}
 
 
-export default function Item({title = ""}) {
+export default function Item({title = "", destination = "https://www.dvnamis.games"}) {
     const ref = useRef(null)
 
     const { scrollYProgress } = useScroll({
@@ -41,7 +41,11 @@ export default function Item({title = ""}) {
         offset: ["start end", "end end"],
     })
     return (
-      <motion.button className="Bix" ref={ref} style={{ scaleY: scrollYProgress}} animate={{rotateX: 0}}>
+      <motion.button className="Bix" 
+      ref={ref} 
+      style={{ scaleY: scrollYProgress}} 
+      animate={{rotateX: 0}}
+      onClick={() => window.open(destination,"_self")}>
         <img src={viteLogo} className="logo react" alt="React logo" />
         {title}
       </motion.button>
