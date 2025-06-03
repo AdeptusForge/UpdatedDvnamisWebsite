@@ -1,8 +1,8 @@
-// @ts-nocheck
 
 import viteLogo from '/vite.svg'
-import { motion, useScroll, motionValue } from "motion/react"
+import { motion, useScroll, motionValue, number } from "motion/react"
 import { useRef } from "react"
+import './Scroll.css'
 
 {/* <figure style={progressIconContainer}>
                     <svg
@@ -35,16 +35,14 @@ import { useRef } from "react"
 
 export default function Item({title = ""}) {
     const ref = useRef(null)
+
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["end end", "start start"],
+        offset: ["start end", "end end"],
     })
-
     return (
-      <motion.button ref={ref} style={item} animate={{rotateX: 0}}>
-        <a href="https://react.dev" target="_blank">
-          <img src={viteLogo} className="logo react" alt="React logo" />
-        </a>
+      <motion.button className="Bix" ref={ref} style={{ scaleY: scrollYProgress}} animate={{rotateX: 0}}>
+        <img src={viteLogo} className="logo react" alt="React logo" />
         {title}
       </motion.button>
     )

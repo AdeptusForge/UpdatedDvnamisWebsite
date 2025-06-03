@@ -16,10 +16,11 @@ import './Collapsible.css'
 // </a>
 
 
-function HeaderButton({buttonText="", image=""})
+function HeaderButton({buttonText="", image="", destination="https://www.dvnamis.games"})
 {
   return (
     <motion.button
+      onClick={() => window.open(destination,"_self")}
       className="HeaderButton"
       style={box}
       >
@@ -72,7 +73,7 @@ function App() {
     </section> */}
 
 
-    {/* <div className="PortfolioTable">
+    <div className="PortfolioTable">
       <section className="PortfolioRow">
         <Item title="Hello"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
@@ -103,7 +104,7 @@ function App() {
           <div className="MiddleHolder"><div className="MiddleOffset">
         </div><Item title="Goodbye"/></div><Item title="Dog"/>
       </section>
-      </div> */}
+      </div>
 
     
     </>
