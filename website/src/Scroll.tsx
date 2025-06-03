@@ -1,3 +1,6 @@
+// @ts-nocheck
+
+import viteLogo from '/vite.svg'
 import { motion, useScroll, motionValue } from "motion/react"
 import { useRef } from "react"
 
@@ -38,9 +41,12 @@ export default function Item({title = ""}) {
     })
 
     return (
-      <motion.div ref={ref} style={item}>
-          {title}
-      </motion.div>
+      <motion.button ref={ref} style={item} animate={{rotateX: 0}}>
+        <a href="https://react.dev" target="_blank">
+          <img src={viteLogo} className="logo react" alt="React logo" />
+        </a>
+        {title}
+      </motion.button>
     )
 }
 
@@ -89,5 +95,7 @@ const item: React.CSSProperties = {
     position: "relative",
     marginLeft: 30,
     padding: 0,
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    alignItems: "center",
+    justifyContent: "center"
 }

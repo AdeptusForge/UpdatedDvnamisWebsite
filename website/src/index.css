@@ -56,6 +56,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.VerticalCollapsibleContainer
+{
+  display: table;
+  width:1000px;
+}
+
+.HorizontalCollapsibleContainer
+{
+  display: table;
+  width:69px;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
