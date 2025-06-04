@@ -19,7 +19,8 @@
 
 button:hover {
   border-color: #646cff;
-  filter:blur(1px);
+  filter:grayscale(40%) contrast(110%) blur(0.5px);
+  
 }
 
 .PortfolioThumbnail

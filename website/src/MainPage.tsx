@@ -70,7 +70,7 @@ function App() {
 
   return (
     <>
-    <div className="HeaderCard">TextHere</div>
+    <div className="HeaderCard"></div>
     <div className="HeaderBar" id="myHeader">
       <HeaderButton buttonText="" image={viteLogo}/>
       <HeaderButton buttonText="ABOUT" destination="about"/>
@@ -85,42 +85,24 @@ function App() {
 
     <div className="PortfolioTable">
       <section className="PortfolioRow">
-        <Item title="Hello" image="WAKE_gif.gif" destination="/TestPage"/>
+        <Item title="WAKE" image="WAKE_gif.gif" destination="/TestPage"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Goodbye" image="StrikeBackThumb.png"/></div>
+          </div><Item title="Strike Back" image="StrikeBackThumb.png"/></div>
         <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
       </section>
       <section className="PortfolioRow">
-        <Item title="Hello" image="WAKE_gif.gif"/>
+        <Item title="CODENAME: Blazer" image="evidencegif.gif"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Goodbye" image="StrikeBackThumb.png"/></div>
-        <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
+          </div><Item title="Burger Flippant" image="BurgerFlippant.gif"/></div>
+        <Item title="DBFZ: KAI" image="websitekai.png"/>
       </section>
       <section className="PortfolioRow">
-        <Item title="Hello" image="WAKE_gif.gif"/>
+        <Item title="Omegatech: Aspen's Story" image="omegatech.png"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Goodbye" image="StrikeBackThumb.png"/></div>
-        <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
-      </section>
-      <section className="PortfolioRow">
-        <Item title="Hello" image="WAKE_gif.gif"/>
-          <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Goodbye" image="StrikeBackThumb.png"/></div>
-        <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
-      </section>
-            <section className="PortfolioRow">
-        <Item title="Hello"/>
-          <div className="MiddleHolder"><div className="MiddleOffset">
-        </div><Item title="Goodbye"/></div><Item title="Dog"/>
-      </section>
-            <section className="PortfolioRow">
-        <Item title="Hello"/>
-          <div className="MiddleHolder"><div className="MiddleOffset">
-        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+          </div><Item title="Goodbye" image="LevelDesignProject.png"/></div>
+        <Item title="DESCENT INTO HELLFORGE" image="redsun.png"/>
       </section>
       </div>
-
-    
     </>
   )
 }
