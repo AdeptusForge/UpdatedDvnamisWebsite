@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './MainPage.css'
 import * as motion from "motion/react-client"
 import Item from './Scroll'
 import { Example } from './Collapsible'
@@ -63,9 +63,9 @@ function App() {
     <>
     <div className="HeaderBar">
       <HeaderButton buttonText="" image={viteLogo}/>
-      <HeaderButton buttonText="ABOUT"/>
-      <HeaderButton buttonText="RÉSUMÉ"/>
-      <HeaderButton buttonText="CONTACT"/>
+      <HeaderButton buttonText="ABOUT" destination="about"/>
+      <HeaderButton buttonText="RÉSUMÉ" destination="resume"/>
+      <HeaderButton buttonText="CONTACT" destination="resume"/>
     </div>
     {/* <section className="PortfolioRow">
       <div className="VerticalCollapsibleContainer"><Example/></div>
