@@ -1,6 +1,6 @@
 
 
-export default function DIV()
+export default function Page()
 {
-  return <div/>
+  return <div>This has some text</div>
 }

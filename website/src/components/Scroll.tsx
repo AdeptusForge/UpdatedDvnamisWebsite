@@ -1,4 +1,3 @@
-// @ts-nocheck
 import viteLogo from '/vite.svg'
 import { motion, useScroll, motionValue, number } from "motion/react"
 import { useRef } from "react"

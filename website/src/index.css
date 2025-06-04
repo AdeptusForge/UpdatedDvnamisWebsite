@@ -48,7 +48,7 @@ button {
   display:block;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: green;
   filter:blur(1px);
 }
 button:focus,

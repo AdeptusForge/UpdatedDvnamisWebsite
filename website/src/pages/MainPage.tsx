@@ -1,11 +1,10 @@
-
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import './MainPage.css'
 import * as motion from "motion/react-client"
-import Item from './Scroll'
-import { Example } from './Collapsible'
-import './Collapsible.css'
+import Item from '../components/Scroll'
+import { Example } from '../components/Collapsible'
+import '../components/Collapsible.css'
 //import Parallax from './Parallax'
 //<Parallax/>
 // <a href="https://vite.dev" target="_blank">
@@ -22,10 +21,8 @@ function HeaderButton({buttonText="", image="", destination="https://www.dvnamis
     <motion.button
       onClick={() => window.open(destination,"_self")}
       className="HeaderButton"
-      style={box}
-      >
+      style={box}>
       <div className="buttonText" hidden={buttonText==""}>{buttonText}</div>
-
       <div className="buttonImage" hidden={image==""}>
         <img className="buttonImage" src={image}/></div>
       
@@ -65,7 +62,7 @@ const box = {
 // }
 
 
-function App() {
+function MainPage() {
   const [count, setCount] = useState(0)
 
   return (
@@ -99,12 +96,11 @@ function App() {
       <section className="PortfolioRow">
         <Item title="Omegatech: Aspen's Story" image="omegatech.png"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Goodbye" image="LevelDesignProject.png"/></div>
+          </div><Item title="Avagard's Study" image="LevelDesignProject.png"/></div>
         <Item title="DESCENT INTO HELLFORGE" image="redsun.png"/>
       </section>
       </div>
     </>
   )
 }
-
-export default App
+export default MainPage

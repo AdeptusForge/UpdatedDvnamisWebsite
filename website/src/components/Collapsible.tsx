@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ContentPlaceholder } from "./ContentPlaceholder";
+import { ContentPlaceholder } from "../ContentPlaceholder";
 
 const Accordion = ({ i, expanded, setExpanded }) => {
   const isOpen = i === expanded;

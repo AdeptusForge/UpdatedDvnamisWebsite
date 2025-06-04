@@ -14,12 +14,13 @@
     justify-content: center;
     pointer-events: all;
     display:block;
-    background-color:green;
+    background-color:white;
 }
 
 button:hover {
-  border-color: #646cff;
-  filter:grayscale(40%) contrast(110%) blur(0.5px);
+  border-color: green;
+  border-width: 0px;
+  filter:grayscale(40%) contrast(110%) blur(0px);
   
 }
 
