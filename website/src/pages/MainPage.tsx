@@ -5,6 +5,7 @@ import * as motion from "motion/react-client"
 import Item from '../components/Scroll'
 //import { Example } from '../components/Collapsible'
 import '../components/Collapsible.css'
+import Expandable from '../components/Expandable'
 //import Parallax from './Parallax'
 //<Parallax/>
 // <a href="https://vite.dev" target="_blank">
@@ -67,7 +68,7 @@ function MainPage() {
 
   return (
     <>
-    <div className="HeaderCard"></div>
+    <div className="HeaderCard"><Expandable></Expandable></div>
     <div className="HeaderBar" id="myHeader">
       <HeaderButton buttonText="" image={viteLogo}/>
       <HeaderButton buttonText="ABOUT" destination="about"/>
