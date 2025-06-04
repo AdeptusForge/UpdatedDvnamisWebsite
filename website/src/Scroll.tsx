@@ -33,7 +33,7 @@ import './Scroll.css'
                 </figure> */}
 
 
-export default function Item({title = "", destination = "https://www.dvnamis.games"}) {
+export default function Item({title = "", image="", destination = "https://www.dvnamis.games"}) {
     const ref = useRef(null)
 
     const { scrollYProgress } = useScroll({
@@ -46,7 +46,7 @@ export default function Item({title = "", destination = "https://www.dvnamis.gam
       style={{ scaleY: scrollYProgress}} 
       animate={{rotateX: 0}}
       onClick={() => window.open(destination,"_self")}>
-        <img src={viteLogo} className="logo react" alt="React logo" />
+        <img src={image} hidden={image==""} className="PortfolioThumbnail"/>
         {title}
       </motion.button>
     )

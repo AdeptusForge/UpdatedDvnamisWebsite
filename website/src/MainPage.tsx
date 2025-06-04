@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import './MainPage.css'
@@ -52,8 +52,17 @@ const box = {
 //   Click on the Vite and React logos to learn more
 // </p>
 
+// window.onscroll = function() {StickyHeader()};
+// var header = document.getElementById("myHeader");
+// var sticky = header.offsetTop;
 
-
+// function StickyHeader() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }
 
 
 function App() {
@@ -61,7 +70,8 @@ function App() {
 
   return (
     <>
-    <div className="HeaderBar">
+    <div className="HeaderCard">TextHere</div>
+    <div className="HeaderBar" id="myHeader">
       <HeaderButton buttonText="" image={viteLogo}/>
       <HeaderButton buttonText="ABOUT" destination="about"/>
       <HeaderButton buttonText="RÉSUMÉ" destination="resume"/>
@@ -75,24 +85,28 @@ function App() {
 
     <div className="PortfolioTable">
       <section className="PortfolioRow">
-        <Item title="Hello"/>
+        <Item title="Hello" image="WAKE_gif.gif" destination="/TestPage"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
-        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+          </div><Item title="Goodbye" image="StrikeBackThumb.png"/></div>
+        <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
       </section>
       <section className="PortfolioRow">
-        <Item title="Hello"/>
+        <Item title="Hello" image="WAKE_gif.gif"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
-        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+          </div><Item title="Goodbye" image="StrikeBackThumb.png"/></div>
+        <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
       </section>
       <section className="PortfolioRow">
-        <Item title="Hello"/>
+        <Item title="Hello" image="WAKE_gif.gif"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
-        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+          </div><Item title="Goodbye" image="StrikeBackThumb.png"/></div>
+        <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
       </section>
-            <section className="PortfolioRow">
-        <Item title="Hello"/>
+      <section className="PortfolioRow">
+        <Item title="Hello" image="WAKE_gif.gif"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
-        </div><Item title="Goodbye"/></div><Item title="Dog"/>
+          </div><Item title="Goodbye" image="StrikeBackThumb.png"/></div>
+        <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
       </section>
             <section className="PortfolioRow">
         <Item title="Hello"/>
