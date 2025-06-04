@@ -1,5 +1,5 @@
-import viteLogo from '/vite.svg'
-import { motion, useScroll, motionValue, number } from "motion/react"
+import { motion, useScroll} from "motion/react"
+//, motionValue, number 
 import { useRef } from "react"
 import './Scroll.css'
 
@@ -57,46 +57,46 @@ export default function Item({title = "", image="", destination = "https://www.d
 
 
 
-const progressIconContainer: React.CSSProperties = {
-    position: "sticky",
-    top: 0,
-    width: 80,
-    height: 80,
-    margin: 0,
-    padding: 0,
-}
+// const progressIconContainer: React.CSSProperties = {
+//     position: "sticky",
+//     top: 0,
+//     width: 80,
+//     height: 80,
+//     margin: 0,
+//     padding: 0,
+// }
 
-const processCircle: React.CSSProperties = {
-    strokeDashoffset: 0,
-    strokeWidth: 5,
-    fill: "none",
-}
+// const processCircle: React.CSSProperties = {
+//     strokeDashoffset: 0,
+//     strokeWidth: 5,
+//     fill: "none",
+// }
 
-const progressIcon: React.CSSProperties = {
-    ...processCircle,
-    transform: "translateX(-100px) rotate(-90deg)",
-    stroke: "#ff0088",
-}
+// const progressIcon: React.CSSProperties = {
+//     ...processCircle,
+//     transform: "translateX(-100px) rotate(-90deg)",
+//     stroke: "#ff0088",
+// }
 
-const progressIconIndicator: React.CSSProperties = {
-    ...processCircle,
-    strokeDashoffset: 0,
-    strokeWidth: 5,
-    fill: "none",
-}
+// const progressIconIndicator: React.CSSProperties = {
+//     ...processCircle,
+//     strokeDashoffset: 0,
+//     strokeWidth: 5,
+//     fill: "none",
+// }
 
-const progressIconBg: React.CSSProperties = {
-    opacity: 0.2,
-}
+// const progressIconBg: React.CSSProperties = {
+//     opacity: 0.2,
+// }
 
-const item: React.CSSProperties = {
-    width: 400,
-    height: 400,
-    border: "2px dotted #ff0088",
-    position: "relative",
-    marginLeft: 30,
-    padding: 0,
-    boxSizing: "border-box",
-    alignItems: "center",
-    justifyContent: "center"
-}
+// const item: React.CSSProperties = {
+//     width: 400,
+//     height: 400,
+//     border: "2px dotted #ff0088",
+//     position: "relative",
+//     marginLeft: 30,
+//     padding: 0,
+//     boxSizing: "border-box",
+//     alignItems: "center",
+//     justifyContent: "center"
+// }

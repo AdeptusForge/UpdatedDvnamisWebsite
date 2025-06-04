@@ -1,9 +1,9 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import './MainPage.css'
 import * as motion from "motion/react-client"
 import Item from '../components/Scroll'
-import { Example } from '../components/Collapsible'
+//import { Example } from '../components/Collapsible'
 import '../components/Collapsible.css'
 //import Parallax from './Parallax'
 //<Parallax/>
@@ -63,7 +63,7 @@ const box = {
 
 
 function MainPage() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 
   return (
     <>
