@@ -44,7 +44,7 @@ export default function Item({title = "", image="", destination = "https://www.d
       ref={ref} 
       style={{ scaleY: scrollYProgress}} 
       animate={{rotateX: 0}}
-      onClick={() => window.open(destination,"_self")}>
+      onClick={() => window.open("#/"+ destination,"_self")}>
         <img src={image} hidden={image==""} className="PortfolioThumbnail"/>
         {title}
       </motion.button>

@@ -10,6 +10,8 @@ function App()
       <Routes>
         <Route path="/" element= {<MainPage/>}/>
         <Route path="/about" element= {<Page/>}/>
+        <Route path="/testpage" element= {<Page/>}/>
+
       </Routes>
     </Router>
   )

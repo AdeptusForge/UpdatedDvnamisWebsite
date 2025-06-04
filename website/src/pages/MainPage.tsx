@@ -15,11 +15,11 @@ import '../components/Collapsible.css'
 // </a>
 
 
-function HeaderButton({buttonText="", image="", destination="https://www.dvnamis.games"})
+function HeaderButton({buttonText="", image="", destination="https://www.dvnamis.games/"})
 {
   return (
     <motion.button
-      onClick={() => window.open(destination,"_self")}
+      onClick={() => window.open("#/" + destination,"_self")}
       className="HeaderButton"
       style={box}>
       <div className="buttonText" hidden={buttonText==""}>{buttonText}</div>
@@ -82,7 +82,7 @@ function MainPage() {
 
     <div className="PortfolioTable">
       <section className="PortfolioRow">
-        <Item title="WAKE" image="WAKE_gif.gif" destination="/TestPage"/>
+        <Item title="WAKE" image="WAKE_gif.gif" destination="testpage"/>
           <div className="MiddleHolder"><div className="MiddleOffset">
           </div><Item title="Strike Back" image="StrikeBackThumb.png"/></div>
         <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
