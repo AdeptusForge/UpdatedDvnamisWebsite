@@ -38,6 +38,7 @@ button:focus
   position: inherit;
 }
 
+
 .PortfolioTitle
 {
   font-size: 220%;
@@ -46,4 +47,5 @@ button:focus
   text-align: left;
   text-indent: 30px;
   text-shadow: 1px 1px 2px slategray;
+  font-family: CONFORTO;
 }

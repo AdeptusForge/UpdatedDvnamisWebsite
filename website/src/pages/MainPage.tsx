@@ -15,9 +15,8 @@ function MainPage() {
   return (
     <>
     <div className="HeaderCard">
-    
-    
-      Text Here
+    CURRENTLY UNDER RECONSTRUCTION
+
     </div>
     <div className="BackgroundImage"></div>
     <HeaderBar/>

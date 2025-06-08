@@ -37,17 +37,16 @@ export default function Item({title = "", image="", destination = "https://www.d
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start end", "end end"],
+        offset: ["0 1", "0.6 1"],
     })
     return (
       <motion.button className="Bix" 
       ref={ref} 
-      style={{ scaleY: scrollYProgress}} 
+      style={{ scaleY: scrollYProgress }} 
       animate={{rotateX: 0}}
       onClick={() => window.open("#/"+ destination,"_self")}>
         <img src={image} hidden={image==""} className="PortfolioThumbnail"/>
         <div className="PortfolioTitle">{title}</div>
-        
       </motion.button>
     )
 }
