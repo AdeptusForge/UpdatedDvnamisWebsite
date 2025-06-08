@@ -46,7 +46,8 @@ export default function Item({title = "", image="", destination = "https://www.d
       animate={{rotateX: 0}}
       onClick={() => window.open("#/"+ destination,"_self")}>
         <img src={image} hidden={image==""} className="PortfolioThumbnail"/>
-        {title}
+        <div className="PortfolioTitle">{title}</div>
+        
       </motion.button>
     )
 }

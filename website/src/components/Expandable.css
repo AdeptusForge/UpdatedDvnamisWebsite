@@ -1,0 +1,25 @@
+.ExpandHolder
+{
+  width: 250px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: block;
+  pointer-events: none;
+}
+
+.ExpandButton
+{
+border-radius: 0px;
+margin: 0;
+padding-left: 0;
+padding-right: 0;
+pointer-events: all;
+}
+
+.ExpandText
+{
+  overflow:hidden;
+  text-align: left;
+  text-wrap: wrap;
+}
