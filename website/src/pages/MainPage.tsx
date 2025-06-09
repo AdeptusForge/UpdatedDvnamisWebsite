@@ -31,7 +31,7 @@ function MainPage() {
         <div className="LeftHolder"><div className="LeftOffset"></div>
         <Item title="WAKE" image="WAKE_gif.gif" destination="testpage"/></div>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Strike Back" image="StrikeBackThumb.png"/></div>
+          </div><Item title="STRIKE BACK strike back" image="StrikeBackThumb.png"/></div>
         <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
       </section>
       <section className="PortfolioRow">
