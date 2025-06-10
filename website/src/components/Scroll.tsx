@@ -42,14 +42,17 @@ export default function Item({title = "", image="", destination = "https://www.d
         offset: ["0 1", "0.6 1"],
     })
     return (
+        <div className="BixFilter">
       <motion.button className="Bix" 
       ref={ref} 
       style={{ scaleY: scrollYProgress }} 
       animate={{rotateX: 0}}
       onClick={() => window.open("#/"+ destination,"_self")}>
+        <div className="PortfolioTitle"><b>{title}</b></div>
         <img src={image} hidden={image==""} className="PortfolioThumbnail"/>
-        <div className="PortfolioTitle">{title}</div>
       </motion.button>
+        </div>
+
     )
 }
 

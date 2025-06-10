@@ -9,7 +9,11 @@ function ResumePage()
     <div className="BackgroundImage"></div>
     <HeaderBar/>
     <div className="PageContent">
-      <embed src="/ProgrammingResume.pdf" type="application/pdf" width="100%" height="100%"/>
+      <section className="ContentSection">
+        <div className="ContentBlock">
+          <embed src="/ProgrammingResume.pdf#view=FitH" type="application/pdf"/>
+        </div>
+      </section>
     </div>
   </div>
   </> 
