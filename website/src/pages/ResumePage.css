@@ -1,0 +1,13 @@
+.PageContent
+{
+  position:relative;
+  z-index: 10;
+  height:1000px;
+  /* justify-content: center;
+  align-items: center;
+  width: 100%; */
+}
+embed
+{
+  width: 40%;
+}

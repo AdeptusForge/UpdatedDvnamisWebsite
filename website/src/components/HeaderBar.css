@@ -8,17 +8,30 @@
   background-color: rgb(255, 255, 255);
   padding-top: 0px;
   margin-bottom: 60px;
+  box-shadow: 0px 15px rgba(0, 0, 0, 0.603);
 }
 .HeaderButton
 {
     border-radius: 0;
     padding-left:40;
     padding-right:40;
-    font-family: 'Conforto Trial';
+    padding-bottom: 5px;
+    font-family: Conforto TRIAL;
+    letter-spacing: -2.5px;
+    font-size: 178%;
     border-width: 0;
 }
 
 button:hover
 {
   filter:contrast(50%);
+}
+
+.buttonImage
+{
+  height:73px;
+}
+.buttonSpacer
+{
+  height:10px;
 }

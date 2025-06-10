@@ -16,12 +16,9 @@ function MainPage() {
     <>
     <div className="HeaderCard">
     CURRENTLY UNDER RECONSTRUCTION
-    <div className="my-pdf" id="my-pdf"></div>
-      <embed src="/ProgrammingResume.pdf" type="application/pdf" width="100%" height="100%"/>
     </div>
     <div className="BackgroundImage"></div>
     <HeaderBar/>
-    
     <div className="PortfolioTable">
       {/* <section className="PortfolioRow">
         <Expandable title="1"></Expandable>
