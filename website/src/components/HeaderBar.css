@@ -9,3 +9,16 @@
   padding-top: 0px;
   margin-bottom: 60px;
 }
+.HeaderButton
+{
+    border-radius: 0;
+    padding-left:40;
+    padding-right:40;
+    font-family: 'Conforto Trial';
+    border-width: 0;
+}
+
+button:hover
+{
+  filter:contrast(50%);
+}

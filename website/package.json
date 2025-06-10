@@ -12,6 +12,7 @@
   "dependencies": {
     "@popmotion/popcorn": "^0.4.4",
     "motion": "^12.15.0",
+    "pdfobject": "^2.3.1",
     "popcorn": "^0.0.3",
     "popmotion": "^11.0.5",
     "react": "^19.1.0",
