@@ -1,11 +1,11 @@
+
 //import { useState } from 'react'
-import viteLogo from '/vite.svg'
 import './MainPage.css'
-import * as motion from "motion/react-client"
+//import * as motion from "motion/react-client"
 import Item from '../components/Scroll'
 //import { Example } from '../components/Collapsible'
 import '../components/Collapsible.css'
-import Expandable from '../components/Expandable'
+//import Expandable from '../components/Expandable'
 import HeaderBar from '../components/HeaderBar'
 
 

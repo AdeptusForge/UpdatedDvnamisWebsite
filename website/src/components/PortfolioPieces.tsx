@@ -1,7 +1,7 @@
 import './PortfolioPieces.css'
 
 
-export function ContentBlock(text ="", split=1)
+export function ContentBlock(text ="")
 {
   return <section>
     <div>{text}</div>

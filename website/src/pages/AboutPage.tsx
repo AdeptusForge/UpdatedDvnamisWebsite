@@ -9,9 +9,9 @@ function AboutPage()
     <div className="BackgroundImage"></div>
     <HeaderBar/>
     <div className="PageContent">
+    
 
 
-      
     </div>
   </div>
   </> 

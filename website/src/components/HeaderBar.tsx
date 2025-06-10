@@ -1,9 +1,8 @@
 import * as motion from "motion/react-client"
-import viteLogo from '/vite.svg'
 import DVNAMIS_BLACK from '/public/DVNAMIS-Logo-Black.svg'
 import './HeaderBar.css'
 
-function HeaderButton({buttonText="", image="", destination=""})
+function HeaderButton({buttonText="", destination=""})
 {
   return (
     <motion.button
