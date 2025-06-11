@@ -34,7 +34,7 @@ import './Scroll.css'
 //<video width="320" height="240" no-controls autoplay muted>
 
 
-export default function Item({title = "", image="", destination = "https://www.dvnamis.games"}) {
+export default function Item({title = "", subtitle = "", image="", destination = "https://www.dvnamis.games"}) {
     const ref = useRef(null)
 
     const { scrollYProgress } = useScroll({
@@ -48,7 +48,10 @@ export default function Item({title = "", image="", destination = "https://www.d
       style={{ scaleY: scrollYProgress }} 
       animate={{rotateX: 0}}
       onClick={() => window.open("#/"+ destination,"_self")}>
-        <div className="PortfolioTitle"><b>{title}</b></div>
+        <div className="PortfolioTitle"><b>{title}</b> 
+        <br/>
+        <div className="PortfolioSubtitle">{subtitle}</div>
+        </div>
         <img src={image} hidden={image==""} className="PortfolioThumbnail"/>
       </motion.button>
         </div>

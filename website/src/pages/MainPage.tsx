@@ -27,24 +27,24 @@ function MainPage() {
       </section> */}
       <section className="PortfolioRow">
         <div className="LeftHolder"><div className="LeftOffset"></div>
-        <Item title="WAKE" image="WAKE_gif.gif" destination="testpage"/></div>
+        <Item title="WAKE" subtitle="Level/Systems/Technical Design Lead" image="WAKE_gif.gif" destination="testpage"/></div>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="STRIKE BACK" image="StrikeBackThumb.png"/></div>
-        <Item title="DESCENT INTO HELLFORGE" image="descent.jpg"/>
+          </div><Item title="STRIKE BACK" subtitle="Technical Design Lead" image="StrikeBackThumb.png"/></div>
+        <Item title="DESCENT INTO HELLFORGE" subtitle="Level/Encounter Design" image="descent.jpg"/>
       </section>
       <section className="PortfolioRow">
         <div className="LeftHolder"><div className="LeftOffset"></div>
-        <Item title="CODENAME: Blazer" image="evidencegif.gif"/></div>
+        <Item title="CODENAME: Blazer" subtitle="Systems & Level Design & Programmer" image="evidencegif.gif"/></div>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Burger Flippant" image="BurgerFlippant.gif"/></div>
-        <Item title="DBFZ: KAI" image="websitekai.png"/>
+          </div><Item title="Burger Flippant" subtitle="Systems Design & Programmer" image="BurgerFlippant.gif"/></div>
+        <Item title="DBFZ: KAI" subtitle="Systems Design & Programmer" image="websitekai.png"/>
       </section>
       <section className="PortfolioRow">
         <div className="LeftHolder"><div className="LeftOffset"></div>
-        <Item title="Omegatech: Aspen's Story" image="omegatech.png"/></div>
+        <Item title="Omegatech: Aspen's Story" subtitle="Level Design" image="omegatech.png"/></div>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Avagard's Study" image="LevelDesignProject.png"/></div>
-        <Item title="DESCENT INTO HELLFORGE" image="redsun.png"/>
+          </div><Item title="Avagard's Study"  subtitle="Level Design & Graphics/Physics Programmer" image="LevelDesignProject.png"/></div>
+        <Item title="Under Red Sun Sands" subtitle="Level Design" image="redsun.png"/>
       </section>
       </div>
     </>
