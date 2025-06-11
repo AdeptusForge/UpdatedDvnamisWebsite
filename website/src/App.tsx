@@ -5,10 +5,25 @@ import Page from './pages/BasicPageTemplate.tsx'
 import ResumePage from './pages/ResumePage.tsx'
 import AboutPage from './pages/AboutPage.tsx'
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+
 function App()
 {
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element= {<MainPage/>}/>
         <Route path="/about" element= {<AboutPage/>}/>
