@@ -14,6 +14,7 @@
     justify-content: center;
     pointer-events: all;
     display:block;
+    border-radius: 0px;
     background-color:rgba(255, 255, 255, 0);
     box-shadow: rgba(0, 0, 0, 0.6) 5px 5px, rgba(0, 0, 0, 0.4) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
     border-width: 0px;
@@ -23,12 +24,15 @@
 
 
 
-button:hover {
+.Bix:hover {
   border-color: black;
   border-width: 0px;
-  filter:grayscale(40%) contrast(110%) blur(0px);
+  transition: 0.4s;
+  filter:grayscale(20%) contrast(120%) blur(0.5px);
 }
-button:focus
+
+
+.Bix:focus
 {
   border-color: black;
   border-width: 0px;
@@ -44,7 +48,6 @@ button:focus
 
 .PortfolioTitle
 {
-  
   font-size: 180%;
   height: 70px;
   width:500px;
@@ -54,7 +57,8 @@ button:focus
   text-shadow: 1px 2px 2px slategray;
   font-family: PP Valve Plain;
   position:absolute;
-  background-color: rgba(0, 0, 0, 0.600);
+  background-color: rgba(0, 0, 0, 0.000);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.100),  rgba(0, 0, 0, 0.700));
   z-index:20;
   bottom:0px;
 }

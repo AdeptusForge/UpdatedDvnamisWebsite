@@ -98,20 +98,20 @@ button:focus-visible {
 @font-face
 {
 font-family: DOSS;
-src: url("/website/Fonts/ExaflopMidTrial.ttf");
+src: url("/Fonts/ExaflopMidTrial.ttf");
 }
 @font-face {
     font-family: 'Frauen TRIAL';
-    src: url('/website/Fonts/FrauenTRIAL-Script.woff2') format('woff2'),
-        url('/website/Fonts/FrauenTRIAL-Script.woff') format('woff');
+    src: url('/Fonts/FrauenTRIAL-Script.woff2') format('woff2'),
+        url('/Fonts/FrauenTRIAL-Script.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'PP Valve Plain';
-    src: url('/website/Fonts/PPValve-PlainExtrabold.woff2') format('woff2'),
-        url('/website/Fonts/PPValve-PlainExtrabold.woff') format('woff');
+    src: url('/Fonts/PPValve-PlainExtrabold.woff2') format('woff2'),
+        url('/Fonts/PPValve-PlainExtrabold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -119,8 +119,8 @@ src: url("/website/Fonts/ExaflopMidTrial.ttf");
 
 @font-face {
     font-family: 'Greenstone Trial';
-    src: url('/website/Fonts/GreenstoneTrial-Regular.woff2') format('woff2'),
-        url('/website/Fonts/GreenstoneTrial-Regular.woff') format('woff');
+    src: url('/GreenstoneTrial-Regular.woff2') format('woff2'),
+        url('/GreenstoneTrial-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -128,8 +128,8 @@ src: url("/website/Fonts/ExaflopMidTrial.ttf");
 
 @font-face {
     font-family: 'Conforto TRIAL';
-    src: url('/website/Fonts/ConfortoTRIAL-Bold.woff2') format('woff2'),
-        url('/website/Fonts/ConfortoTRIAL-Bold.woff') format('woff');
+    src: url('/Fonts/ConfortoTRIAL-Bold.woff2') format('woff2'),
+        url('/Fonts/ConfortoTRIAL-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
