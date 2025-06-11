@@ -153,5 +153,83 @@ src: url("/Fonts/ExaflopMidTrial.ttf");
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Aku & Kamu';
+    src: url('AkuKamu.woff2') format('woff2'),
+        url('AkuKamu.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Mr Headlines';
+    src: url('MrHeadlines.woff2') format('woff2'),
+        url('MrHeadlines.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'NEXT ART';
+    src: url('NEXTART.woff2') format('woff2'),
+        url('NEXTART.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NEXT ART';
+    src: url('NEXTART-Heavy.woff2') format('woff2'),
+        url('NEXTART-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NEXT ART';
+    src: url('NEXTART-Light.woff2') format('woff2'),
+        url('NEXTART-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NEXT ART';
+    src: url('NEXTART-SemiBold.woff2') format('woff2'),
+        url('NEXTART-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NEXT ART';
+    src: url('NEXTART-Bold.woff2') format('woff2'),
+        url('NEXTART-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rockford Sans';
+    src: url('RockfordSans-Light.woff2') format('woff2'),
+        url('RockfordSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Toxigenesis Rg';
+    src: url('ToxigenesisRg-Bold.woff2') format('woff2'),
+        url('ToxigenesisRg-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,5 +1,5 @@
 import * as motion from "motion/react-client"
-import DVNAMIS_BLACK from '/public/DVNAMIS-Logo-Black.svg'
+import DVNAMIS_BLACK from '/DVNAMIS-Logo-Black.svg'
 import './HeaderBar.css'
 
 function HeaderButton({buttonText="", destination=""})

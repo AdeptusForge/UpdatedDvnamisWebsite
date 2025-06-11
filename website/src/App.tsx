@@ -29,7 +29,6 @@ function App()
         <Route path="/about" element= {<AboutPage/>}/>
         <Route path="/resume" element= {<ResumePage/>}/>
         <Route path="/testpage" element= {<Page/>}/>
-
       </Routes>
     </Router>
   )
