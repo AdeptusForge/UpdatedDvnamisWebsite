@@ -7,7 +7,6 @@ import {defineConfig} from 'vite'
 export default defineConfig({
   plugins: [
     {enforce: 'pre', ...mdx({/* jsxImportSource: …, otherOptions… */})},
-    react(),
     {
       name: 'markdown-loader',
       transform(code, id) {
@@ -15,8 +14,8 @@ export default defineConfig({
           // For .md files, get the raw content
           return `export default ${JSON.stringify(code)};`;
         }
-        include: /\.(jsx|js|mdx|md|tsx|ts)$/
       }
     },
+    react({include: /\.(jsx|js|mdx|md|tsx|ts)$/}),
   ],
 })
