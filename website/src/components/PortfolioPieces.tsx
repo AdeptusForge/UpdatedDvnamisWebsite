@@ -1,9 +1,8 @@
 import './PortfolioPieces.css'
 
 
-export function ContentBlock(text ="")
+export function ContentBlock()
 {
   return <section>
-    <div>{text}</div>
   </section>
 }

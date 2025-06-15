@@ -2,12 +2,33 @@
 {
   position:relative;
   z-index: 10;
-  height:1000px;
-  /* justify-content: center;
-  align-items: center;
-  width: 100%; */
+  align-items: "center";
+  justify-content: center;
+  width: 100%;
+  display:block;
+  margin:auto;
 }
 embed
 {
   width: 40%;
 }
+
+.ContentBlock
+{
+  margin:auto;
+  width:85vw;
+  background-color:white;
+  box-shadow: rgba(0, 0, 0, 0.6) 5px 5px, rgba(0, 0, 0, 0.4) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+  border-width: 0px;
+}
+
+.ContentText
+{
+  text-align: left;
+  font-family: SFT Schrifted Sans TRIAL;
+  text-wrap: wrap;
+  font-size: 16px;
+  margin: 20px;
+  padding-top: 16px;
+}
+/* Gantari, Soliden Trial, Soliden Trial EXP, */

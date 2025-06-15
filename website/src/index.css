@@ -236,3 +236,282 @@ src: url("/Fonts/ExaflopMidTrial.ttf");
 
 
 
+@font-face {
+    font-family: 'Code Saver';
+    src: url('/Fonts/CodeSaver-Regular.woff2') format('woff2'),
+        url('/Fonts/CodeSaver-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Soliden Trial';
+    src: url('/Fonts/SolidenTrial-Regular.woff2') format('woff2'),
+        url('/Fonts/SolidenTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Soliden Trial';
+    src: url('/Fonts/SolidenTrial-Bold.woff2') format('woff2'),
+        url('/Fonts/SolidenTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Soliden Trial Cond';
+    src: url('/Fonts/SolidenTrial-BoldCondensed.woff2') format('woff2'),
+        url('/Fonts/SolidenTrial-BoldCondensed.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Soliden Trial Exp';
+    src: url('/Fonts/SolidenTrial-Expanded.woff2') format('woff2'),
+        url('/Fonts/SolidenTrial-Expanded.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Soliden Trial Exp';
+    src: url('/Fonts/SolidenTrial-BoldExpanded.woff2') format('woff2'),
+        url('/Fonts/SolidenTrial-BoldExpanded.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Soliden Trial Cond';
+    src: url('/Fonts/SolidenTrial-Condensed.woff2') format('woff2'),
+        url('/Fonts/SolidenTrial-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-Light.woff2') format('woff2'),
+        url('/Fonts/Gantari-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-LightItalic.woff2') format('woff2'),
+        url('/Fonts/Gantari-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-BlackItalic.woff2') format('woff2'),
+        url('/Fonts/Gantari-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-Black.woff2') format('woff2'),
+        url('/Fonts/Gantari-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-Italic.woff2') format('woff2'),
+        url('/Fonts/Gantari-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-ExtraBold.woff2') format('woff2'),
+        url('/Fonts/Gantari-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-ExtraBoldItalic.woff2') format('woff2'),
+        url('/Fonts/Gantari-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-BoldItalic.woff2') format('woff2'),
+        url('/Fonts/Gantari-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-Bold.woff2') format('woff2'),
+        url('/Fonts/Gantari-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-Thin.woff2') format('woff2'),
+        url('/Fonts/Gantari-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-SemiBold.woff2') format('woff2'),
+        url('/Fonts/Gantari-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-Regular.woff2') format('woff2'),
+        url('/Fonts/Gantari-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-ThinItalic.woff2') format('woff2'),
+        url('/Fonts/Gantari-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gantari';
+    src: url('/Fonts/Gantari-SemiBoldItalic.woff2') format('woff2'),
+        url('/Fonts/Gantari-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-Bold.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-Italic.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL ExBold';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-ExtraBold.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL ExBold';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-ExBoldItalic.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-ExBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-Light.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-Black.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-LightItalic.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-Medium.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-MediumItalic.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans TRIAL';
+    src: url('/Fonts/SFTSchriftedSansTRIAL-Regular.woff2') format('woff2'),
+        url('/Fonts/SFTSchriftedSansTRIAL-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

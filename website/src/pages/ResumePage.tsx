@@ -10,8 +10,9 @@ function ResumePage()
     <HeaderBar/>
     <div className="PageContent">
       <section className="ContentSection">
+        <embed src="/ProgrammingResume.pdf#view=FitH" type="application/pdf"/>
         <div className="ContentBlock">
-          <embed src="/ProgrammingResume.pdf#view=FitH" type="application/pdf"/>
+          
         </div>
       </section>
     </div>
