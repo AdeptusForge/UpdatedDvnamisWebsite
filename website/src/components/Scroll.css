@@ -1,7 +1,7 @@
 .Bix
 {
-    width: 500px;
-    height: 350px;
+    width: 25vw;
+    height: 17.5vw;
     /* border-width: 2px;
     border-style: dotted;
     border-color:#ff0088; */
@@ -40,39 +40,41 @@
 .PortfolioThumbnail
 {
   width:100%;
-  height:350px;
+  height:100%;
   
 }
 
+.PortfolioTextCard
+{
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.000);
+  background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.050),  rgba(0, 0, 0, 0.700));
+  position:absolute;
+  z-index:20;
+  bottom:0px;
+}
 
 .PortfolioTitle
 {
   font-size: 200%;
-  height: 70px;
-  width:500px;
+  margin-left: 20px;
   color:rgb(240, 240, 240);
   text-align: left;
-  text-indent: 20px;
   text-shadow: 1px 2px 2px slategray;
   font-family: Next Art;
-  position:absolute;
-  background-color: rgba(0, 0, 0, 0.000);
-  background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.050),  rgba(0, 0, 0, 0.700));
-  z-index:20;
-  bottom:0px;
+  text-wrap: wrap;
 }
 
 .PortfolioSubtitle
 {
   font-size: 50%;
-  height: 30px;
+  height: 25px;
   width:500px;
   color:rgb(240, 240, 240);
   text-align: left;
-  text-indent: 20px;
+  text-indent: 10;
   text-shadow: 1px 2px 2px slategray;
   font-family: Next Art;
-  position:absolute;
   z-index:20;
   bottom:0px;
 }

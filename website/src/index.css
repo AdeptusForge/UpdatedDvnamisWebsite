@@ -71,7 +71,7 @@ button:focus-visible {
 .BackgroundImage
 {
   background-image: url("/WebsiteBackground9_albedo.png");
-  background-color: rgb(202, 214, 197);
+  background-color: rgb(214, 214, 214);
   z-index: 0;
   position:absolute;
   background-repeat: repeat;

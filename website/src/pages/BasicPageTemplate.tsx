@@ -7,7 +7,6 @@ export default function PortfolioPage()
     <div className="BackgroundImage"></div>
     <HeaderBar/>
     <div className="PageContent">
-      
     </div>
   </div>
 }

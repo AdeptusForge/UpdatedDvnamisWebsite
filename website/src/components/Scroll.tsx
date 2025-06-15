@@ -48,9 +48,11 @@ export default function Item({title = "", subtitle = "", image="", destination =
       style={{ scaleY: scrollYProgress }} 
       animate={{rotateX: 0}}
       onClick={() => window.open("#/"+ destination,"_self")}>
-        <div className="PortfolioTitle"><b>{title}</b> 
-        <br/>
-        <div className="PortfolioSubtitle">{subtitle}</div>
+        <div className="PortfolioTextCard">
+            <div className="PortfolioTitle"><b>{title}</b> 
+            <br/>
+            <div className="PortfolioSubtitle">{subtitle}</div>
+            </div>
         </div>
         <img src={image} hidden={image==""} className="PortfolioThumbnail"/>
       </motion.button>

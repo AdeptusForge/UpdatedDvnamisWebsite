@@ -27,9 +27,9 @@ function MainPage() {
       </section> */}
       <section className="PortfolioRow">
         <div className="LeftHolder"><div className="LeftOffset"></div>
-        <Item title="WAKE" subtitle="Level/Systems/Technical Design Lead" image="WAKE_gif.gif" destination="testpage"/></div>
+        <Item title="WAKE" subtitle="Level/Systems Designer & Build Master" image="WAKE_gif.gif" destination="testpage"/></div>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="STRIKE BACK" subtitle="Technical Design Lead" image="StrikeBackThumb.png"/></div>
+          </div><Item title="STRIKE BACK" subtitle="Technical Lead/Tool Developer" image="StrikeBackThumb.png"/></div>
         <Item title="DESCENT INTO HELLFORGE" subtitle="Level/Encounter Design" image="descent.jpg"/>
       </section>
       <section className="PortfolioRow">
