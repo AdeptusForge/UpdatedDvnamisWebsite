@@ -7,6 +7,9 @@ interface Props {
   children?: ReactNode
 }
 
+
+const pages = ["WAKE", "Strike Back", "HELLFORGE", "Codename: BLAZER", "Burger Flippant", "DBFZ: KAI", "Omegatech", "Avagard's Study", "Under Red Sun Sands"]
+
 export default function PageTemplate({ children }: Props)
 {
     return<>

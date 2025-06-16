@@ -121,3 +121,9 @@
   height: 500px; 
   border: 1px solid #ccc;
 }
+
+.HeaderBarFix
+{
+  height:100vh;
+  pointer-events: none;
+}
