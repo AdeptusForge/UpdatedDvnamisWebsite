@@ -17,8 +17,9 @@ function MainPage() {
     <div className="HeaderCard">
     
     </div>
-    <div className="BackgroundImage"></div>
+    
     <HeaderBar/>
+    <div className="BackgroundImage">
     <div className="PortfolioTable">
       {/* <section className="PortfolioRow">
         <Expandable title="1"></Expandable>
@@ -46,6 +47,7 @@ function MainPage() {
           </div><Item title="Avagard's Study"  subtitle="Level Design & Graphics/Physics Programmer" image="LevelDesignProject.png"/></div>
         <Item title="Under Red Sun Sands" subtitle="Level Design" image="redsun.png"/>
       </section>
+      </div>
       </div>
     </>
   )

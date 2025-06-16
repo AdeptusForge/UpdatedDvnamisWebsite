@@ -64,9 +64,11 @@
 }
 .PortfolioTable
 {
+  padding-top:60px;
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height:1500px;
 }
 .PortfolioRow
 {
@@ -79,7 +81,6 @@
   pointer-events: none;
   position:relative;
 }
-
 
 .MiddleHolder
 {

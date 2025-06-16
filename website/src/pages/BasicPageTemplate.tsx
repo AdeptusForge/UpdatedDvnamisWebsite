@@ -1,4 +1,5 @@
 import HeaderBar from "../components/HeaderBar" 
+import FooterBar from "../components/FooterBar";
 import './BasicPageTemplate.css'
 import { type ReactNode } from "react";
 
@@ -8,9 +9,11 @@ interface Props {
 
 export default function PageTemplate({ children }: Props)
 {
-    return(
+    return<>
         <div className="PageEntry">
-          <div className="BackgroundImage"></div>
           <HeaderBar/>
-          <div className="PageContent">{children}</div></div>)
+          <div className="BackgroundImage">
+          <div className="PageContent">{children}</div></div></div>
+          <FooterBar/>
+        </>
 }

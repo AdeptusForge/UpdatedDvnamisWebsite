@@ -2,7 +2,7 @@
 {
   position:relative;
   z-index: 10;
-  height:1000px;
+  height:auto;
   justify-content: "center";
   align-items: center;
   width: 100%;
