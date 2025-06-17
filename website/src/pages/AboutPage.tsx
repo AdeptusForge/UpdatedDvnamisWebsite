@@ -24,7 +24,17 @@ function AboutPage()
   <PageTemplate>
       <ContentBlock>
         <section className="ContentRow">
-          <div className="ContentTextHolder"><div className="ContentText">{text}</div></div>
+          <div className="ContentTextHolder"><div className="ContentText">
+            <h1>
+              About Me
+            </h1>
+            <h2>
+              This is a long long long line of text about me
+            </h2>
+            <p>
+              {text}
+            </p>
+            </div></div>
           <div className="ContentImageHolder"><img className="ContentImage" src="self_portrait.png"/></div>
         </section>
       </ContentBlock>

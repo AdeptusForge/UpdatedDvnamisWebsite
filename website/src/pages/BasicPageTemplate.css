@@ -4,3 +4,31 @@
   height:auto;
   top:0px;
 }
+
+h1
+{
+  text-align: left;
+  font-family: Next Art;
+  text-wrap: wrap;
+  font-size: 54px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left:24px;
+}
+h2
+{
+  text-align: left;
+  font-family: SFT Schrifted Sans TRIAL;
+  text-wrap: wrap;
+  font-size: 24px;
+  margin-left:48px;
+}
+
+p
+{
+  text-align: left;
+  font-family: SFT Schrifted Sans TRIAL;
+  text-wrap: wrap;
+  font-size: 18px;
+  margin-left:64px;
+}

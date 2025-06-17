@@ -6,7 +6,6 @@ export default function FooterBar()
   return<>
   <div className="FooterCard">
     <div>
-      TExt Here
     </div>
   </div>
   </>

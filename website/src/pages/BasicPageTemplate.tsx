@@ -7,6 +7,17 @@ interface Props {
   children?: ReactNode
 }
 
+export function ContentBlock({ children }: Props)
+{
+    return(
+    <section className="ContentBlock">{children}</section>)
+}
+
+export function VideoBlock()
+{
+  return <>
+  </>
+}
 
 const pages = ["WAKE", "Strike Back", "HELLFORGE", "Codename: BLAZER", "Burger Flippant", "DBFZ: KAI", "Omegatech", "Avagard's Study", "Under Red Sun Sands"]
 
@@ -14,9 +25,10 @@ export default function PageTemplate({ children }: Props)
 {
     return<>
         <div className="PageEntry">
-          <HeaderBar/>
           <div className="BackgroundImage">
-          <div className="PageContent">{children}</div></div></div>
-          <FooterBar/>
+          <HeaderBar/>
+          <div className="PageContent">{children}<FooterBar/></div>
+          </div>
+        </div>
         </>
 }

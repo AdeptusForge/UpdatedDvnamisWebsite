@@ -72,12 +72,13 @@ button:focus-visible {
 {
   background-image: url("/WebsiteBackground9_albedo.png");
   background-color: rgb(214, 214, 214);
-  z-index: 0;
+  z-index: 10;
   position:absolute;
   background-repeat: repeat;
   width:100%;
   height:fit-content;
   margin-top: -60px;
+  top:0px;
 }
 
 @media (prefers-color-scheme: light) {
