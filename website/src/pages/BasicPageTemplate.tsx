@@ -13,13 +13,16 @@ export function ContentBlock({ children }: Props)
     <section className="ContentBlock">{children}</section>)
 }
 
-export function VideoBlock()
+export function FullVideoBlock()
 {
   return <>
+  <ContentBlock>
+
+  </ContentBlock>
   </>
 }
 
-const pages = ["WAKE", "Strike Back", "HELLFORGE", "Codename: BLAZER", "Burger Flippant", "DBFZ: KAI", "Omegatech", "Avagard's Study", "Under Red Sun Sands"]
+//const pages = ["WAKE", "Strike Back", "HELLFORGE", "Codename: BLAZER", "Burger Flippant", "DBFZ: KAI", "Omegatech", "Avagard's Study", "Under Red Sun Sands"]
 
 export default function PageTemplate({ children }: Props)
 {

@@ -10,6 +10,7 @@ import AboutPage from './pages/AboutPage.tsx'
 
 import WakePage from './pages/PortfolioPages/Wake.tsx'
 import StrikeBackPage from './pages/PortfolioPages/StrikeBack.tsx'
+import HellforgePage from './pages/PortfolioPages/Hellforge.tsx';
 
 
 function ScrollToTop() {
@@ -35,7 +36,7 @@ function App()
         <Route path="/contact" element= {<Page/>}/>
         <Route path="/wake" element= {<WakePage/>}/>
         <Route path="/strike_back" element= {<StrikeBackPage/>}/>
-        <Route path="/descent_into_hellforge" element= {<StrikeBackPage/>}/>
+        <Route path="/descent_into_hellforge" element= {<HellforgePage/>}/>
         <Route path="/codename_blazer" element= {<StrikeBackPage/>}/>
         <Route path="/burger_flippant" element= {<StrikeBackPage/>}/>
         <Route path="/dbfz_kai" element= {<StrikeBackPage/>}/>

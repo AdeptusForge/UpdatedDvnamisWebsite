@@ -1,4 +1,4 @@
-import HeaderBar from "../components/HeaderBar";
+//import HeaderBar from "../components/HeaderBar";
 import './BasicPageTemplate.css'
 import './ResumePage.css'
 import PageTemplate from "./BasicPageTemplate";

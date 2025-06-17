@@ -1,8 +1,8 @@
-import HeaderBar from "../components/HeaderBar";
+//import HeaderBar from "../components/HeaderBar";
 import './BasicPageTemplate.css'
 import './AboutPage.css'
 import { type ReactNode } from "react";
-import PortfolioPage from "./BasicPageTemplate";
+//import PortfolioPage from "./BasicPageTemplate";
 import PageTemplate from "./BasicPageTemplate";
 
 interface Props {

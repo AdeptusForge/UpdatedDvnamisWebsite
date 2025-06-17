@@ -3,6 +3,7 @@
   width:100%;
   height:auto;
   top:0px;
+  white-space: pre-line
 }
 
 h1
@@ -30,5 +31,5 @@ p
   font-family: SFT Schrifted Sans TRIAL;
   text-wrap: wrap;
   font-size: 18px;
-  margin-left:64px;
+  margin-left:48px;
 }
