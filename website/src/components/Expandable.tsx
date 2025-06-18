@@ -2,6 +2,10 @@ import './Expandable.css'
 import { motion } from "framer-motion";
 import { useState } from 'react';
 
+function ButtonText (open:boolean)
+{
+  return open ? " Click To Collapse" : " Click To Expand";
+}
 
 
 function Expandable({title=""})
@@ -15,12 +19,12 @@ function Expandable({title=""})
   // transition={{ duration: 0.55}}
   onClick={() => setIsOpen(!isOpen)}
   >
-    {title + " Click To Expand"}
+    {title + ButtonText(isOpen)}
   </motion.button>
   <motion.div 
   className="ExpandText"
   initial={{height:"0px"}}
-  animate={{height: isOpen ? "200px" : "0px"}}
+  animate={{height: isOpen ? "auto" : "0px"}}
   transition={{ duration: 0.55}}>
     Here's some lorem ipsum Here's some lorem ipsum Here's some lorem ipsum
   </motion.div>

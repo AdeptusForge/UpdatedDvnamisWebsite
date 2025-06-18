@@ -23,7 +23,6 @@ function HeaderLogoButton({buttonText="", image="", destination=""})
       <div className="buttonText" hidden={buttonText==""}>{buttonText}</div>
       <div className="buttonImageHolder" hidden={image==null}>
         <img className="buttonImage" src={image}/></div>
-      
     </motion.button>
   )
 }

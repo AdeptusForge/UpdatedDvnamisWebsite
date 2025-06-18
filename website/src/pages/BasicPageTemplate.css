@@ -10,26 +10,35 @@ h1
 {
   text-align: left;
   font-family: Next Art;
+  font-size: 50px;
   text-wrap: wrap;
-  font-size: 54px;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left:24px;
+  margin-left:-20px;
 }
 h2
 {
   text-align: left;
   font-family: SFT Schrifted Sans TRIAL;
-  text-wrap: wrap;
   font-size: 24px;
-  margin-left:48px;
+  text-wrap: wrap;
 }
 
 p
 {
   text-align: left;
   font-family: SFT Schrifted Sans TRIAL;
-  text-wrap: wrap;
   font-size: 18px;
-  margin-left:48px;
+  text-wrap: wrap;
+}
+
+embed
+{
+  width:100%;
+  height:100%;
+  min-height:350px;
+}
+
+.ContentExpandableHolder
+{
 }
