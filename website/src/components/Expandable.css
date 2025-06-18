@@ -6,25 +6,43 @@
   justify-content: center;
   display: block;
   pointer-events: none;
+  border-top:0px;
+  border-bottom:2px;
+  border-left:0px;
+  border-right:0px;
+  border-style:solid;
+}
+
+.ExpandImage
+{
+width:100%;
+height:100%;
+object-fit: cover;
+min-height: 100%;
+
 }
 
 .ExpandButton
 {
-border-radius: 0px;
-margin: 0;
-padding-left: 0;
-padding-right: 0;
-pointer-events: all;
-width:100%;
-top:0px;
+  border-radius: 0px;
+  margin: 0px;
+  margin-top:-6px;
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-left: 0px;
+  padding-right: 0px;
+  pointer-events: all;
+  width:100%;
+  top:0px;
+  text-align:center;
+  font-family: SFT Schrifted Sans TRIAL;
+  font-size: 24px;
+  text-wrap: wrap;
 }
 
 
 .ExpandText
 {
   overflow:hidden;
-  text-align: left;
-  font-family: SFT Schrifted Sans TRIAL;
-  font-size: 18px;
-  text-wrap:wrap;
+
 }

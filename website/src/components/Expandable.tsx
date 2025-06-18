@@ -4,32 +4,30 @@ import { useState } from 'react';
 
 function ButtonText (open:boolean)
 {
-  return open ? " Click To Collapse" : " Click To Expand";
+  return open ? " \n <   Collapse   >" : " \n >   Expand   <";
 }
 
-
-function Expandable({title=""})
+function Expandable({title="",image="", text=""})
 {
   const [isOpen, setIsOpen] = useState(false);
   return <div className="ExpandHolder">
+  <img className="ExpandImage" src={image}></img>
   <motion.button 
   className="ExpandButton" 
   // initial={{height:"100px"}}
   // animate={{height: isOpen ? "200px" : "100px"}}
   // transition={{ duration: 0.55}}
-  onClick={() => setIsOpen(!isOpen)}
-  >
-    {title + ButtonText(isOpen)}
+  onClick={() => setIsOpen(!isOpen)}>
+    <b>{title}</b>{"" + ButtonText(isOpen)}
   </motion.button>
   <motion.div 
   className="ExpandText"
   initial={{height:"0px"}}
   animate={{height: isOpen ? "auto" : "0px"}}
-  transition={{ duration: 0.55}}>
-    Here's some lorem ipsum Here's some lorem ipsum Here's some lorem ipsum
+  transition={{duration: 0.4}}>
+    <p>{text}</p>
   </motion.div>
   </div>
 }
-
 
 export default Expandable

@@ -28,6 +28,18 @@
   width: 100%;
   position:relative;
 }
+.ContentExpandableRow
+{
+  justify-content: center;
+  align-items: top;
+  display:flex;
+  width: auto;
+  position:relative;
+  padding-left:64px;
+  padding-right:64px;
+  margin-top:0px;
+  margin-bottom:0px;
+}
 
 .ContentTextHolder
 {
@@ -56,6 +68,6 @@
 
 .ContentImage
 {
-  width:auto;
+  width:100%;
 }
 /* Gantari, Soliden Trial, Soliden Trial EXP, */
