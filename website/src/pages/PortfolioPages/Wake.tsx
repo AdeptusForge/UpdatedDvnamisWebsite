@@ -2,14 +2,13 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
-import { LastButton, NextButton } from "../../components/NextLastButton";
+import { NextButton } from "../../components/NextLastButton";
 
 const title = "WAKE"
 const introductionDetails = "August 2024 - April 2025 \n GODOT Engine 4.4"
 const introduction = "WAKE was my first project in GODOT Engine, working with a team of 5 other people. I was designated as Design Lead, which encompassed building the combat sandbox ruleset and our large singular level, in addition to supervising and documenting the work of other designers."
 
 const responsibilities = "> Mechanical Combat Design\n> Camera & Character Controller Development\n> UX Iteration \n> Player & AI Behavior Patterning\n> Prototyping\n> Designer Management\n> Playtesting & Research Data Analysis\n> Encounter & Environment Blockouts"
-
 
 const paragraph1 = "Our ideation of WAKE was a grand, brutal, cold world. Set in a decrepit fishing hamlet off a forgotten cliffside coast somewhere in europe, players would explore and fight their way through humans and horrors alike. A large portion of the design was informed by the artistic direction our team had decide upon: a PSX visual style with high color contrast and saturation."
 const header1= "Constructing A Sandbox out of a Shoebox"
