@@ -4,7 +4,7 @@ import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
-const title = "Descent Into HELLForge"
+const title = "WAKE"
 const introductionDetails = "January 2024 \n DOOM 2016 SnapMap"
 const introduction = "Descent Into HELLForge was a level I made as a short 2 week experiment in creating dynamic subencounters. Encounter design across different games is a notoriously touchy subject matter. Each game has a different mechanical context that must be accounted for. Even different balancing schemes within the same system set will have wildly different results on how encounters plays out."
 
@@ -29,7 +29,7 @@ export default function WakePage()
 {
   return<>
   <PageTemplate>
-    <LastButton buttonText="LAST" destination="strike_back"/><NextButton buttonText="NEXT" destination="codename_blazer"/>
+    <NextButton buttonText="NEXT" destination="strike_back"/>
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
