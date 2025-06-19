@@ -11,6 +11,12 @@ import AboutPage from './pages/AboutPage.tsx'
 import WakePage from './pages/PortfolioPages/Wake.tsx'
 import StrikeBackPage from './pages/PortfolioPages/StrikeBack.tsx'
 import HellforgePage from './pages/PortfolioPages/Hellforge.tsx';
+import BlazerPage from './pages/PortfolioPages/CodenameBlazer.tsx';
+import BurgerFlippantPage from './pages/PortfolioPages/BurgerFlippant.tsx';
+import KaiPage from './pages/PortfolioPages/DBFZKAI.tsx';
+import OmegaTechPage from './pages/PortfolioPages/OmegaTech.tsx';
+import AvagradsStudyPage from './pages/PortfolioPages/AvadardsStudy.tsx';
+import RedSunPage from './pages/PortfolioPages/RedSun.tsx';
 
 
 function ScrollToTop() {
@@ -37,12 +43,12 @@ function App()
         <Route path="/wake" element= {<WakePage/>}/>
         <Route path="/strike_back" element= {<StrikeBackPage/>}/>
         <Route path="/descent_into_hellforge" element= {<HellforgePage/>}/>
-        <Route path="/codename_blazer" element= {<StrikeBackPage/>}/>
-        <Route path="/burger_flippant" element= {<StrikeBackPage/>}/>
-        <Route path="/dbfz_kai" element= {<StrikeBackPage/>}/>
-        <Route path="/omegatech" element= {<StrikeBackPage/>}/>
-        <Route path="/avagards_study" element= {<StrikeBackPage/>}/>
-        <Route path="/red_sun" element= {<StrikeBackPage/>}/>
+        <Route path="/codename_blazer" element= {<BlazerPage/>}/>
+        <Route path="/burger_flippant" element= {<BurgerFlippantPage/>}/>
+        <Route path="/dbfz_kai" element= {<KaiPage/>}/>
+        <Route path="/omegatech" element= {<OmegaTechPage/>}/>
+        <Route path="/avagards_study" element= {<AvagradsStudyPage/>}/>
+        <Route path="/red_sun" element= {<RedSunPage/>}/>
 
 
       </Routes>

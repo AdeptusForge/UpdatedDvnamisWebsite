@@ -13,13 +13,26 @@
   border-style:solid;
 }
 
+.ImageButton
+{
+  margin:0px;
+  padding:0px;
+  border:0px;
+  pointer-events: all;
+  border-radius: 0px;
+}
+.ImageButton:hover
+{
+  filter:opacity(1);
+}
+
 .ExpandImage
 {
-width:100%;
-height:100%;
-object-fit: cover;
-min-height: 100%;
-
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  min-height: 100%;
+  pointer-events: none;
 }
 
 .ExpandButton
@@ -39,7 +52,16 @@ min-height: 100%;
   font-size: 24px;
   text-wrap: wrap;
 }
-
+.ExpandButton:hover
+{
+  border-color: transparent;
+  border-radius: 0px;
+}
+.ExpandButton:focus
+{
+  border-color: transparent;
+  border-radius: 0px;
+}
 
 .ExpandText
 {

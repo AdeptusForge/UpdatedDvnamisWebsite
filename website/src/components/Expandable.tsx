@@ -11,7 +11,10 @@ function Expandable({title="",image="", text=""})
 {
   const [isOpen, setIsOpen] = useState(false);
   return <div className="ExpandHolder">
-  <img className="ExpandImage" src={image}></img>
+    <motion.button className="ImageButton"
+    onClick={() => setIsOpen(!isOpen)}
+    ><img className="ExpandImage" src={image}></img></motion.button>
+  
   <motion.button 
   className="ExpandButton" 
   // initial={{height:"100px"}}

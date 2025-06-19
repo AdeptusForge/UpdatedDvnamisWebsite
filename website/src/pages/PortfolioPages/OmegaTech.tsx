@@ -25,7 +25,7 @@ const paragraph4 = "While I am overall extremely happy with the outcome of this 
 
 //Player behavior can usually be boiled down to far fewer options because of the circumstances they are put in.
 
-export default function HellforgePage()
+export default function OmegaTechPage()
 {
   return<>
   <PageTemplate>

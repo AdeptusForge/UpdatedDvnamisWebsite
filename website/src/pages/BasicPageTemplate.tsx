@@ -28,10 +28,15 @@ export default function PageTemplate({ children }: Props)
 {
     return<>
         <div className="PageEntry">
+          
           <div className="BackgroundImage">
           <HeaderBar/>
-          <div className="PageContent">{children}<FooterBar/></div>
+          <div className="PageContent">{children}
+            </div>
+            
           </div>
+          <FooterBar/>
         </div>
+        
         </>
 }
