@@ -5,23 +5,28 @@ import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Dragon Ball FighterZ KAI"
-const introductionDetails = "January 2024 \n DOOM 2016 SnapMap"
-const introduction = "Descent Into HELLForge was a level I made as a short 2 week experiment in creating dynamic subencounters. Encounter design across different games is a notoriously touchy subject matter. Each game has a different mechanical context that must be accounted for. Even different balancing schemes within the same system set will have wildly different results on how encounters plays out."
+const introductionDetails = "November 2019 - June 2020 \n Modding DBFZ"
+const introduction = "A 1v1 variant mod for the immensely popular fighting game Dragon Ball FighterZ. DBFZ:KAI spawned from equal parts my frustration and love of the original game. At the time, I was particularly disillusioned with the balance state of several characters, and started writing up some quick ideas regarding how changes could make them both more enjoyable and balanced in the base roster. Eventually, this morphed into full-fledged system overhaul for every character and in-depth changes to all their mechanics."
 
 // const roles = "Level Design"
 
 
-const paragraph1 = "For Descent into HELLForge, the first thing I did was re-familiarize myself with the game’s mechanics from a player perspective to better equate myself with the original design space of the game. Some major things I noted down:\nMelee is the least desired form of combat.\nVarious weapons affect engagement range with every type of demon\nMovement while attacking is paramount (kiting, circle strafing, and looping around terrain)\nCover is useful but temporary; demons flush out defensive points"
-const header1= "Dynamic Sub Encounters"
-const paragraph2 = "A thematic motif I used throughout this process was constructing encounters as gestalt such that individual encounter elements could be experienced in multiple ways. These subencounters are experienced in multiple unique ways dependent on player prioritization and temperment. Subencounters are blocked out to provide recontextualization to a given level piece without creating overly complex level geometry. Below are some example encounters that made the best usage of this principal."
+const paragraph1 = "After liberal research into the game’s code and study of older Arc System Works games, I found BlazBlue Script. BBScript was a proprietary scripting language for designers to modify character abilities that Arc System Works had been using for every game(including DBFZ) since the original BlazBlue Calamity Trigger. I developed my own program to modify the BBScript to be writable in Python, making it possible to modify any character in Dragon Ball Fighter Z. \n\nBelow is an in-development look at several of the changes coming together to alter the combo structure of Goku:"
+const header1= "Design Constraints"
+const paragraph2 = "Kai was developed with clear design goals and limitations due to the limitations of my BBScript modification, and my own scope constraints:\n> No Teammate Actions: Assists or Tagging\n> All Characters must function on offense & defense without Teammate Actions \n> No New Animation Frames\n\nThe lack of new animation frames and removing assists necessitated adding affordances to character actions without fundamentally altering them, and adding new baseline mechanics to not remove depth from the original game. Without assists, many characters lost fundamental ways of creating openings in the opponent, or lost the ability to control space reliably.\n\nWithout the ability to create new animation frames, I could not create new character actions ex-nihilo; every new action or altered action had to be derived from other moves that already were present. This creates its own problems, as character normal & special attacks in the base game were designed to be significantly larger in order to catch the opponent over larger portions of screen space, and make 'tightening up' the design space rather difficult."
+const challenges= "Challenges for the new ruleset"
 
 
+const header2 = "Solution Through Innovation"
+const paragraph3 = "My Design philosophy for solving the majority of problems was to use multi-faceted solutions; create elementing within the games’ ruleset that solve more than one problem at once. It reduced my own scope overhead, and meant I had to think of novel solutions to bespoke fighting game problems. \n\nBelow are some of the solutions I developed:"
 
-const header2 = "Blobular Encounter Methodology"
-const paragraph3 = "One way I view encounter design is as a series of overlapping and shifting ‘blobs’ of engagement. These blobs can be anything from future movement, line of sight, attack range, or they could be desirable locations, resources, enemies/groups of enemies, or whatever is pertinent to the gameplay. In a way, it’s like a shifting heatmap of players, enemies and gameplay components, all sloshing around in the container that is ‘the level’. \n\nThe use of these blobs is to help recognize how we, as designers, want players to move and think throughout a space. Enemies, particularly melee enemies, push players around the space. Obstacles obstruct movement of both players and enemies, and affect the danger zones of player and enemy weapons. The crucial thing to recognize is that all of these blobs push against each other to varying degrees. It makes understanding the complex, unique nature of every combat encounter from a player easier. To date, I haven't found a game system that this cannot be readily applied to in some capacity, top-down isometric games, third-person-shooters, turn-based RPGs, it works with pretty much everything."
+const header3="Design Results"
+const paragraph4="Kai Cancels ended up being the most fun new aspect to the mod; they revitalized ranged gameplay and provided move character uniqueness by further delineating move functionality for each character, while also greatly expanding the combo space of each character. Now Ki Specials are contextualized with the Normal Specials a character has as well, effectively recontextualizing all Special moves on every character. Several of the players I playtested with commented it should be in the base game.\n\n Faster normals shortened combo duration, blockstrings, and pressure sequences, but didn't change the pace of gameplay where neither player is advantaged. This was an unintended effect, but was not outside of the original design goals, so was not addressed.\n\nRubberband Dashes were recieved strangely, and many players commented on how the entire game felt stranger when they were introduced. The design hypothesis for this is that all of the playtesters were native Dragon Ball FighterZ players, and thus had an inbuilt context for the game. Making changes to the fundamental aspects was outside of their frame of reference, and they were unsure how to factor it into behavioral changes during gameplay. More testing with a purely new fighting game engine would have led to more undiluted results."
 
-const header3 = "Post Mortem"
-const paragraph4 = "While I am overall extremely happy with the outcome of this project(outside of some minor hiccups with the DOOM SnapMap, pretty much everything went to plan), there are some areas that I would like to examine more closely. The map is very 'condensed', and doesn't have much exploration, which I usually like to incorporate into my level design. My prior projects are far more open-ended than anything I got to do with this project. I would like to stretch my pacing structure as far as I possibly can. I know that while this is solid, there's so much more room to improve."
+const header4 = "Post Mortem"
+const paragraph5 = "I ended up having to shelve this project indefinitely. At the time, the modding tools for DBFZ were rudimentary, and I was unwilling to dig into executable hacking to try and further the tools necessary for them. Several of the changes I made to characters in Kai would show up in whole or in part in the game in later seasons. SSJ Vegeta's ability to cancel his Consecutive Ki blasts, as well as the ability to combo into Vegeta Blue's hitgrabs in midair being the most notable examples. I learned a lot about controlling disparate implications of rule changes, and how to better conduct playtests of instrumental games."
+
+
 
 //Player behavior can usually be boiled down to far fewer options because of the circumstances they are put in.
 
@@ -36,7 +41,7 @@ export default function KaiPage()
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p></div>
         </div>
         <div className="ContentImageHolder">
-          <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
+          <img width="100%" height="100%" src="Kai/websitekai.png" />
         </div>
       </section>
 
@@ -47,24 +52,28 @@ export default function KaiPage()
         </div>
       </section>
       <section className="ContentRow">
-        <div className="ContentImageHolder">
-          <img className="ContentImage" src="descent.jpg"/>
-        </div>
+        <video  width="92%" height="90%" src="Kai/kai_showcase.mp4" controls/>
       </section>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header1}</h1><p>{paragraph2}</p></div>
+          <div className="ContentText"><h1>{header1}</h1><p>{paragraph2}</p><h1>{challenges}</h1></div>
         </div>
       </section>
       <section className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
-          <Expandable title="SecuriStation" image="Hellforge/SecuriStation.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
+          <Expandable title="Removing Assists Reduces Possibility Gamestates" text = "Assists in the base game serve a wide variety of purposes and expand the design space of the game in myriad ways. They allowed for both diversity in playstyle and diversity of outcome, as Assists would drastically change in function & effectiveness depending on the situational use."></Expandable>
         </div>
         <div className="ContentExpandableHolder">
-          <Expandable title="Dynamic Duo" image="Hellforge/DynamicDuo.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
+          <Expandable title="Stagnant Ranged Gameplay without Assists" text = "One of the main usages of assists was to control space and prevent opponents from moving, or to disincentivize opponent actions. Without assists, most characters lacked a rich enough ranged gameplan to successfully combat opponents without immediately resorting to melee, as movement was ferociously fast."></Expandable>
         </div>
         <div className="ContentExpandableHolder">
-          <Expandable title="Boiler Room" image="Hellforge/BoilerRoom.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
+          <Expandable title="Lack of Combo Variety" text = "DBFZ had a notorious problem where combos were almost unimportant to gameplay, as situational outcomes were often identical. Any combo worth doing would lead to a knockdown in the corner, with large amounts of positive frame advantage. Often times this also meant that combos were highly monotonous across the cast and reduced player expressiveness."></Expandable>
+        </div>
+        <div className="ContentExpandableHolder">
+          <Expandable title="Lack of Diverse Character Function" text = "Characters were originally designed to be almost interchangeable on purpose. They wanted characters that were easy to pick up and switch between on the fly for new players without causing frustration. This meant that characters needed to have new creative options and niches added to them."></Expandable>
+        </div>
+        <div className="ContentExpandableHolder">
+          <Expandable title="Less Points of Attention on Offense/Defense" text = "Characters at the time were balanced around having assists, meaning their frame data was slower than normal to compensate, and attacks generally had longer periods of downtime to allow for wider openings in a more chaotic space. Reducing the points of attention during gameplay lowered mental effort far too much, and make defense far more powerful."></Expandable>
         </div>
       </section>
       <section className="ContentRow">
@@ -72,20 +81,27 @@ export default function KaiPage()
           <div className="ContentText"><h1>{header2}</h1><p>{paragraph3}</p></div>
         </div>
       </section>
+
+
       <section className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
-          <Expandable title="Stairway Encounter" image="Hellforge/Stairwell.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
+          <Expandable title="Kai Cancels" text = "Every character in the game has a ‘Ki Special’ move alongside their ‘Normal Special’ moves. These usually create unique projectiles or perform unique functions. To solve the character diversity problem, I allowed every character to cancel Normal Special moves while performing Ki Special moves. "></Expandable>
         </div>
         <div className="ContentExpandableHolder">
-          <Expandable title="Hellknight Ambush" image="Hellforge/HellknightAmbush.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
+          <Expandable title="'Rubberband' Dashing" text = "To increase the variety of movement, and improve offensive capabilities further, I implemented a new concept called Rubberband Dashing. In the base game, dashing can be canceled at any time with any Attack button, or by blocking. To amplify this further, characters would now take a short, fast step backwards before moving forward at higher speed with greater momentum, allowing player six unique movement options with a grounded dash instead of the classical two."></Expandable>
         </div>
         <div className="ContentExpandableHolder">
-          <Expandable title="HELLForge Core" image="Hellforge/HellforgeCore.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
+          <Expandable title="Speeding up Nearly Every Move" text = "A simple sounding change, but changing the framedata of every move in the game while keeping them all balanced is no easy feat. Making player actions faster and shorter improves offense and defense at the same time by making choices less committal and more effective, and unintended design effects need to be monitored through rigorous iteration and playtesting."></Expandable>
+        </div>
+      </section>
+        <section className="ContentRow">
+        <div className="ContentTextHolder">
+          <div className="ContentText"><h1>{header3}</h1><p>{paragraph4}</p></div>
         </div>
       </section>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header3}</h1><p>{paragraph4}</p></div>
+          <div className="ContentText"><h1>{header4}</h1><p>{paragraph5}</p></div>
         </div>
       </section>
     </ContentBlock>

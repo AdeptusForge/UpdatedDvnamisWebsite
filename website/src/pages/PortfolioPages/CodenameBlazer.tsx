@@ -34,7 +34,7 @@ export default function BlazerPage()
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p></div>
         </div>
         <div className="ContentImageHolder">
-          <img src="CodenameBlazer/evidencegif.gif" />
+          <img width="100%" height="100%"src="CodenameBlazer/evidencegif.gif" />
         </div>
       </section>
 

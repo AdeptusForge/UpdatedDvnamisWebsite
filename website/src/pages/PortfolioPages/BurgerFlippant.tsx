@@ -36,7 +36,7 @@ export default function BurgerFlippantPage()
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p></div>
         </div>
         <div className="ContentImageHolder">
-          <img src="BurgerFlippant/BurgerFlippant.gif" />
+          <img width="100%" height="100%" src="BurgerFlippant/BurgerFlippant.gif" />
         </div>
       </section>
       <section className="ContentRow">

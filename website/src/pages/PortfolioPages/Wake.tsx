@@ -42,11 +42,11 @@ export default function WakePage()
           <div className="ContentText"><p>{paragraph1}</p></div>
         </div>
       </section>
-      <section className="ContentRow">
+      {/* <section className="ContentRow">
         <div className="ContentImageHolder">
           <img className="ContentImage" src="descent.jpg"/>
         </div>
-      </section>
+      </section> */}
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{header1}</h1><p>{paragraph2}</p><h1>Key Design Pillars</h1></div>
