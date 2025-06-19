@@ -28,7 +28,7 @@ function Expandable({title="",image="", text=""})
   initial={{height:"0px"}}
   animate={{height: isOpen ? "auto" : "0px"}}
   transition={{duration: 0.4}}>
-    <p>{text}</p>
+    <h5>{text}</h5>
   </motion.div>
   </div>
 }

@@ -5,16 +5,14 @@ import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Strike Back"
-const introductionDetails = "January 2024 \n DOOM 2016 SnapMap"
-const introduction = "Descent Into HELLForge was a level I made as a short 2 week experiment in creating dynamic subencounters. Encounter design across different games is a notoriously touchy subject matter. Each game has a different mechanical context that must be accounted for. Even different balancing schemes within the same system set will have wildly different results on how encounters plays out."
+const introductionDetails = "August 2022 - April 2024 \n FOWL Custom Engine (C++)"
+const introduction = "Strike Back is a 2D traditional ground-based fighting game I developed over the course of 8 months with a team of 19 members. I was designated as Technical Lead of the project, and was responsible for engine & tools development, building graphics and animation pipelines, and managing the programming department."
 
 // const roles = "Level Design"
-
 
 const paragraph1 = "For Descent into HELLForge, the first thing I did was re-familiarize myself with the game’s mechanics from a player perspective to better equate myself with the original design space of the game. Some major things I noted down:\nMelee is the least desired form of combat.\nVarious weapons affect engagement range with every type of demon\nMovement while attacking is paramount (kiting, circle strafing, and looping around terrain)\nCover is useful but temporary; demons flush out defensive points"
 const header1= "Dynamic Sub Encounters"
 const paragraph2 = "A thematic motif I used throughout this process was constructing encounters as gestalt such that individual encounter elements could be experienced in multiple ways. These subencounters are experienced in multiple unique ways dependent on player prioritization and temperment. Subencounters are blocked out to provide recontextualization to a given level piece without creating overly complex level geometry. Below are some example encounters that made the best usage of this principal."
-
 
 
 const header2 = "Blobular Encounter Methodology"
@@ -36,7 +34,7 @@ export default function StrikeBackPage()
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p></div>
         </div>
         <div className="ContentImageHolder">
-          <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
+          <embed src="https://www.youtube.com/embed/d7UgyWLVeNI?si=UKlCPoa-Ap5VM4vp" />
         </div>
       </section>
 
