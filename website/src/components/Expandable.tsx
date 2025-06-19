@@ -13,6 +13,7 @@ function Expandable({title="",image="", text=""})
   return <div className="ExpandHolder">
     <motion.button className="ImageButton"
     onClick={() => setIsOpen(!isOpen)}
+    hidden={image==null}
     ><img className="ExpandImage" src={image}></img></motion.button>
   
   <motion.button 
