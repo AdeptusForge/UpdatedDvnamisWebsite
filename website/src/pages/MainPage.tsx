@@ -7,7 +7,7 @@ import Item from '../components/Scroll'
 import '../components/Collapsible.css'
 //import Expandable from '../components/Expandable'
 import HeaderBar from '../components/HeaderBar'
-import FooterBar from '../components/FooterBar'
+// import FooterBar from '../components/FooterBar'
 
 
 function MainPage() {
@@ -18,8 +18,8 @@ function MainPage() {
 
 
     <div className="BackgroundImage">
-    <div className="HeaderCard">
-    </div>
+    {/* <div className="HeaderCard">
+    </div> */}
     <HeaderBar/>
     <div className="PortfolioTable">
       {/* <section className="PortfolioRow">
@@ -49,7 +49,7 @@ function MainPage() {
         <Item title="Under Red Sun Sands" subtitle="Level Design" image="RedSun/redsun.png" destination="red_sun"/>
       </section>
       </div>
-      <FooterBar/>
+      {/* <FooterBar/> */}
       </div>
 
       

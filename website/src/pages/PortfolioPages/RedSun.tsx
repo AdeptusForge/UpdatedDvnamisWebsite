@@ -1,27 +1,27 @@
 import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
-import Expandable from "../../components/Expandable";
-import { LastButton, NextButton } from "../../components/NextLastButton";
+// import Expandable from "../../components/Expandable";
+import { LastButton } from "../../components/NextLastButton";
 
 const title = "Under Red Sun Sands"
-const introductionDetails = "January 2024 \n DOOM 2016 SnapMap"
-const introduction = "Descent Into HELLForge was a level I made as a short 2 week experiment in creating dynamic subencounters. Encounter design across different games is a notoriously touchy subject matter. Each game has a different mechanical context that must be accounted for. Even different balancing schemes within the same system set will have wildly different results on how encounters plays out."
+const introductionDetails = "Unity"
+const introduction = "A quick 10 hour level study in pacing and changing implied contexts.\n\nUnder Red Sun Sands was a Unity level white-boxing project I undertook as part of an analysis of 3D viewpoints and how level geometry needs to be modified based on the angle of player approach. The concept for the level was a desert that has become infested with vile other-worldly growths. These growths were centered around a facility, which the would player enter and traverse downward toward the source of the otherworldly growths. \n\nMy main goal for the project was to come to a better understanding of 3D level structure and improve my creation speed while under strict time constraints. I also wanted to frame the level as being eery and creepy by exercising some of the pacing lessons I had learned in the past."
 
 // const roles = "Level Design"
 
 
-const paragraph1 = "For Descent into HELLForge, the first thing I did was re-familiarize myself with the game’s mechanics from a player perspective to better equate myself with the original design space of the game. Some major things I noted down:\nMelee is the least desired form of combat.\nVarious weapons affect engagement range with every type of demon\nMovement while attacking is paramount (kiting, circle strafing, and looping around terrain)\nCover is useful but temporary; demons flush out defensive points"
-const header1= "Dynamic Sub Encounters"
-const paragraph2 = "A thematic motif I used throughout this process was constructing encounters as gestalt such that individual encounter elements could be experienced in multiple ways. These subencounters are experienced in multiple unique ways dependent on player prioritization and temperment. Subencounters are blocked out to provide recontextualization to a given level piece without creating overly complex level geometry. Below are some example encounters that made the best usage of this principal."
+const paragraph1 = ""
+const header1= ""
+const paragraph2 = "My first attempts saw that I ran into teething troubles with Unity's terrain tool, as I spent a few hours attempting to get a proper grip on making nuanced level geometry with it. The biggest problem I had was with sand dunes; desert dunes are rather complex geometrically speaking, and unity's barebones terrain tool made it difficult to properly model baseline terrain from my early sketches. Design-wise, the choice of a desert also created other problems. Deserts are usually fairly 'even' when it comes to the type of terrain you can get away with. Jutting crags, rocks, and the growths I inserted into the map could be used to block player movement, but they also disturbed the open sightlines I was hoping for on the map."
 
 
 
-const header2 = "Blobular Encounter Methodology"
-const paragraph3 = "One way I view encounter design is as a series of overlapping and shifting ‘blobs’ of engagement. These blobs can be anything from future movement, line of sight, attack range, or they could be desirable locations, resources, enemies/groups of enemies, or whatever is pertinent to the gameplay. In a way, it’s like a shifting heatmap of players, enemies and gameplay components, all sloshing around in the container that is ‘the level’. \n\nThe use of these blobs is to help recognize how we, as designers, want players to move and think throughout a space. Enemies, particularly melee enemies, push players around the space. Obstacles obstruct movement of both players and enemies, and affect the danger zones of player and enemy weapons. The crucial thing to recognize is that all of these blobs push against each other to varying degrees. It makes understanding the complex, unique nature of every combat encounter from a player easier. To date, I haven't found a game system that this cannot be readily applied to in some capacity, top-down isometric games, third-person-shooters, turn-based RPGs, it works with pretty much everything."
+const header2 = ""
+const paragraph3 = "After a good amount of time spent poking and prodding at the idea several times, I ended up scrapping most of the blocking terrain in favor of the more open version I wanted. Due to the project's time constraints, I couldn't figure out proper solutions to these problems and simply had to make due. I ended up focusing on refining my workflow more and more as the project continued. A big benefit I found was in using static cameras in particularly important locations while I was editing terrain. This way, I could edit terrain in one location while also being sure how it would alter the views other locations in the level."
 
 const header3 = "Post Mortem"
-const paragraph4 = "While I am overall extremely happy with the outcome of this project(outside of some minor hiccups with the DOOM SnapMap, pretty much everything went to plan), there are some areas that I would like to examine more closely. The map is very 'condensed', and doesn't have much exploration, which I usually like to incorporate into my level design. My prior projects are far more open-ended than anything I got to do with this project. I would like to stretch my pacing structure as far as I possibly can. I know that while this is solid, there's so much more room to improve."
+const paragraph4 = "Overall this project was a good experiment for the time I had, but in future I think I would develop the concept *after* trying to learn the tools available. The facility itself was also far less polished than I would have liked, and player guidance there is too linear for my tastes."
 
 //Player behavior can usually be boiled down to far fewer options because of the circumstances they are put in.
 
@@ -36,19 +36,12 @@ export default function RedSunPage()
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p></div>
         </div>
         <div className="ContentImageHolder">
-          <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
-        </div>
-      </section>
-
-      
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><p>{paragraph1}</p></div>
+          <img width="100%" height="100%"src="RedSun/redsun.png" />
         </div>
       </section>
       <section className="ContentRow">
         <div className="ContentImageHolder">
-          <img className="ContentImage" src="descent.jpg"/>
+          <img className="ContentImage"width="100%" height="100%" src="RedSun/desert.jpg"/>
         </div>
       </section>
       <section className="ContentRow">
@@ -56,15 +49,9 @@ export default function RedSunPage()
           <div className="ContentText"><h1>{header1}</h1><p>{paragraph2}</p></div>
         </div>
       </section>
-      <section className="ContentExpandableRow">
-        <div className="ContentExpandableHolder">
-          <Expandable title="SecuriStation" image="Hellforge/SecuriStation.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
-        </div>
-        <div className="ContentExpandableHolder">
-          <Expandable title="Dynamic Duo" image="Hellforge/DynamicDuo.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
-        </div>
-        <div className="ContentExpandableHolder">
-          <Expandable title="Boiler Room" image="Hellforge/BoilerRoom.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
+      <section className="ContentRow">
+        <div className="ContentTextHolder">
+          <div className="ContentText"><p>{paragraph1}</p></div>
         </div>
       </section>
       <section className="ContentRow">
@@ -72,17 +59,12 @@ export default function RedSunPage()
           <div className="ContentText"><h1>{header2}</h1><p>{paragraph3}</p></div>
         </div>
       </section>
-      <section className="ContentExpandableRow">
-        <div className="ContentExpandableHolder">
-          <Expandable title="Stairway Encounter" image="Hellforge/Stairwell.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
-        </div>
-        <div className="ContentExpandableHolder">
-          <Expandable title="Hellknight Ambush" image="Hellforge/HellknightAmbush.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
-        </div>
-        <div className="ContentExpandableHolder">
-          <Expandable title="HELLForge Core" image="Hellforge/HellforgeCore.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
+      <section className="ContentRow">
+        <div className="ContentImageHolder">
+          <img className="ContentImage" src="RedSun/dome.png"/>
         </div>
       </section>
+
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{header3}</h1><p>{paragraph4}</p></div>

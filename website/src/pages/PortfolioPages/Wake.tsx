@@ -68,17 +68,6 @@ export default function WakePage()
           <div className="ContentText"><h1>{header2}</h1><p>{paragraph3}</p></div>
         </div>
       </section>
-      <section className="ContentExpandableRow">
-        <div className="ContentExpandableHolder">
-          <Expandable title="Stairway Encounter" image="Hellforge/Stairwell.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
-        </div>
-        <div className="ContentExpandableHolder">
-          <Expandable title="Hellknight Ambush" image="Hellforge/HellknightAmbush.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
-        </div>
-        <div className="ContentExpandableHolder">
-          <Expandable title="HELLForge Core" image="Hellforge/HellforgeCore.jpg" text = "As the player finishes with the Dynamic Duo, they’ll have to come back around the corner and down the stairs to progress. When they reach the bottom, two unknown demons spawn directly in front of them. These are two Hellknights(Group A), a dangerous foe in such tight confines. 6 Zombie Soldiers are also spawned in; 3 directly behind the player at the top of the stairs(Group B) and 3 more around the corner out of sight(Group C)."></Expandable>
-        </div>
-      </section>
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h2>{header3}</h2><p>{paragraph4}</p></div>

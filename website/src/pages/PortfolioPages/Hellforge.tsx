@@ -48,7 +48,7 @@ export default function HellforgePage()
       </section>
       <section className="ContentRow">
         <div className="ContentImageHolder">
-          <img className="ContentImage" src="descent.jpg"/>
+          <img className="ContentImage" src="Hellforge/descent.jpg"/>
         </div>
       </section>
       <section className="ContentRow">

@@ -1,7 +1,7 @@
 import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
-import Expandable from "../../components/Expandable";
+// import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Burger Flippant"
@@ -13,7 +13,7 @@ const introduction = "Burger Flippant was a physics-based arcade cooking simulat
 
 const paragraph1 = "The main system I designed for the game was the cooking mechanics. Ingredients needed to gradually cook while in contact with the grill, needed to be physically manipulatable, and needed to visually show how cooked they were. To this end, my thinking was that simplest way to handle this was to subdivide ingredients. Every ingredient would be composed of 'Physics Nodes'; box colliders connected by physics joints of differing elasticity. This allowed objects to react somewhat realistically while still being overexaggerated and cartoony. \n\nTo solve the cooking problem, I subdivided them again, and made 'transfer nodes'. These Transfer nodes, similar to Physics Nodes, were connected game objects (albeit not physically), and would recieve heat from the grill and store it as an integer. Every node would transfer heat to its designated neighbors at different, modifiable rates. Increased heat in each node would change the nodes' color and alter its elasticity and physical properties, as well as a 'done-ness' stat, which was used in calculating the final meal's score. Reaching certain objective scores would grant the player new ingredients and another goal to reach. Done-ness thresholds also allowed each ingredient to have unique behavior: \n\n> Lettuce would turn black and char\n> Meat would eventually burst into flames\n> Spices would release flavor particles"
 const header1= "Implementation"
-const paragraph2 = ""
+// const paragraph2 = ""
 
 
 

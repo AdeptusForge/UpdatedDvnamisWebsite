@@ -1,7 +1,7 @@
 import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
-import Expandable from "../../components/Expandable";
+// import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "CODENAME: Blazer"
