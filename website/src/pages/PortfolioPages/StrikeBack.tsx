@@ -15,7 +15,6 @@ const paragraph1 = ""
 const header1= "Building a Game (Engine)"
 const paragraph2 = "Together, we constructed the engine from scratch using OpenGL. My main concerns were with architecture, simulating the games internal physics, and with rendering capabilities. Having already made a 3D rendering engine in the past, the vast majority of problems were simple to solve, having the benefits of hindsight.\n\nAside from the purely technical aspects of development, leading so many people was a unique experience for me. Given that the engine development was setting the pace for most other tasks, segmenting tasks for other programmers based on our planned future tasks became crucial. Continually maintaining and discussing our project timelines made sure there were rarely blockers for other team members."
 
-
 const header2 = "The Grand 'Animation Machine'"
 const paragraph3 = "The heart and soul of any fighting game is its animation system; how it works, what it can do, and how easy it is to work with. Designers working on fighting games need the ability to almost instantly change character movesets, as fighting games are highly iterative. There is also a need for an extremely rigorous system: professional-grade fighting games should have nearly non-existent or invisible bugs.\n\nThis leads naturally to a conundrum where giving designers behavior editing access can cause a codebase to rapidly become unmanageable, as every time a character changes, potential bugs are introduced.\n\nThe solution is what I dubbed the Animation Machine: a full JSON-based scripting language that is interpretted into a list of sequential AnimationFrames. Our custom engine then uses these AnimationFrames to construct animations during runtime using preset draw calls and event triggers.\n\nThis system provides several uniquely powerful benefits:\n\n> Human readable animation files for easy debugging\n> Ability to reuse animation frames from anywhere on the disk\n> Streamlines designer iteration multiple times while staying in the engine\n> Allows artistic iteration without needing to request re-animation from the art department"
 
@@ -26,6 +25,11 @@ const paragraph4 = "The project goal being relatively inflexible technically spe
 export default function StrikeBackPage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | Strike Back</title>
+  </head>
   <PageTemplate>
     <LastButton buttonText="LAST" destination="wake"/><NextButton buttonText="NEXT" destination="descent_into_hellforge"/>
     <ContentBlock>

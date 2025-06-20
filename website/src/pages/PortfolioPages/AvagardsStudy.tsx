@@ -27,6 +27,11 @@ const paragraph4 = "Unfortunately I didn’t get the time to finish the resoluti
 export default function AvagardsStudyPage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | Avagard's Study</title>
+  </head>
   <PageTemplate>
     <LastButton buttonText="LAST" destination="omegatech"/><NextButton buttonText="NEXT" destination="red_sun"/>
     <ContentBlock>

@@ -26,6 +26,11 @@ const header1= "Post Mortem"
 export default function OmegaTechPage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | OmegaTech</title>
+  </head>
   <PageTemplate>
     <LastButton buttonText="LAST" destination="dbfz_kai"/><NextButton buttonText="NEXT" destination="avagards_study"/>
     <ContentBlock>

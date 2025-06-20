@@ -21,6 +21,11 @@ const text="A gamer for as long as he can remember, known better online as DVNAM
 function AboutPage()
 {
   return <>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | About</title>
+  </head>
   <PageTemplate>
       <ContentBlock>
         <section className="ContentRow">

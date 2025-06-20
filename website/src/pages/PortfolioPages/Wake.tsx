@@ -24,6 +24,11 @@ const paragraph4 = "As a way of better fleshing out the ‘Diving Suit’ aspect
 export default function WakePage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | WAKE</title>
+  </head>
   <PageTemplate>
     <NextButton buttonText="NEXT" destination="strike_back"/>
     <ContentBlock>

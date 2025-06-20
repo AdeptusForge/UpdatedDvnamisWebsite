@@ -28,6 +28,11 @@ const paragraph4 = "Overall this project was a good experiment for the time I ha
 export default function RedSunPage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | Under Red Sun Sands</title>
+  </head>
   <PageTemplate>
     <LastButton buttonText="LAST" destination="avagards_study"/>
     <ContentBlock>

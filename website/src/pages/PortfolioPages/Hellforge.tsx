@@ -28,6 +28,11 @@ const paragraph4 = "While I am overall extremely happy with the outcome of this 
 export default function HellforgePage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | Descent into HELLForge</title>
+  </head>
   <PageTemplate>
     <LastButton buttonText="LAST" destination="strike_back"/><NextButton buttonText="NEXT" destination="codename_blazer"/>
     <ContentBlock>

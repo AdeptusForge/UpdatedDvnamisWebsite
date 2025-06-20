@@ -26,6 +26,11 @@ const paragraph4 = "As can be inferred from the fact CODENAME:BLAZER hadn't revo
 export default function BlazerPage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | CODENAME: Blazer</title>
+  </head>
   <PageTemplate>
     <LastButton buttonText="LAST" destination="descent_into_hellforge"/><NextButton buttonText="NEXT" destination="burger_flippant"/>
     <ContentBlock>

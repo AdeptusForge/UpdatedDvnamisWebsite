@@ -33,6 +33,11 @@ const paragraph5 = "I ended up having to shelve this project indefinitely. At th
 export default function KaiPage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | DBFZ: Kai</title>
+  </head>
   <PageTemplate>
     <LastButton buttonText="LAST" destination="burger_flippant"/><NextButton buttonText="NEXT" destination="omegatech"/>
     <ContentBlock>

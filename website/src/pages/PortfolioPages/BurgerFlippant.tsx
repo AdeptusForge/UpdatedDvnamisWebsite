@@ -28,6 +28,11 @@ const paragraph4 = ""
 export default function BurgerFlippantPage()
 {
   return<>
+  <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DVNAMIS | Burger Flippant</title>
+  </head>
   <PageTemplate>
     <LastButton buttonText="LAST" destination="codename_blazer"/><NextButton buttonText="NEXT" destination="dbfz_kai"/>
     <ContentBlock>
