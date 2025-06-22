@@ -11,7 +11,7 @@ const introduction = "Descent Into HELLForge was a level I made as a short 2 wee
 // const roles = "Level Design"
 
 
-const paragraph1 = "For Descent into HELLForge, the first thing I did was re-familiarize myself with the game’s mechanics from a player perspective to better equate myself with the original design space of the game. Some major things I noted down:\nMelee is the least desired form of combat.\nVarious weapons affect engagement range with every type of demon\nMovement while attacking is paramount (kiting, circle strafing, and looping around terrain)\nCover is useful but temporary; demons flush out defensive points"
+const paragraph1 = "For Descent into HELLForge, the first thing I did was re-familiarize myself with the game’s mechanics from a player perspective to better equate myself with the original design space of the game. Some major things I noted down:\n\n> Melee is the least desired form of combat.\n> Various weapons affect engagement range with every type of demon\n> Movement while attacking is paramount (kiting, circle strafing, and looping around terrain)\n> Cover is useful but temporary; demons flush out defensive points"
 const header1= "Dynamic Sub Encounters"
 const paragraph2 = "A thematic motif I used throughout this process was constructing encounters as gestalt such that individual encounter elements could be experienced in multiple ways. These subencounters are experienced in multiple unique ways dependent on player prioritization and temperment. Subencounters are blocked out to provide recontextualization to a given level piece without creating overly complex level geometry. Below are some example encounters that made the best usage of this principal."
 

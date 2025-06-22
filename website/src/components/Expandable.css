@@ -74,4 +74,6 @@ h5
   font-size: 16px;
   text-wrap: wrap;
   font-weight:400;
+  padding-left:25px;
+  padding-right:25px;
 }
