@@ -33,7 +33,9 @@ function ScrollToTop() {
 function App()
 {
   return (
+
     <Router>
+
       <ScrollToTop/>
       <Routes>
         <Route path="/" element= {<MainPage/>}/>
