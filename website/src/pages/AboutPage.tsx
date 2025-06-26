@@ -16,7 +16,9 @@ function ContentBlock({ children }: Props)
 }
 
 
-const text="A gamer for as long as he can remember, known better online as DVNAMIS. A game builder, designer, and modder with several successful projects. Grew up in Texas, moved to Washington, and still trying to figure out the rest. Has worked on a wide variety of projects over the last 10 years, including building game engines, writing shaders for artists, and fine-tuning combat systems. Actively trying to make something truly unique. Started in Unity, gradually moved to Unreal and landed on GODOT just recently. Die-hard indie developer, but currently on hiatus because of the necessities of applying for higher-tier game development positions. Two-time college graduate: Tarrant County Community College & (shortly) Digipen Institute of Technology-having Bachelor’s simply opened too many doors to ignore. If you need someone with extensive multidisciplinary experience and deep knowledge on animation systems & level construction, feel free to email me at: dvnamis@protonmail.com"
+const text="A gamer for as long as he can remember, known better online as DVNAMIS. A game builder, designer, and modder with several successful projects. Grew up in Texas, moved to Washington, and still trying to figure out the rest. Has worked on a wide variety of projects over the last 10 years, including building game engines, writing shaders for artists, and fine-tuning combat systems. Actively trying to make something truly unique. Started in Unity, gradually moved to Unreal and landed on GODOT just recently. Die-hard indie developer, but currently on hiatus because of the necessities of applying for higher-tier game development positions. Two-time college graduate: Tarrant County Community College & (shortly) Digipen Institute of Technology-having Bachelor’s simply opened too many doors to ignore. If you need someone with extensive multidisciplinary experience and deep knowledge on animation systems & level construction, feel free to email me at: \n\ndvnamis@protonmail.com"
+
+
 
 function AboutPage()
 {
@@ -34,10 +36,11 @@ function AboutPage()
               About Me
             </h1>
             <h2>
-              This is a long long long line of text about me
+              Gameplay Designer & Engineer
             </h2>
             <p>
               {text}
+              
             </p>
             </div></div>
           <div className="ContentImageHolder"><img className="ContentImage" src="self_portrait.png"/></div>
