@@ -23,6 +23,7 @@ export default function HeaderLogoCard({})
       </motion.button>
       <motion.button 
       className="CentralButton"
+      onClick={() => window.open("#/about","_self")}
       >
         steffen simmons
       </motion.button>
