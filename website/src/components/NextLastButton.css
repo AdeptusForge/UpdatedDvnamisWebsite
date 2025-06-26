@@ -29,6 +29,7 @@
   background-color: rgba(255, 255, 255, 0.349);
   border-width: 0;
   z-index: 20;
+  text-shadow: 0px 0px transparent;
 }
 
 .LastButtonText
@@ -62,7 +63,7 @@
 .LastButtonGraphic
 {
   background-color: rgba(255, 255, 255, 0);
-  background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15),  rgba(0, 0, 0, 1));
+  background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.6),  rgba(0, 0, 0, 1));
   clip-path: polygon(50% 15%, 50% 35%, 100% 35%, 100% 65%, 50% 65%, 50% 85%, 0% 50%);
   width:100%;
   height:70px;
@@ -76,7 +77,7 @@
 .NextButtonGraphic
 {
   background-color: rgba(255, 255, 255, 0);
-  background-image: linear-gradient(-90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.000));
+  background-image: linear-gradient(-90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0));
   clip-path: polygon(0 35%, 50% 35%, 50% 15%, 100% 50%, 50% 85%, 50% 65%, 0 65%);
   width:100%;
   height:70px;
