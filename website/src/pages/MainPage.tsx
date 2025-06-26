@@ -23,7 +23,7 @@ function MainPage() {
     </head>
 
     <div className="BackgroundImage">
-    {/* <HeaderLogoCard/> */}
+    <HeaderLogoCard/>
     <HeaderBar/>
     <div className="PortfolioTable">
       {/* <section className="PortfolioRow">

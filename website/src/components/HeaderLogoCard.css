@@ -1,7 +1,7 @@
 .HeaderCard
 {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   background-color: white;
   z-index: 100;
   display:flex;
@@ -18,13 +18,12 @@ button:hover
 {
 filter:blur(0px);
 border-color:transparent;
-color:rgb(0, 179, 0);
 transition: 0.4s;
 }
 
 .LogoHolder
 {
-  padding-top:10vh;
+  margin-top:4vh;
   width:100%;
 }
 
@@ -35,9 +34,15 @@ transition: 0.4s;
   border-radius:0px;
   padding:0px;
   height:fit-content;
-  font-size: 70px;
+  font-size: 80px;
   font-family: Conforto TRIAL;
   letter-spacing: -3px;
+}
+
+.CentralButton:hover
+{
+  transition: 0.4s;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.4), 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .UpperButton
@@ -47,10 +52,32 @@ transition: 0.4s;
   width:100%;
   border-radius:0px;
   padding:0px;
-  height:50px;
+  height:100px;
   font-size: 70px;
   font-family: Conforto TRIAL;
   letter-spacing: -3px;
+}
+.UpperButtonText
+{
+  background-color: white;
+  width:100%;
+  border-radius:0px;
+  padding:0px;
+  font-size: 70px;
+  height:100px;
+  position:relative;
+  font-family: Conforto TRIAL;
+  letter-spacing: -3px;
+  top:50px;
+  transition: 0.4s;
+}
+
+.UpperButtonText:hover
+{
+  filter:blur(0px);
+  border-color:transparent;
+  top:11px;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.4), 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .LowerButton
@@ -60,8 +87,29 @@ transition: 0.4s;
   width:100%;
   border-radius:0px;
   padding:0px;
-  height:50px;
+  height:100px;
   font-size: 70px;
   font-family: Conforto TRIAL;
   letter-spacing: -3px;
+}
+
+.LowerButtonText
+{
+  background-color: white;
+  width:100%;
+  border-radius:0px;
+  padding:0px;
+  font-size: 70px;
+  height:fit-content;
+  position:relative;
+  top:-50px;
+  transition: 0.4s;
+}
+
+.LowerButtonText:hover
+{
+  filter:blur(0px);
+  border-color:transparent;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.4), 8px 8px rgba(0, 0, 0, 0.2);
+  top:-11px;
 }
