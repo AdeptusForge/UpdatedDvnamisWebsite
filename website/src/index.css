@@ -70,7 +70,7 @@ button:focus-visible {
 
 .BackgroundImage
 {
-  background-image: url("/WebsiteBackground9_albedo.png");
+  background-image: url("/Backgrounds/WebsiteBackground16_albedo.png");
   background-color: rgb(214, 214, 214);
   z-index: 10;
   position:absolute;

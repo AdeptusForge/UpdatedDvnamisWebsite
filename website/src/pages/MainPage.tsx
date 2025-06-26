@@ -8,6 +8,7 @@ import '../components/Collapsible.css'
 //import Expandable from '../components/Expandable'
 import HeaderBar from '../components/HeaderBar'
 // import FooterBar from '../components/FooterBar'
+import HeaderLogoCard from '../components/HeaderLogoCard'
 
 
 function MainPage() {
@@ -22,8 +23,7 @@ function MainPage() {
     </head>
 
     <div className="BackgroundImage">
-    {/* <div className="HeaderCard">
-    </div> */}
+    {/* <HeaderLogoCard/> */}
     <HeaderBar/>
     <div className="PortfolioTable">
       {/* <section className="PortfolioRow">

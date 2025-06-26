@@ -46,8 +46,8 @@
   width:100%;
   height:100%;
   padding-top: 16px;
-  margin-left:64px;
-  margin-right:64px;
+  margin-left:96px;
+  margin-right:96px;
 
 }
 .ContentText
@@ -63,7 +63,10 @@
 {
   width:100%;
   height:100%;
-  margin: 64px;
+  margin: 96px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+
 }
 
 .ContentImage
