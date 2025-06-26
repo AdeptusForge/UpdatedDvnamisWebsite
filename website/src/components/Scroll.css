@@ -67,8 +67,6 @@
 .PortfolioSubtitle
 {
   font-size: 50%;
-  height: 25px;
-  width:500px;
   color:rgb(240, 240, 240);
   text-align: left;
   text-indent: 10;
@@ -76,4 +74,6 @@
   font-family: Next Art;
   z-index:20;
   bottom:0px;
+  text-wrap: balance;
+  padding-bottom:5px;
 }
