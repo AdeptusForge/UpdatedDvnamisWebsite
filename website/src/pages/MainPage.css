@@ -106,14 +106,6 @@
   position: relative;
 }
 
-.HeaderCard
-{
-  width: 100%;
-  height: 28vh;
-  background-color: white;
-  z-index: 100;
-}
-
 .pdfobject-container
 {
   height: 500px; 
