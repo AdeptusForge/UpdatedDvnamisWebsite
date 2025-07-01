@@ -1,18 +1,18 @@
 import './Expandable.css'
 import { motion } from "framer-motion";
-import { useState, useEffect } from 'react';
-import { useLocation } from "react-router-dom";
+import { useState } from 'react';
+//import { useLocation } from "react-router-dom";
 
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
+// function ScrollToTop() {
+//   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
 
-  return null;
-}
+//   return null;
+// }
 
 
 function ButtonText (open:boolean)

@@ -59,7 +59,8 @@ export default function KaiPage()
       <section className="ContentRow">
         <video  width="92%" height="90%" src="Kai/kai_showcase.mp4" controls/>
       </section>
-      <TextOnlySection header = {header2} paragraph={challenges}/>
+      <TextOnlySection header = {header1} paragraph={paragraph2}/>
+      <TextOnlySection header = {challenges} paragraph={''}/>
       <section className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
           <Expandable title="Removing Assists Reduces Possibility Gamestates" text = "Assists in the base game serve a wide variety of purposes and expand the design space of the game in myriad ways. They allowed for both diversity in playstyle and diversity of outcome, as Assists would drastically change in function & effectiveness depending on the situational use."></Expandable>
