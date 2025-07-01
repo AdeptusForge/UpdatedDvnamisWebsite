@@ -1,5 +1,5 @@
 import PageTemplate from "../BasicPageTemplate";
-import { ContentBlock } from "../BasicPageTemplate";
+import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
 import { NextButton } from "../../components/NextLastButton";
@@ -34,7 +34,7 @@ export default function WakePage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p><Expandable title="My Responsibilities" text={responsibilities}></Expandable></div>
+          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/><Expandable title="My Responsibilities" text={responsibilities}></Expandable></div>
         </div>
         <div className="ContentImageHolder">
           <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
@@ -44,7 +44,7 @@ export default function WakePage()
       
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><p>{paragraph1}</p></div>
+          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
         </div>
       </section>
       {/* <section className="ContentRow">
@@ -54,7 +54,7 @@ export default function WakePage()
       </section> */}
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header1}</h1><p>{paragraph2}</p><h1>Key Design Pillars</h1></div>
+          <div className="ContentText"><h1>{header1}</h1><p dangerouslySetInnerHTML={{__html: paragraph2}}/><h1>Key Design Pillars</h1></div>
         </div>
       </section>
       <section className="ContentExpandableRow">
@@ -68,16 +68,8 @@ export default function WakePage()
           <Expandable title="Keep the Game an Unsolved Problem" text = "If players feel they have found the optimal option in a given situation, they are less likely to experiment. Create weapons that have dedicated situation, but give them purpose outside of their primary combat context to encourage exploration of the combat sandbox. Force players to think ahead and plan actions out a few seconds in advance to keep themselves alive."></Expandable>
         </div>
       </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header2}</h1><p>{paragraph3}</p></div>
-        </div>
-      </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h2>{header3}</h2><p>{paragraph4}</p></div>
-        </div>
-      </section>
+      <TextOnlySection header = {header2} paragraph={paragraph3}/>
+      <TextOnlySection header = {header3} paragraph={paragraph4}/>
     </ContentBlock>
   </PageTemplate>
   </>

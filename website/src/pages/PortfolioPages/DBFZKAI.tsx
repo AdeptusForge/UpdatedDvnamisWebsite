@@ -1,5 +1,5 @@
 import PageTemplate from "../BasicPageTemplate";
-import { ContentBlock } from "../BasicPageTemplate";
+import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
@@ -43,7 +43,7 @@ export default function KaiPage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p></div>
+          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%" src="Kai/websitekai.png" />
@@ -53,17 +53,13 @@ export default function KaiPage()
       
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><p>{paragraph1}</p></div>
+          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
         </div>
       </section>
       <section className="ContentRow">
         <video  width="92%" height="90%" src="Kai/kai_showcase.mp4" controls/>
       </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header1}</h1><p>{paragraph2}</p><h1>{challenges}</h1></div>
-        </div>
-      </section>
+      <TextOnlySection header = {header2} paragraph={challenges}/>
       <section className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
           <Expandable title="Removing Assists Reduces Possibility Gamestates" text = "Assists in the base game serve a wide variety of purposes and expand the design space of the game in myriad ways. They allowed for both diversity in playstyle and diversity of outcome, as Assists would drastically change in function & effectiveness depending on the situational use."></Expandable>
@@ -81,13 +77,7 @@ export default function KaiPage()
           <Expandable title="Less Points of Attention on Offense/Defense" text = "Characters at the time were balanced around having assists, meaning their frame data was slower than normal to compensate, and attacks generally had longer periods of downtime to allow for wider openings in a more chaotic space. Reducing the points of attention during gameplay lowered mental effort far too much, and make defense far more powerful."></Expandable>
         </div>
       </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header2}</h1><p>{paragraph3}</p></div>
-        </div>
-      </section>
-
-
+      <TextOnlySection header = {header2} paragraph={paragraph3}/>
       <section className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
           <Expandable title="Kai Cancels" text = "Every character in the game has a ‘Ki Special’ move alongside their ‘Normal Special’ moves. These usually create unique projectiles or perform unique functions. To solve the character diversity problem, I allowed every character to cancel Normal Special moves while performing Ki Special moves. "></Expandable>
@@ -99,16 +89,8 @@ export default function KaiPage()
           <Expandable title="Speeding up Nearly Every Move" text = "A simple sounding change, but changing the framedata of every move in the game while keeping them all balanced is no easy feat. Making player actions faster and shorter improves offense and defense at the same time by making choices less committal and more effective, and unintended design effects need to be monitored through rigorous iteration and playtesting."></Expandable>
         </div>
       </section>
-        <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header3}</h1><p>{paragraph4}</p></div>
-        </div>
-      </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header4}</h1><p>{paragraph5}</p></div>
-        </div>
-      </section>
+      <TextOnlySection header = {header3} paragraph={paragraph4}/>
+      <TextOnlySection header = {header4} paragraph={paragraph5}/>
     </ContentBlock>
   </PageTemplate>
   </>

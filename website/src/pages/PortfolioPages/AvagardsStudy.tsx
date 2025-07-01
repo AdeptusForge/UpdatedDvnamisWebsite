@@ -1,5 +1,5 @@
 import PageTemplate from "../BasicPageTemplate";
-import { ContentBlock } from "../BasicPageTemplate";
+import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 // import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
@@ -37,7 +37,7 @@ export default function AvagardsStudyPage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p></div>
+          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%" src="AvagardsStudy/LevelDesignProject.png" />
@@ -47,27 +47,19 @@ export default function AvagardsStudyPage()
       
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><p>{paragraph1}</p></div>
+          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
         </div>
       </section>
+      <TextOnlySection header={header1} paragraph={paragraph2}/>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header1}</h1><p>{paragraph2}</p></div>
-        </div>
-      </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header2}</h1><p>{paragraph3}</p></div>
+          <div className="ContentText"><h1>{header2}</h1><p dangerouslySetInnerHTML={{__html: paragraph3}}/></div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%" src="AvagardsStudy/stairsgif.gif" />
         </div>
       </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header3}</h1><p>{paragraph4}</p></div>
-        </div>
-      </section>
+      <TextOnlySection header={header3} paragraph={paragraph4}/>
     </ContentBlock>
   </PageTemplate>
   </>

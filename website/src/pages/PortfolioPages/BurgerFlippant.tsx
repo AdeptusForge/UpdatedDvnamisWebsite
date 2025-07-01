@@ -1,5 +1,5 @@
 import PageTemplate from "../BasicPageTemplate";
-import { ContentBlock } from "../BasicPageTemplate";
+import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 // import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
@@ -38,27 +38,15 @@ export default function BurgerFlippantPage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p>{introduction}</p></div>
+          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%" src="BurgerFlippant/BurgerFlippant.gif" />
         </div>
       </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header1}</h1><p>{paragraph1}</p></div>
-        </div>
-      </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header2}</h1><p>{paragraph3}</p></div>
-        </div>
-      </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header3}</h1><p>{paragraph4}</p></div>
-        </div>
-      </section>
+      <TextOnlySection header = {header1} paragraph={paragraph1}/>
+      <TextOnlySection header = {header2} paragraph={paragraph3}/>
+      <TextOnlySection header = {header3} paragraph={paragraph4}/>
     </ContentBlock>
   </PageTemplate>
   </>

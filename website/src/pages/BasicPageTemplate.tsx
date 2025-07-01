@@ -22,6 +22,18 @@ export function FullVideoBlock()
   </>
 }
 
+export function TextOnlySection({header='', paragraph=''})
+{
+  return <>
+      <section className="ContentRow">
+        <div className="ContentTextHolder">
+          <div className="ContentText"><h1>{header}</h1><p dangerouslySetInnerHTML={{__html: paragraph}}/></div>
+        </div>
+      </section>
+  </>
+}
+
+
 //const pages = ["WAKE", "Strike Back", "HELLFORGE", "Codename: BLAZER", "Burger Flippant", "DBFZ: KAI", "Omegatech", "Avagard's Study", "Under Red Sun Sands"]
 
 export default function PageTemplate({ children }: Props)
