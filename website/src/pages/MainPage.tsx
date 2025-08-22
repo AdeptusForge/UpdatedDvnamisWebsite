@@ -60,7 +60,7 @@ function MainPage() {
       </div>
       </BrowserView>
       <MobileView>
-      <div>Mobile Viewing is not currently available on this website. Please use a desktop environment to view this website until Mobile Viewing has been implemented. Thank You!</div>
+      <div className="MobileText">Mobile Viewing is not currently available on this website. Please use a desktop environment to view this website until Mobile Viewing has been implemented. Thank You!</div>
       <img className="buttonImage" src={DVNAMIS_BLACK}/>
 
       </MobileView>

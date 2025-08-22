@@ -117,3 +117,9 @@
   height:100vh;
   pointer-events: none;
 }
+
+.MobileText
+{
+  padding: 20px;
+  color: black;
+}
