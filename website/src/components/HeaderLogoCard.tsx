@@ -14,7 +14,7 @@ export default function HeaderLogoCard({})
       initial={{color:"black"}}
       animate={{color:"black"}}
       style={{
-        textIndent:"400px"}}
+        textIndent:"43vh"}}
       className="UpperButton"
       >
         <motion.div className="UpperButtonText">
@@ -29,7 +29,7 @@ export default function HeaderLogoCard({})
       </motion.button>
       <motion.button 
       style={{
-        textIndent:"-275px"}}
+        textIndent:"-30vh"}}
       className="LowerButton"
       >
         <motion.div className="LowerButtonText">

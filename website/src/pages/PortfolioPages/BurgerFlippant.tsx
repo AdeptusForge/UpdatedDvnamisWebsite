@@ -5,7 +5,7 @@ import '../BasicPageTemplate.css'
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Burger Flippant"
-const introductionDetails = "July 2015 \n Unity"
+const introductionDetails = "July 2015 \n Unity Engine"
 const introduction = 'Burger Flippant was a physics-based arcade cooking \
 simulator I developed as part of a 2 week Game-Jam with a friend of mine. \
 Our goal was to finish the entire game in those 2 weeks, with my friend \

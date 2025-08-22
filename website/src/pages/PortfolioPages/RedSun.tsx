@@ -5,7 +5,7 @@ import '../BasicPageTemplate.css'
 import { LastButton } from "../../components/NextLastButton";
 
 const title = "Under Red Sun Sands"
-const introductionDetails = "Unity"
+const introductionDetails = "Unity Engine"
 const introduction = 'A quick 10 hour level study in pacing and \
 changing implied contexts.\
 \n\n\
@@ -19,7 +19,7 @@ the source of the otherworldly growths. \
 \n\n\
 My main goal for the \project was to come to a better understanding of \
 3D level structure and improve my creation speed while under strict \
-time constraints. I also wanted to frame the level as being eery and \
+time constraints. I also wanted to frame the level as being eerie and \
 creepy by exercising some of the pacing lessons I had learned in the \
 past.'
 

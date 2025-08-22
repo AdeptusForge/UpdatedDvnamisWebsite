@@ -5,7 +5,7 @@ import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Omegatech: Aspen's Story"
-const introductionDetails = "May 2016 - March 2017 \nMegaworld Studios\nUnity"
+const introductionDetails = "May 2016 - March 2017 \nMegaworld Studios\nUnity Engine"
 const introduction = 'Omegatech: Aspen’s Story was my first taste of \
 professional game development after being picked up on the Unity forums. \
 It was the first work I was paid to do, and subsequently my first game \

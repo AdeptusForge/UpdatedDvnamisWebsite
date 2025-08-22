@@ -5,7 +5,7 @@ import '../BasicPageTemplate.css'
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Avagard's Study"
-const introductionDetails = "January 20th, 2024 - February 12th, 2024 \n Unity"
+const introductionDetails = "January 20th, 2024 - February 12th, 2024 \n Unity Engine"
 const introduction = 'Avagard\'s Study is a level designed for a \
 predefined 3rd person controller that experiments with architectural \
 framing and sightlines.\n\n\

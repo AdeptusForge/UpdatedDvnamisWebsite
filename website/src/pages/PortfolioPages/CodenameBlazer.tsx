@@ -5,7 +5,7 @@ import '../BasicPageTemplate.css'
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "CODENAME: Blazer"
-const introductionDetails = "May 2015 - May 2018 \n Unity"
+const introductionDetails = "May 2015 - May 2018 \n Unity Engine"
 const introduction = 'Built as my first large solo project, CODENAME:Blazer \
 was a side-scrolling rogue-lite with a large overarching narrative. I worked \
 on the project while working on a number of other Unity projects.'
