@@ -9,7 +9,8 @@ import '../components/Collapsible.css'
 import HeaderBar from '../components/HeaderBar'
 // import FooterBar from '../components/FooterBar'
 import HeaderLogoCard from '../components/HeaderLogoCard'
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import { BrowserView, MobileView} from 'react-device-detect';
+import DVNAMIS_BLACK from '/DVNAMIS-Logo-Black.svg'
 
 
 function MainPage() {
@@ -59,7 +60,9 @@ function MainPage() {
       </div>
       </BrowserView>
       <MobileView>
-      <div>Mobile Viewing is not currently available on this website. Please use a desktop environment to view this website until Mobile Viewing has been implemented. Thank You! -DVNAMIS</div>
+      <div>Mobile Viewing is not currently available on this website. Please use a desktop environment to view this website until Mobile Viewing has been implemented. Thank You!</div>
+      <img className="buttonImage" src={DVNAMIS_BLACK}/>
+
       </MobileView>
 
       

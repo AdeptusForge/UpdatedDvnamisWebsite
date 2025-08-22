@@ -80,7 +80,7 @@ export default function WakePage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
+          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/><Expandable title="My Responsibilities" text={responsibilities}></Expandable></div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%" src="Wake/WAKE_gif.gif" />
