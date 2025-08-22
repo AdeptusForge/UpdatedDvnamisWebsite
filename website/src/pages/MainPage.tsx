@@ -9,6 +9,7 @@ import '../components/Collapsible.css'
 import HeaderBar from '../components/HeaderBar'
 // import FooterBar from '../components/FooterBar'
 import HeaderLogoCard from '../components/HeaderLogoCard'
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 
 function MainPage() {
@@ -16,6 +17,7 @@ function MainPage() {
 
   return (
     <>
+    <BrowserView>
     <head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,6 +57,10 @@ function MainPage() {
       </div>
       {/* <FooterBar/> */}
       </div>
+      </BrowserView>
+      <MobileView>
+      <div>Mobile Viewing is not currently available on this website. Please use a desktop environment to view this website until Mobile Viewing has been implemented. Thank You! -DVNAMIS</div>
+      </MobileView>
 
       
       

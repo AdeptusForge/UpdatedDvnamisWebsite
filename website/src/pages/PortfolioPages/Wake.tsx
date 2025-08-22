@@ -30,7 +30,7 @@ the point where major storytelling devices were inaccessible due to their \
 programming constraints.\
 \n\n\
 Without more nuanced narrative and gameplay tools, I decided it best to \
-focus my and my other designer’s efforts wholly on the battle \
+focus my and my other designer\’s efforts wholly on the battle \
 mechanics/dynamics. To make up for the missing design nuance, \
 I made efforts to allow players to interact with the world by using combat \
 mechanics in non-offensive ways as I built the core tenants of the game’s \
@@ -51,10 +51,10 @@ was most optimal for a situation.'
 
 const header3 = "Gas System"
 const paragraph4 = 'As a way of better fleshing out the \‘Diving Suit\’ \
-aspects of the player, I created a ‘gas system’. Essentially, the player \
+aspects of the player, I created a \‘gas system\’. Essentially, the player \
 had access to multiple empty tanks filled with various gases that they \
 could switch between. These gases could be spent in discrete amounts for \
-templated player abilities, with the gas used altering the abilities’ effects. \
+templated player abilities, with the gas used altering the abilities\’ effects. \
 \n\n\
 Example: You could throw out a canister filled with oxygen the would explode \
 after a given time or when shot, or you could throw a canister out with burning \
@@ -80,10 +80,10 @@ export default function WakePage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/><Expandable title="My Responsibilities" text={responsibilities}></Expandable></div>
+          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
         </div>
         <div className="ContentImageHolder">
-          <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
+          <img width="100%" height="100%" src="Wake/WAKE_gif.gif" />
         </div>
       </section>
 

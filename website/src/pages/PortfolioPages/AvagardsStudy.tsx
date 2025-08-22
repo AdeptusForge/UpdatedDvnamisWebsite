@@ -8,8 +8,9 @@ const title = "Avagard's Study"
 const introductionDetails = "January 20th, 2024 - February 12th, 2024 \n Unity"
 const introduction = 'Avagard\'s Study is a level designed for a \
 predefined 3rd person controller that experiments with architectural \
-framing and sightlines.\n\nAvagard\’s Study was 3 week level design \
-challenge that I did to try and experiment with changing player \
+framing and sightlines.\n\n\
+Avagard\’s Study was 3 week level design challenge that I did to try \
+and experiment with changing player \
 context. For this, I decided to code a custom portal system in Unity \
 and use ProBuild to save myself time during level construction.'
 
@@ -20,11 +21,13 @@ const paragraph1 = ""
 const header1= "Design Process"
 const paragraph2 = 'I started with a rough level sketch based on several \
 ideas pulled from House of Leaves, Library of Ruina, and Book of Hours. \
-\n\nThe narrative throughline of the level starts with the player entering \
+\n\n\
+The narrative throughline of the level starts with the player entering \
 on a hemmed-in mountain top with a singular path up to an observator with a \
 slightly ajar door. By the angle of the door to the player, they are unable \
 to see inside, which is crucial in hiding the portal to the oversized interior.\
-\n\nThe main motif was the larger than life building with countless rows of \
+\n\n\
+The main motif was the larger than life building with countless rows of \
 books and artifacts. I was playing with older architectural styles as well, \
 relying on art nouveau and néoclassique mainly, with baroque and constructivist \
 elements thrown in to break up the space and make it feel otherworldly. However, \
@@ -44,10 +47,14 @@ gives players unique setpieces at each portion of the stairs, and does a far \
 better job of signposting intent to the player. It also acts as a small UX \
 improvement over normal vertical spiral staircases; it requires less input and \
 reorientation for players to look diagonally along its length without needing \
-take their camera completely off the floor. \n\nEach level section of the stairs \
+take their camera completely off the floor. \
+\n\n\
+Each level section of the stairs \
 opens to a portal of a room in a different architecture style, further implying \
 a grander scope of the occupants of the building while also informing more on \
-the goings on of the day-to-day activities. \n\nAs the player ascends up the \
+the goings on of the day-to-day activities. \
+\n\n\
+As the player ascends up the \
 staircase, the player is slowly given insight into an insidious force that is \
 corrupting the observatory. This climaxes in the final observatory, where the \
 entire area is filled corruption, with all of the dead occupants corpses \
