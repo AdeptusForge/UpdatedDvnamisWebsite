@@ -21,12 +21,18 @@ export default function HeaderLogoCard({})
         designer
         </motion.div>
       </motion.button>
-      <motion.button 
-      className="CentralButton"
-      onClick={() => window.open("#/about","_self")}
-      >
-        steffen simmons
+      <motion.button
+      initial={{color:"black"}}
+      animate={{color:"black"}}
+      className = "CentralButton">
+        <motion.div 
+        className="CentralButtonText"
+        onClick={() => window.open("#/about","_self")}
+        >
+          steffen simmons
+        </motion.div>
       </motion.button>
+      
       <motion.button 
       style={{
         textIndent:"-30vh"}}

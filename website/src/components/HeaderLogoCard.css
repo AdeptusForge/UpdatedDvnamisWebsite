@@ -29,6 +29,18 @@ transition: 0.4s;
 
 .CentralButton
 {
+  overflow: hidden;
+  background-color: transparent;
+  width:100%;
+  border-radius:0px;
+  padding:0px;
+  height:fit-content;
+  font-family: Conforto TRIAL;
+  letter-spacing: -3px;
+}
+
+.CentralButtonText
+{
   background-color: transparent;
   width:100%;
   border-radius:0px;
@@ -37,11 +49,11 @@ transition: 0.4s;
   font-size: 8.70vh;
   font-family: Conforto TRIAL;
   letter-spacing: -3px;
+  transition: 0.4s;
 }
 
 .CentralButton:hover
 {
-  transition: 0.4s;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.4), 8px 8px rgba(0, 0, 0, 0.2);
 }
 
