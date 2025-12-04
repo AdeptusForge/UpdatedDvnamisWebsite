@@ -3,7 +3,6 @@ import './BasicPageTemplate.css'
 import './AboutPage.css'
 import { type ReactNode } from "react";
 //import PortfolioPage from "./BasicPageTemplate";
-import PageTemplate, { TextOnlySection } from "./BasicPageTemplate";
 
 interface Props {
   children?: ReactNode
