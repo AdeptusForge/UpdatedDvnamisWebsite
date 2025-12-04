@@ -1,5 +1,5 @@
 //import HeaderBar from "../components/HeaderBar";
-import './BasicPageTemplate.css'
+import PageTemplate from "../pages/BasicPageTemplate";
 import './AboutPage.css'
 import { type ReactNode } from "react";
 //import PortfolioPage from "./BasicPageTemplate";
