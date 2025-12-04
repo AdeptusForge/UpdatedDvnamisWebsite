@@ -14,6 +14,18 @@ function HeaderButton({buttonText="", destination=""})
   )
 }
 
+function MailerButton({buttonText=""})
+{
+  return (
+    <motion.button
+      onClick={() => window.open("mailto:dvnamis@protonmail.com")}
+      className="HeaderButton">
+      <div className="buttonText" hidden={buttonText==""}><b>{buttonText}</b></div>
+      <div className="buttonSpacer"></div>
+    </motion.button>
+  )
+}
+
 function HeaderLogoButton({buttonText="", image="", destination=""})
 {
   return (
@@ -37,6 +49,6 @@ export default function HeaderBar()
       <HeaderButton buttonText="portfolio"/>
       <HeaderButton buttonText="about" destination="about"/>
       <HeaderButton buttonText="resume" destination="resume"/>
-      <HeaderButton buttonText="contact" destination="contact"/>
+      <MailerButton buttonText="contact"/>
     </div>
 }
