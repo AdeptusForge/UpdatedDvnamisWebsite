@@ -27,6 +27,7 @@ button
 {
   background-color: whitesmoke;
   color: rgb(0, 0, 0);
+  transition: text-shadow 0.4s ease-out;
 }
 
 .HeaderButton.dark
@@ -38,7 +39,8 @@ button
 button:hover
 {
   filter:contrast(50%);
-  text-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.3), 6px 6px rgba(0, 0, 0, 0.2);
+  
 }
 
 .buttonImage

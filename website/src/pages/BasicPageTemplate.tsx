@@ -22,12 +22,12 @@ export function FullVideoBlock()
   </>
 }
 
-export function TextOnlySection({header='', paragraph=''})
+export function TextOnlySection({scrollID='', header='', paragraph=''})
 {
   return <>
-      <section className="ContentRow">
+      <section className="ContentRow"id={scrollID}>
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header}</h1><p dangerouslySetInnerHTML={{__html: paragraph}}/></div>
+          <div className="ContentText"><h1 >{header}</h1><p dangerouslySetInnerHTML={{__html: paragraph}}/></div>
         </div>
       </section>
   </>
@@ -38,6 +38,7 @@ export function TextOnlySection({header='', paragraph=''})
 
 export default function PageTemplate({ children }: Props)
 {
+
     return<>
         <div className="PageEntry">
 

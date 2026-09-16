@@ -3,14 +3,21 @@ import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
-
+import CodeSample  from "../../components/CodeSample";
+function scrollfunc() {
+  const element = document.getElementById("bigbigapple");
+  if(element !== null)
+    element.scrollIntoView();
+}
 const title = "Descent Into HELLForge"
 const introductionDetails = "January 2024 \n DOOM 2016 SnapMap"
 const introduction = 'Descent Into HELLForge was a level I made as a short 2 week experiment \
 in creating dynamic subencounters. Encounter design across different games is a notoriously \
 touchy subject matter. Each game has a different mechanical context that must be accounted for. \
 Even different balancing schemes within the same system set will have wildly different results \
-on how encounters plays out.'
+on how encounters plays out. \
+\n\n\
+'
 
 // const roles = "Level Design"
 
@@ -24,7 +31,7 @@ design space of the game. Some major things I noted down: \
 > Cover is useful but temporary; demons flush out defensive points'
 
 
-const header1= "Dynamic Sub Encounters"
+const header1= "Dynamic Sub Encounters  "
 const paragraph2 = "A thematic motif I used throughout this process was constructing encounters \
 as gestalt such that individual encounter elements could be experienced in multiple ways. These \
 subencounters are experienced in multiple unique ways dependent on player prioritization and \
@@ -41,11 +48,12 @@ range, or they could be desirable locations, resources, enemies/groups of enemie
 is pertinent to the gameplay. In a way, it’s like a shifting heatmap of players, enemies and \
 gameplay components, all sloshing around in the container that is ‘the level’. \n\nThe use of \
 these blobs is to help recognize how we, as designers, want players to move and think throughout \
-a space. Enemies, particularly melee enemies, push players around the space. Obstacles obstruct \
-movement of both players and enemies, and affect the danger zones of player and enemy weapons. The\
- crucial thing to recognize is that all of these blobs work as fluids in a complex combat space, \
- pushing against each other to varying degrees. It makes understanding the complex, unique nature \
- of every combat encounter far simpler and a more universal way of thinking."
+a space.  The crucial thing to recognize is that all of these blobs work as fluids in a complex \
+combat space, pushing against each other to varying degrees.\ Obstacles obstruct \
+movement of both players and enemies, causing them to bounce off & move away. \
+ Enemies, particularly melee enemies, push opposing blobs around. Players eliminate or bounce off of other non-allied blobs. \n\n \
+ The concept makes understanding the complex, unique nature \
+ of every encounter far simpler and provides a more universal way of thinking about the problem of combat."
 
 const header3 = "Post Mortem"
 const paragraph4 = "While I am overall extremely happy with the outcome of this project(outside of \
@@ -53,6 +61,22 @@ some minor hiccups with the DOOM SnapMap), there are some areas that I would lik
 closely. The map is very 'condensed', and doesn't have much exploration through alternate pathways \
 or visual artistry, which I usually like to incorporate into my level design. My prior projects are \
 far more open-ended than anything I got to do with this project."
+
+const block1 = `  
+using system; 
+    void LoremIpsumCode(LoremIpsumVar loremipsum)
+    { 
+        if (loremipsum == null) 
+        { 
+            Print(\"lorem ipsum\"); 
+            return; 
+        } 
+        loremipsum = false; 
+        loremipsum.loremipsum = loremipsum; 
+        loremipsum = false; 
+        loremipsum = false; 
+    }
+        `
 
 //Player behavior can usually be boiled down to far fewer options because of the circumstances they are put in.
 
@@ -65,21 +89,23 @@ export default function HellforgePage()
     <title>| DVNAMIS | Descent into HELLForge</title>
   </head>
   <PageTemplate>
+    
     <LastButton buttonText="LAST" destination="strike_back"/><NextButton buttonText="NEXT" destination="codename_blazer"/>
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
+          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/><CodeSample code={block1}/><a onClick={scrollfunc}>Go to Target Section</a></div>
         </div>
         <div className="ContentImageHolder">
           <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
         </div>
       </section>
-
+  
       
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
+          
         </div>
       </section>
       <section className="ContentRow">
@@ -87,8 +113,8 @@ export default function HellforgePage()
           <img className="ContentImage" src="Hellforge/descent.jpg"/>
         </div>
       </section>
-      <TextOnlySection header={header1} paragraph={paragraph2}/>
-      <section className="ContentExpandableRow">
+      <TextOnlySection  header={header1} paragraph={paragraph2}/>
+      <section  className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
           <Expandable title="SecuriStation" image="Hellforge/SecuriStation.jpg" text = "This simple spread of imps and soldiers acts as an engagement ramp before future encounters with dynamic environmental elements to maintain verisimilitude with the rest of the game world. The available cover lets players modulate the difficulty of this first fight themselves. Aggressive players can charge forward to use the full combat space. Defensive players huddle behind the cover and take opportunistic shots from safety. Tricky players will find the spacing of enemies perfect to engage the infighting mechanics."></Expandable>
         </div>
@@ -98,9 +124,9 @@ export default function HellforgePage()
         <div className="ContentExpandableHolder">
           <Expandable title="Boiler Room" image="Hellforge/BoilerRoom.jpg" text = "This room holds a persistent wave-based fight that extends for quite some time and strains on player resources. At any point during the wave-based encounter in this room, a side-room is present with a Mega Health Sphere to alleviate some tension by replenshing resources. However, when they do so, they put themselves into a confined space. This turns the room into a choice for players thinking ahead, and a difficult subencounter if the player stumbles into it unprepared."></Expandable>
         </div>
-      </section>
-      <TextOnlySection header={header2} paragraph={paragraph3}/>
-      <section className="ContentExpandableRow">
+      </section >
+      <TextOnlySection scrollID="bigbigapple" header={header2} paragraph={paragraph3} />
+      <section  className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
           <Expandable title="Stairway Encounter" image="Hellforge/Stairwell.jpg" text = "This is where Blobular Design is pushed to its most extreme. When the player enters the stairwell the door behind them immediately locks, and two Pinkies spawn far down the staircase with a Cacodemon filling out the airspace. The demons then approach, effectively compressing the player's interaction options to pick from, where they can either kill the pinkies first run down the stairs to make space, or kill the Cacodemon an leap over the pinkies to alleviate combat pressure."></Expandable>
         </div>

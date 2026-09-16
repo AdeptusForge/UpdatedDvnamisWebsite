@@ -1,0 +1,9 @@
+commands to remember:
+npm run dev
+    Runs the website in localhost:5173. Usually visible through the side panel unless something goes SERIOUSLY wrong
+
+npm run build
+    Builds the website. Not imminently useful beyond making sure you aren't deploying broken code.
+
+
+Pushing to the UpdatedWebsite Git Repo will cause the website to update. Make sure to build before doing so.

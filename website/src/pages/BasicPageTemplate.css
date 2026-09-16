@@ -1,9 +1,16 @@
+html
+{
+scroll-behavior:smooth;
+scroll-padding-top: 100px; 
+}
+
 .PageEntry
 {
   width:100%;
   height:auto;
   top:0px;
-  white-space: pre-line
+  white-space: pre-line;
+  scroll-behavior:smooth;
 }
 
 h1

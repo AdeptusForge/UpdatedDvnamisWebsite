@@ -1,0 +1,73 @@
+.CodeSample {
+  white-space: nowrap;
+  width:fit-content;
+  overflow-x: auto;
+  text-align: left;
+  font-family: SFT Schrifted Sans TRIAL;
+  font-size: 14px;
+  text-wrap: wrap;
+  font-weight:600;
+  padding-top:0px;
+  max-width: 50rem;
+  color: rgb(0, 201, 167);
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-width: 2px;
+  border-color: rgb(13,13,13);
+  background-color: rgb(104, 140, 172);
+  background-color:rgb(78, 105, 129)
+}
+
+.code-block {
+  counter-reset: line-numb;
+  display: inline-block;
+  width:fit-content;
+  
+}
+.code-block pre {
+  
+  font-size: 13px;
+  max-width: 42*rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 1px;
+  font-family: monospace;
+  margin: 0px;
+  padding-left: 6.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  white-space: pre;
+  font-weight: 400;
+  border-width: 0px;
+  border-bottom: 1px;
+  border-color: rgb(126, 126, 126);
+  border-style: solid;
+}
+
+.code-block pre::before {
+  counter-increment: line-numb;
+  content: counter(line-numb) " ";
+  text-shadow: none;
+  width: 3em;
+  padding-left: 1.25rem;
+  padding-right: 0.75rem;
+  text-align: right;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  filter: brightness(70%);
+}
+
+.code-block pre:nth-child(odd),
+.code-block pre:nth-child(odd)::before {
+  background-color: rgb(54, 72, 88) !important;
+}
+.code-block pre:nth-child(even),
+.code-block pre:nth-child(even)::before {
+  background-color:rgb(67, 90, 110)  !important;
+}
+.code-block pre:nth-last-child(1),
+.code-block pre:nth-last-child(1)::before {
+  border-width: 0px  !important;
+}

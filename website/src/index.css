@@ -76,9 +76,10 @@ button:focus-visible {
   position:absolute;
   background-repeat: repeat;
   width:100%;
-  height:fit-content;
+  height:137vh-60px;
   margin-top: -60px;
   top:0px;
+  background-size: 100% 100%;
 }
 
 @media (prefers-color-scheme: light) {
