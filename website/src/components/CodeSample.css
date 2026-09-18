@@ -4,11 +4,12 @@
   overflow-x: auto;
   text-align: left;
   font-family: SFT Schrifted Sans TRIAL;
-  font-size: 14px;
+  font-size: 12px;
   text-wrap: wrap;
   font-weight:600;
   padding-top:0px;
   max-width: 50rem;
+  width: 100%;
   color: rgb(0, 201, 167);
   border-radius: 0px;
   border-style: solid;
@@ -27,8 +28,8 @@
 }
 .code-block pre {
   
-  font-size: 13px;
-  max-width: 42*rem;
+  font-size: 12px;
+  max-width: 42*1rem;
   color: rgb(255, 255, 255);
   text-shadow: 0 0 1px;
   font-family: monospace;
@@ -42,15 +43,19 @@
   border-bottom: 1px;
   border-color: rgb(126, 126, 126);
   border-style: solid;
+  padding-top:0px;
+  padding-bottom:0px;
 }
 
 .code-block pre::before {
   counter-increment: line-numb;
   content: counter(line-numb) " ";
   text-shadow: none;
-  width: 3em;
+  width: 2.5em;
   padding-left: 1.25rem;
   padding-right: 0.75rem;
+
+
   text-align: right;
   position: absolute;
   display: inline-block;

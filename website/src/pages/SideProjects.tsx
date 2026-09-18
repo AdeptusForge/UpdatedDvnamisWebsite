@@ -2,28 +2,58 @@
 import './MainPage.css'
 
 import '../components/Collapsible.css'
-
+import { motion } from "framer-motion";
 import PageTemplate from "./BasicPageTemplate";
-import { ContentBlock, TextOnlySection } from "./BasicPageTemplate";
+import { ContentBlock } from "./BasicPageTemplate";
 import './BasicPageTemplate.css'
-import { LastButton, NextButton } from "../components/NextLastButton";
+
 import { type ReactNode } from "react";
 import './SideProjects.css'
+import CodeSample from '../components/CodeSample';
 
 interface Props {
   children?: ReactNode
 }
 
-function scrollfunc() {
-  const element = document.getElementById("bigbigapple");
+function scrollfunc(value="") {
+  const element = document.getElementById(value);
   if(element !== null)
     element.scrollIntoView();
 }
 
+function ScrollerButton({titleID=""})
+{
+  return <motion.button className="ScrollerButton" onClick={() => scrollfunc(titleID)}>{titleID}</motion.button>
+}
 
 
 const title = "SIDE PROJECTS"
 const loremipsum = "lorem ipsum dolor sit amet consectetur adipiscing elit aliqua cupiditate omnis cillum corrupti elit minim at autem in est deserunt harum sit ducimus mollitia consequatur consequat officia officia corrupti sint officia et fugiat nulla consequat ipsum officia ad voluptas at lorem in qui molestias vel quis et dolor nulla aute do officia ut fugiat soluta eiusmod distinctio est deserunt quis quod nam voluptatum accusamus dolore ut ad est in cupidatat animi pariatur eu id repellendus similique quidem praesentium nobis similique ut occaecat et duis odio repellendus dignissimos qui officia distinctio cum fugiat at eos illum cumque repellendus autem dolore dolorum irure tempore qui id qui fugiat omnis dolores et atque ducimus in dolor molestias et cum et qui magna qui nulla soluta voluptas minus libero deserunt in iusto provident enim iusto voluptas omnis occaecat qui dolorum facilis cillum culpa officia ut occaecat nam ipsum aute commodo excepturi quo quis animi mollitia laborum quos deserunt voluptate et exercitation praesentium corrupti consequat dolor provident laboris veniam sunt lorem ipsum dolor sit amet consectetur adipiscing elit aliqua cupiditate omnis cillum corrupti elit minim at autem in est deserunt harum sit ducimus mollitia consequatur consequat officia officia corrupti sint officia et fugiat nulla consequat ipsum officia ad voluptas at lorem in qui molestias vel quis et dolor nulla aute do officia ut fugiat soluta eiusmod distinctio est deserunt quis quod nam voluptatum accusamus dolore ut ad est in cupidatat animi pariatur eu id repellendus similique quidem praesentium nobis similique ut occaecat et duis odio repellendus dignissimos qui officia distinctio cum fugiat at eos illum cumque repellendus autem dolore dolorum irure tempore qui id qui fugiat omnis dolores et atque ducimus in dolor molestias et cum et qui magna qui nulla soluta voluptas minus libero deserunt in iusto provident enim iusto voluptas omnis occaecat qui dolorum facilis cillum culpa officia ut occaecat nam ipsum aute commodo excepturi quo quis animi mollitia laborum quos deserunt voluptate et exercitation praesentium corrupti consequat dolor provident laboris veniam sunt"
+
+const triplanarP = 'Since I level design a lot, a while back I figured the best thing I could do was to make my life easier. \
+\n\
+While I generally don\'t have the time to make my levels look as snazzy as they deserve, I found there were ways to get more from less. This Triplanar & Stochastic Texture makes it very easy to add visual variety to large scenes without needing to spend undue time.'
+
+const triplanar_code = `  
+using system; 
+    void LoremIpsumCode(LoremIpsumVar loremipsum)
+    { 
+        if (loremipsum == null) 
+        { 
+            Print(\"lorem ipsum\"); 
+            return; 
+        } 
+        loremipsum = false; 
+        loremipsum.loremipsum = loremipsum; 
+        loremipsum = false; 
+        loremipsum = false; 
+              loremipsum = false; 
+          loremipsum = false; 
+        loremipsum = false; 
+
+    }
+        `
+
 
 
 
@@ -52,24 +82,42 @@ function SideProjects() {
       <ContentBlock>
         <section className="ContentRow">
           <div className="ContentTextHolder">
-            <div className="ContentText"><h1>{title}</h1><h2>Select below:</h2><a onClick={scrollfunc}>Click here</a></div>
+            <div className="ContentText"><h1>{title}</h1>
+            <h2>Select below:</h2>
+            <ScrollerButton titleID="Triplanar / Stochastic Texture"/>
+            <ScrollerButton titleID="HK-47 Modeling"/>
+            </div>
           </div>
           <SideProjectScroller>
             <div>
               <section className="ContentRow">
-                <div className="ScrollerTextHolder">
-                  {loremipsum}
+                <div className="ScrollerTextHolder"id='Triplanar / Stochastic Texture'>
+                  <div className="ScrollHeader">Triplanar Stochastic Material</div>
+                  {triplanarP}
+                  <div className='TextSpacer'/>
+                  <CodeSample code={triplanar_code}/>
                 </div>
                 <div className="ScrollerTextHolder">
                   {loremipsum}
                 </div>
               </section>
-              {loremipsum}{loremipsum}
+              <section className='ContentSpacer'/>
+              <section className="ContentRow">
+                <div className="ScrollerTextHolder"id='HK-47 Modeling'>
+                  <div className="ScrollHeader">3D Modeling HK-47</div>
+                  {triplanarP}
+                  <CodeSample code={triplanar_code}/>
+                </div>
+                <div className="ScrollerTextHolder">
+                  {loremipsum}
+                </div>
+              </section>
               <section className="ContentRow">
                 <div className="ScrollerTextHolder">
                   {loremipsum}
                 </div>
-                <div className="ScrollerTextHolder"id='bigbigapple'>
+                <div className="ScrollerTextHolder" id='Stochastic Texture'>
+                  
                   {loremipsum}
                 </div>
               </section>

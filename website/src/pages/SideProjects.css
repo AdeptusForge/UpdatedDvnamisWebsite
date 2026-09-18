@@ -1,8 +1,7 @@
 .ProjectScrollerBox
 {
   padding-left:2%;
-
-  max-width:45%;
+  max-width:60%;
     margin:auto;
   background-color:whitesmoke;
   border-width: 0px;
@@ -15,8 +14,8 @@
 .ProjectScroller{
   height: 100%;
   padding-right:2%;
-  max-height: 65vh;
-  min-height: 65vh;
+  max-height: 70vh;
+  min-height: 70vh;
     mask-image: 
     linear-gradient(to bottom, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%),
     linear-gradient(to left, black 15px, transparent 15px);
@@ -33,4 +32,37 @@
   display:flex;
   width: 100%;
   position:relative;
+}
+.ScrollerButton
+{
+
+}
+.ScrollerTextHolder
+{
+  max-width: 60%;
+  padding-top:20px;
+  padding-left:20px;
+  text-align: left;
+}
+.ScrollHeader
+{
+  line-height: 1.1;
+  text-align: left;
+  font-family: SFT Schrifted Sans TRIAL;
+  font-size: 30px;
+  text-wrap: wrap;
+  margin-right:20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  color: rgb(7, 7, 7);
+  font-weight:bold;
+}
+.ContentSpacer
+{
+  padding-top:3rem;
+}
+.TextSpacer
+{
+  min-height:1.3rem;
 }

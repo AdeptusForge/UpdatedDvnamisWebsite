@@ -2,7 +2,7 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
-import ContentPicker from "../../components/ContentPicker";
+//import ContentPicker from "../../components/ContentPicker";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 import CodeSample  from "../../components/CodeSample";
 function scrollfunc() {
