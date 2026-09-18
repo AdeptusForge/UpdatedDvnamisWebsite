@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import MainPage from './pages/MainPage.tsx'
+import SideProjects from './pages/SideProjects.tsx'
 import Page from './pages/BasicPageTemplate.tsx'
 import ResumePage from './pages/ResumePage.tsx'
 import AboutPage from './pages/AboutPage.tsx'
@@ -39,6 +40,7 @@ function App()
       <ScrollToTop/>
       <Routes>
         <Route path="/" element= {<MainPage/>}/>
+        <Route path="/side-projects" element= {<SideProjects/>}/>
         <Route path="/about" element= {<AboutPage/>}/>
         <Route path="/resume" element= {<ResumePage/>}/>
         <Route path="/contact" element= {<Page/>}/>

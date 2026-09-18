@@ -47,6 +47,7 @@ export default function HeaderBar()
   return <div className="HeaderBar" id="myHeader">
       <HeaderLogoButton buttonText="" image={DVNAMIS_BLACK}/>
       <HeaderButton buttonText="portfolio"/>
+      <HeaderButton buttonText="side projects" destination="side-projects"/>
       <HeaderButton buttonText="about" destination="about"/>
       <HeaderButton buttonText="resume" destination="resume"/>
       <MailerButton buttonText="contact"/>

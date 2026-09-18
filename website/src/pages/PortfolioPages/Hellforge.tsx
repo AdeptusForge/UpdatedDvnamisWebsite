@@ -2,6 +2,7 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
+import ContentPicker from "../../components/ContentPicker";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 import CodeSample  from "../../components/CodeSample";
 function scrollfunc() {
@@ -75,6 +76,10 @@ using system;
         loremipsum.loremipsum = loremipsum; 
         loremipsum = false; 
         loremipsum = false; 
+              loremipsum = false; 
+          loremipsum = false; 
+        loremipsum = false; 
+
     }
         `
 
@@ -126,6 +131,9 @@ export default function HellforgePage()
         </div>
       </section >
       <TextOnlySection scrollID="bigbigapple" header={header2} paragraph={paragraph3} />
+      {/* <section  className="ContentExpandableRow">
+        <ContentPicker titles={["test1","test2"] as string[]}/>
+      </section> */}
       <section  className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
           <Expandable title="Stairway Encounter" image="Hellforge/Stairwell.jpg" text = "This is where Blobular Design is pushed to its most extreme. When the player enters the stairwell the door behind them immediately locks, and two Pinkies spawn far down the staircase with a Cacodemon filling out the airspace. The demons then approach, effectively compressing the player's interaction options to pick from, where they can either kill the pinkies first run down the stairs to make space, or kill the Cacodemon an leap over the pinkies to alleviate combat pressure."></Expandable>

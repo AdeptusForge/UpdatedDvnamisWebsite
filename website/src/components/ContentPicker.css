@@ -1,0 +1,27 @@
+.ContentPickButton
+{
+  border-radius: 0px;
+  margin: 0px;
+  margin-top:-6px;
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-left: 0px;
+  padding-right: 0px;
+  pointer-events: all;
+  width:100%;
+  top:0px;
+  text-align:center;
+  font-family: SFT Schrifted Sans TRIAL;
+  font-size: 24px;
+  text-wrap: wrap;
+}
+.ContentPickButton:hover
+{
+  border-color: transparent;
+  border-radius: 0px;
+}
+.ContentPickButton:focus
+{
+  border-color: transparent;
+  border-radius: 0px;
+}
