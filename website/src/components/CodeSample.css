@@ -17,14 +17,20 @@
   border-bottom-width: 2px;
   border-color: rgb(13,13,13);
   background-color: rgb(104, 140, 172);
-  background-color:rgb(78, 105, 129)
+  background-color:rgb(78, 105, 129);
+  transition: filter 0.2s ease-out;
+}
+.CodeSample:hover
+{
+    filter:contrast(160%);
+    transition:0.2s
 }
 
 .code-block {
   counter-reset: line-numb;
   display: inline-block;
+  min-width:100%;
   width:fit-content;
-  
 }
 .code-block pre {
   
@@ -53,9 +59,6 @@
   text-shadow: none;
   width: 2.5em;
   padding-left: 1.25rem;
-  padding-right: 0.75rem;
-
-
   text-align: right;
   position: absolute;
   display: inline-block;
@@ -76,3 +79,4 @@
 .code-block pre:nth-last-child(1)::before {
   border-width: 0px  !important;
 }
+

@@ -23,7 +23,7 @@ function scrollfunc(value="") {
 
 function ScrollerButton({titleID=""})
 {
-  return <motion.button className="ScrollerButton" onClick={() => scrollfunc(titleID)}>{titleID}</motion.button>
+  return <motion.button className="ScrollerButton" onClick={() => scrollfunc(titleID)}>▪ {titleID}</motion.button>
 }
 
 
@@ -50,13 +50,45 @@ using system;
               loremipsum = false; 
           loremipsum = false; 
         loremipsum = false; 
-
+ 
     }
         `
 
+const HK47P = "As part of the Kipper Project I'm working on presently, \
+I found the need to learn 3D modeling/rigging/UVing to understand the exact process from a non-programmatic or design perspective.\n\
+Kept some various progress shots of the experimentation process and the results of ~9 hours of work so far.\n\
+I'll eventually return to the project to fix the topology & finish UV mapping."
 
+const action_channels = "While working on some school projects, I was required to build an ActionList system to coordinate simultaneous UI. \
+The system I was required to build back then was rudimentary at best, and had obvious avenues for improvement.\n\
+The biggest change to the formula was to allow multiple actions to influence the same value at the same time by using additive channels.\
+It functions by sampling a curve based on the difference between its current state & past state. A standard ActionList system didn't allow desynced or parallel actions on the same variable, only sequencial. \n\
+I didn't realize until I dropped the project much later that I had reverse engineered a sort of linear interpolation from base principles."
+const channels_code =`  
+using system; 
+    protected float CurveChange()
+    {
+        float timeDivisor = Time.deltaTime / duration;
+        float currentDurDivisor = currentDuration / duration;
+        float val;
+        if (reversed == false) 
+            val = (curve.Evaluate(currentDurDivisor) - curve.Evaluate((currentDurDivisor - timeDivisor)));
+            
+        else
+            val = (curve.Evaluate(currentDurDivisor) - curve.Evaluate((currentDuration + timeDivisor)));
+        
+        return val;
+    }
+        `
 
-
+const alamut_level ="Back in 2025, I was particularly enamored by the art of Mike Franchina, particularly his work on/with Trench Crusade. \
+I latched onto the story of Alamut, an assassin's mystic castle defended for centuries through secrecy, deception, and guile. The castle itself \
+was based around Turkish & Middle Eastern fortresses, and shared a name with the real life Alamut fortress in. \n\
+Still, I did plan out a large number of the interior & exterior structure, with significant amounts of creative liberty taken. \
+I had a large amount of room to flex creative muscles; an assassin's castle can have any number of secret passage ways, tricks, \
+traps and alternative pathways to traverse through for the enterprising or perceptive player.\n\
+I bit off significantly more than I could chew with this one, and never got beyond the planning stages, as I realized that without \
+mechanics to back it up, the level would serve no purpose, and have limited interactivity."
 
 function SideProjectScroller({ children }: Props)
 {
@@ -86,6 +118,8 @@ function SideProjects() {
             <h2>Select below:</h2>
             <ScrollerButton titleID="Triplanar / Stochastic Texture"/>
             <ScrollerButton titleID="HK-47 Modeling"/>
+            <ScrollerButton titleID="Additive Action Channels"/>
+            <ScrollerButton titleID="ALAMUT Fortress"/>
             </div>
           </div>
           <SideProjectScroller>
@@ -104,14 +138,33 @@ function SideProjects() {
               <section className='ContentSpacer'/>
               <section className="ContentRow">
                 <div className="ScrollerTextHolder"id='HK-47 Modeling'>
-                  <div className="ScrollHeader">3D Modeling HK-47</div>
-                  {triplanarP}
-                  <CodeSample code={triplanar_code}/>
+                  <div className="ScrollHeader">3D Modeling HK-47</div> {HK47P} 
                 </div>
                 <div className="ScrollerTextHolder">
                   {loremipsum}
                 </div>
               </section>
+              <section className="ContentRow">
+                <div className="ScrollerTextHolder"id='Additive Action Channels'>
+                  <div className="ScrollHeader">Additive 'ActionChannels'</div> {action_channels}
+                  <div className='TextSpacer'/>
+                  <CodeSample code={channels_code}/>
+                </div>
+                <div className="ScrollerTextHolder">
+                  {loremipsum}
+                </div>
+              </section>
+              <section className="ContentRow">
+                <div className="ScrollerTextHolder"id='ALAMUT Fortress'>
+                  <div className="ScrollHeader">Alamut Fortress Level</div>
+                  {alamut_level}
+                  <div className='TextSpacer'/>
+                </div>
+                <div className="ScrollerTextHolder">
+                  {loremipsum}
+                </div>
+              </section>
+
               <section className="ContentRow">
                 <div className="ScrollerTextHolder">
                   {loremipsum}
