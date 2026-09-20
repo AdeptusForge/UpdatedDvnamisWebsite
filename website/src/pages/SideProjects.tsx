@@ -146,6 +146,7 @@ function SideProjects() {
                     <div className="TestSlide1">stuff here</div>
                     <div className="TestSlide2">stuff here</div>
                     <div className="TestSlide3">stuff here</div>
+                    <div className="TestSlide3">stuff here</div>
                   </Carousel>
                 </div>
               </section>

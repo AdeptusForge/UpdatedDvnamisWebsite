@@ -1,8 +1,6 @@
 import "./Carousel.css";
 import * as motion from "motion/react-client"
-import { type ReactNode, useState, useEffect } from "react";
-
-
+import { type ReactNode, useEffect, Children} from "react";
 
 interface Props {
   carouselID: string
@@ -23,43 +21,14 @@ function CurrentSlidePosition(carouselID = "")
 }
 
 
-// function ScrollCarousel(carouselID = "", forward=false)
-// {
-//   const target = document.getElementById(carouselID)
-//   if(target !== null)
-//     {
-//       const scrollamount = target?.scrollWidth / target?.children.length
-//       const offsetScroll = scrollamount - target.scrollLeft;
-//       var finalAmount = scrollamount;
-//       if(offsetScroll % scrollamount != 0)
-//         {
-//           if(forward)
-//             finalAmount = scrollamount + offsetScroll
-//           else
-//             finalAmount = scrollamount - offsetScroll
-//         }
-//       if(forward)
-//         target.scrollBy(finalAmount, 0);
-//       else
-//         target.scrollBy(-finalAmount, 0);
-//     }
-// }
-
-function CarouselFix({carouselID=""})
-{
-  const target = document.getElementById(carouselID)
-}
-
 function ScrollCarouselTo(carouselID = "", slideNum = 0)
 {
   const target = document.getElementById(carouselID)
   if(target != null)
   {
-    const pos = CurrentSlidePosition();
     const scrollamount = target?.scrollWidth / target?.children.length
     target.scrollTo(slideNum * scrollamount, 0);
   }
-
 }
 
 function NextButton({carouselID=""})
@@ -99,7 +68,11 @@ function Carousel({carouselID, children, widthSet}:Props) {
       clearTimeout(timeoutId);
     }
     })
-
+    const progressButtons: ReactNode[] = [];
+    Children.forEach(children, (child, index) => {
+    progressButtons.push(<ProgressButton carouselID={carouselID} slideNum={index}/>);
+      
+  });
   return (
     <div className="CarouselBox" style={{width: widthSet}}>
       <div className="Carousel" id={carouselID}>
@@ -111,9 +84,7 @@ function Carousel({carouselID, children, widthSet}:Props) {
           <NextButton carouselID={carouselID}></NextButton>
         </div>
         <div className="ProgressHolder">
-          <ProgressButton carouselID={carouselID} slideNum={0}/>
-          <ProgressButton carouselID={carouselID} slideNum={1}/>
-          <ProgressButton carouselID={carouselID} slideNum={2}/>
+          {progressButtons}
         </div>
     </div>
     )
