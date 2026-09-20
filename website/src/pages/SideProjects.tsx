@@ -1,11 +1,12 @@
 
 import './MainPage.css'
-
 import '../components/Collapsible.css'
 import { motion } from "framer-motion";
 import PageTemplate from "./BasicPageTemplate";
 import { ContentBlock } from "./BasicPageTemplate";
 import './BasicPageTemplate.css'
+import Carousel from '../components/Carousel'
+
 
 import { type ReactNode } from "react";
 import './SideProjects.css'
@@ -56,7 +57,7 @@ using system;
 
 const HK47P = "As part of the Kipper Project I'm working on presently, \
 I found the need to learn 3D modeling/rigging/UVing to understand the exact process from a non-programmatic or design perspective.\n\
-Kept some various progress shots of the experimentation process and the results of ~9 hours of work so far.\n\
+Kept some various progress shots of the experimentation process and the results of ~90 hours of work so far.\n\
 I'll eventually return to the project to fix the topology & finish UV mapping."
 
 const action_channels = "While working on some school projects, I was required to build an ActionList system to coordinate simultaneous UI. \
@@ -140,8 +141,12 @@ function SideProjects() {
                 <div className="ScrollerTextHolder"id='HK-47 Modeling'>
                   <div className="ScrollHeader">3D Modeling HK-47</div> {HK47P} 
                 </div>
-                <div className="ScrollerTextHolder">
-                  {loremipsum}
+                <div className="ScrollerCarouselHolder">
+                    <Carousel carouselID="HKCarousel" widthSet="100%">
+                    <div className="TestSlide1">stuff here</div>
+                    <div className="TestSlide2">stuff here</div>
+                    <div className="TestSlide3">stuff here</div>
+                  </Carousel>
                 </div>
               </section>
               <section className="ContentRow">

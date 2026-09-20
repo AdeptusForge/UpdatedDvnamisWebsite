@@ -106,7 +106,11 @@ export default function HellforgePage()
         </div>
       </section>
 
-      <Carousel carouselID="testcarousel"/>
+      <Carousel carouselID="carouselID" widthSet="800px">
+        <div className="TestSlide1">stuff here</div>
+        <div className="TestSlide2">stuff here</div>
+        <div className="TestSlide3">stuff here</div>
+      </Carousel>
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>

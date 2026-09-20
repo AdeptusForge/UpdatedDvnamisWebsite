@@ -1,8 +1,7 @@
 .CarouselBox
 {
-  width:1000px;
   height:400px;
-  
+  width: round(nearest, 100%, 1px);
 }
 .Carousel
 {
@@ -22,6 +21,8 @@
   top:-100%;
   left:0%;
 }
+
+
 .CarouselButton
 {
   color:black;
@@ -41,6 +42,31 @@
   background-color: rgba(0, 0, 0, 0.1);
   filter:contrast(300%);
   text-shadow: 3px 3px rgba(0, 0, 0, 0.3), 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ProgressHolder
+{
+  width:100%;
+  display: inline-flex;
+  position:relative;
+  top:-120%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.005);
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+.ProgressButton
+{
+  border-radius: 0px;
+  color:black;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.ProgressButton:hover
+{
+  
 }
 .buttonSpacer
 {
