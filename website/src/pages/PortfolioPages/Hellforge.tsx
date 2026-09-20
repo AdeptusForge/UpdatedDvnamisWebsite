@@ -2,9 +2,9 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
-//import ContentPicker from "../../components/ContentPicker";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 import CodeSample  from "../../components/CodeSample";
+import Carousel from "../../components/Carousel";
 function scrollfunc() {
   const element = document.getElementById("bigbigapple");
   if(element !== null)
@@ -105,8 +105,8 @@ export default function HellforgePage()
           <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
         </div>
       </section>
-  
-      
+
+      <Carousel carouselID="testcarousel"/>
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
