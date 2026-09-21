@@ -1,6 +1,6 @@
 .TabFader
 {
-
+  width:100%;
 }
 .TabsHolder
 {
@@ -15,6 +15,7 @@ justify-content: center;
 .TabContentHolder
 {
   color:black;
+  display:flex;
 }
 
 .TestSlide1
@@ -22,16 +23,19 @@ justify-content: center;
   width:fit-content;
   min-width: 100%;
   background-color: green;
+  position:relative;
 }
 .TestSlide2
 {
   width:fit-content;
   min-width: 100%;
   background-color: red;
+  position:relative;
 }
 .TestSlide3
 {
   width:fit-content;
   min-width: 100%;
   background-color: yellow;
+  position:relative;
 }

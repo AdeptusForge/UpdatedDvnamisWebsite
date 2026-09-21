@@ -9,7 +9,7 @@ interface Props {
 }
 
 
-function TabFader({faderID, children}:Props)
+function TabFader({faderID}:Props)
 {
 
 const [activeTab, setActiveTab] = useState(-1);
@@ -33,6 +33,7 @@ const [activeTab, setActiveTab] = useState(-1);
           className="TestSlide2"
           initial={{opacity:"0%"}}
           animate={{opacity: activeTab == 1 ? "100%" : "0%"}}
+          style={{left:"-100%"}}
           transition={{duration: 0.2}}>
             <h5>stuff here</h5>
         </motion.div>
@@ -40,11 +41,11 @@ const [activeTab, setActiveTab] = useState(-1);
           className="TestSlide3"
           initial={{color:"0%"}}
           animate={{opacity: activeTab == 2 ? "100%" : "0%"}}
+          style={{left:"-200%"}}
           transition={{duration: 0.2}}>
             <h5>stuff here</h5>
         </motion.div>
       </div>
-      {children}
     </div>
   );
 }
