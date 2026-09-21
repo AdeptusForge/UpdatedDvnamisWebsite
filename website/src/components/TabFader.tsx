@@ -35,7 +35,7 @@ const [activeTab, setActiveTab] = useState(-1);
           animate={{opacity: activeTab == 1 ? "100%" : "0%"}}
           style={{left:"-100%"}}
           transition={{duration: 0.2}}>
-            <h5>stuff here</h5>
+            <h5>stuff here1</h5>
         </motion.div>
         <motion.div 
           className="TestSlide3"
@@ -43,7 +43,7 @@ const [activeTab, setActiveTab] = useState(-1);
           animate={{opacity: activeTab == 2 ? "100%" : "0%"}}
           style={{left:"-200%"}}
           transition={{duration: 0.2}}>
-            <h5>stuff here</h5>
+            <h5>stuff here2</h5>
         </motion.div>
       </div>
     </div>

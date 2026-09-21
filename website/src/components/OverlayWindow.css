@@ -1,0 +1,94 @@
+
+.OutsideOverlay
+{
+  position:fixed;
+  display:none;
+  width:100%;
+  height:100%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  padding:0px;
+  margin:0px;
+  border:0px;
+  background-color:transparent;
+  z-index: 1000;
+}
+.OverlayWindow
+{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.3); /* Black background with opacity */
+  z-index: 99999; /* Specify a stack order in case you're using a different order for other elements */
+  color:whitesmoke;
+  backdrop-filter: blur(7px);
+  box-shadow: rgba(0, 0, 0, 0.6) 5px 5px, rgba(0, 0, 0, 0.4) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+}
+.OverlayTargetButton
+{
+position:relative;
+transition:0.35s;
+}
+.OverlayTargetButton:hover
+{
+  color:white;
+  filter:contrast(130%);
+}
+.OverlayTargetButton:focus
+{
+  border-color: transparent;
+  border-radius: 0px;
+}
+.OverlayButtonText
+{
+  position:absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  width:100%;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+  color:transparent;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.005);
+  font-size:2.5rem;
+  transition:0.35s;
+}
+.OverlayButtonText:hover
+{
+  color:whitesmoke;
+}
+
+
+.ContentHolder
+{
+  position:relative;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+
+}
+
+.TargetContent
+{
+  position:relative;
+  width: 100%;
+  height: 100%;
+}

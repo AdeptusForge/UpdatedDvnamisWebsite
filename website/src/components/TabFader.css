@@ -1,41 +1,52 @@
 .TabFader
 {
   width:100%;
+  box-shadow: rgba(0, 0, 0, 0.6) 5px 5px, rgba(0, 0, 0, 0.4) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+
 }
+
 .TabsHolder
 {
 display:flex;
 align-items: center;
 justify-content: center;
+width:100%;
+
+height:fit-content;
 }
 .TabButton
 {
-  max-width:33%;
+  max-width: round(33%, nearest,0px);
+  width:100%;
+  border-radius: 0px;
 }
+
 .TabContentHolder
 {
   color:black;
   display:flex;
+  background-color: whitesmoke;
 }
 
 .TestSlide1
 {
   width:fit-content;
   min-width: 100%;
-  background-color: green;
   position:relative;
+  background-color: transparent;
+
 }
 .TestSlide2
 {
   width:fit-content;
   min-width: 100%;
-  background-color: red;
+  background-color: transparent;
   position:relative;
 }
 .TestSlide3
 {
   width:fit-content;
   min-width: 100%;
-  background-color: yellow;
+  background-color: transparent;
   position:relative;
 }

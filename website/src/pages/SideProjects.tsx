@@ -6,7 +6,8 @@ import PageTemplate from "./BasicPageTemplate";
 import { ContentBlock } from "./BasicPageTemplate";
 import './BasicPageTemplate.css'
 import Carousel from '../components/Carousel'
-
+import OverlayWindow from '../components/OverlayWindow'
+import { OverlayTarget } from '../components/OverlayWindow';
 
 import { type ReactNode } from "react";
 import './SideProjects.css'
@@ -105,12 +106,14 @@ function SideProjects() {
   //const [count, setCount] = useState(0)
 
   return <>
+  <OverlayWindow></OverlayWindow>
   <head>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>| DVNAMIS | Descent into HELLForge</title>
   </head>
   <PageTemplate>
+  
   {/* <LastButton buttonText="LAST" destination="strike_back"/><NextButton buttonText="NEXT" destination="codename_blazer"/> */}
       <ContentBlock>
         <section className="ContentRow">
@@ -121,6 +124,8 @@ function SideProjects() {
             <ScrollerButton titleID="HK-47 Modeling"/>
             <ScrollerButton titleID="Additive Action Channels"/>
             <ScrollerButton titleID="ALAMUT Fortress"/>
+            <OverlayTarget targetID="testtarget"><img width="100%" height="100%" src="Wake/WAKE_gif.gif"/></OverlayTarget>
+            <OverlayTarget targetID="testtarget2"><img width="100%" height="100%" src="AvagardsStudy/stairsgif.gif"/></OverlayTarget>
             </div>
           </div>
           <SideProjectScroller>
