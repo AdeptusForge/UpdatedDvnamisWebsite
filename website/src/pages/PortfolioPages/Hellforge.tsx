@@ -5,6 +5,7 @@ import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 import CodeSample  from "../../components/CodeSample";
 import Carousel from "../../components/Carousel";
+import TabFader from "../../components/TabFader";
 function scrollfunc() {
   const element = document.getElementById("bigbigapple");
   if(element !== null)
@@ -106,11 +107,11 @@ export default function HellforgePage()
         </div>
       </section>
 
-      <Carousel carouselID="carouselID" widthSet="800px">
+      {/* <Carousel carouselID="carouselID" widthSet="800px">
         <div className="TestSlide1">stuff here</div>
         <div className="TestSlide2">stuff here</div>
         <div className="TestSlide3">stuff here</div>
-      </Carousel>
+      </Carousel> */}
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
@@ -134,6 +135,10 @@ export default function HellforgePage()
           <Expandable title="Boiler Room" image="Hellforge/BoilerRoom.jpg" text = "This room holds a persistent wave-based fight that extends for quite some time and strains on player resources. At any point during the wave-based encounter in this room, a side-room is present with a Mega Health Sphere to alleviate some tension by replenshing resources. However, when they do so, they put themselves into a confined space. This turns the room into a choice for players thinking ahead, and a difficult subencounter if the player stumbles into it unprepared."></Expandable>
         </div>
       </section >
+      <TabFader faderID="testFader">
+        <div></div>
+      </TabFader>
+
       <TextOnlySection scrollID="bigbigapple" header={header2} paragraph={paragraph3} />
       {/* <section  className="ContentExpandableRow">
         <ContentPicker titles={["test1","test2"] as string[]}/>

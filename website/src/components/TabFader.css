@@ -1,0 +1,37 @@
+.TabFader
+{
+
+}
+.TabsHolder
+{
+display:flex;
+align-items: center;
+justify-content: center;
+}
+.TabButton
+{
+  max-width:33%;
+}
+.TabContentHolder
+{
+  color:black;
+}
+
+.TestSlide1
+{
+  width:fit-content;
+  min-width: 100%;
+  background-color: green;
+}
+.TestSlide2
+{
+  width:fit-content;
+  min-width: 100%;
+  background-color: red;
+}
+.TestSlide3
+{
+  width:fit-content;
+  min-width: 100%;
+  background-color: yellow;
+}

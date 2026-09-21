@@ -176,7 +176,6 @@ function SideProjects() {
                   {loremipsum}
                 </div>
                 <div className="ScrollerTextHolder" id='Stochastic Texture'>
-                  
                   {loremipsum}
                 </div>
               </section>
