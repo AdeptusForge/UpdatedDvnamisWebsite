@@ -6,6 +6,12 @@ import { LastButton, NextButton } from "../../components/NextLastButton";
 import CodeSample  from "../../components/CodeSample";
 import Carousel from "../../components/Carousel";
 import TabFader from "../../components/TabFader";
+import ScrollerButton from "../../components/ScrollerButton";
+import { OverlayTarget } from "../../components/OverlayWindow";
+import OverlayWindow from "../../components/OverlayWindow";
+
+
+
 function scrollfunc() {
   const element = document.getElementById("bigbigapple");
   if(element !== null)
@@ -89,6 +95,7 @@ using system;
 export default function HellforgePage()
 {
   return<>
+  <OverlayWindow/>
   <head>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -100,31 +107,32 @@ export default function HellforgePage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/><CodeSample code={block1}/><a onClick={scrollfunc}>Go to Target Section</a></div>
+          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/>
+          <div>
+            <h2>Highlights</h2>
+            <ScrollerButton titleID="Layout & Design Goals"/>
+            <ScrollerButton titleID="Dynamic SubEncounters"/>
+            <ScrollerButton titleID="Blobular Encounter Methodology"/>
+          </div>
+          </div>
         </div>
         <div className="ContentImageHolder">
           <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
         </div>
       </section>
-
-      {/* <Carousel carouselID="carouselID" widthSet="800px">
-        <div className="TestSlide1">stuff here</div>
-        <div className="TestSlide2">stuff here</div>
-        <div className="TestSlide3">stuff here</div>
-      </Carousel> */}
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
           
         </div>
       </section>
-      <section className="ContentRow">
+      <section className="ContentRow" >
         <div className="ContentImageHolder">
           <img className="ContentImage" src="Hellforge/descent.jpg"/>
         </div>
       </section>
-      <TextOnlySection  header={header1} paragraph={paragraph2}/>
-      <section  className="ContentExpandableRow">
+      <TextOnlySection scrollID="Dynamic SubEncounters" header={header1} paragraph={paragraph2}/>
+      <section  className="ContentExpandableRow" >
         <div className="ContentExpandableHolder">
           <Expandable title="SecuriStation" image="Hellforge/SecuriStation.jpg" text = "This simple spread of imps and soldiers acts as an engagement ramp before future encounters with dynamic environmental elements to maintain verisimilitude with the rest of the game world. The available cover lets players modulate the difficulty of this first fight themselves. Aggressive players can charge forward to use the full combat space. Defensive players huddle behind the cover and take opportunistic shots from safety. Tricky players will find the spacing of enemies perfect to engage the infighting mechanics."></Expandable>
         </div>
@@ -140,7 +148,9 @@ export default function HellforgePage()
           <div></div>
         </TabFader>
       </section >
-      <TextOnlySection scrollID="bigbigapple" header={header2} paragraph={paragraph3} />
+      <TextOnlySection scrollID="Blobular Encounter Methodology" header={header2} paragraph={paragraph3} />
+      <OverlayTarget targetID="codeTarget1"><CodeSample code={block1}></CodeSample></OverlayTarget>
+      
       {/* <section  className="ContentExpandableRow">
         <ContentPicker titles={["test1","test2"] as string[]}/>
       </section> */}

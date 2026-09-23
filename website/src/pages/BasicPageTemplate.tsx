@@ -22,15 +22,11 @@ export function FullVideoBlock()
   </>
 }
 
-export function TextOnlySection({scrollID='', header='', paragraph=''})
+export function TextOnlySection({scrollID="", header='', paragraph=''})
 {
-  var v = {scrollID};
 
-  if(v.scrollID == {scrollID}.scrollID)
-    {
-    }
   return <>
-      <section className="ContentRow">
+      <section className="ContentRow" id={scrollID}>
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{header}</h1><p dangerouslySetInnerHTML={{__html: paragraph}}/></div>
           

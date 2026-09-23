@@ -1,0 +1,19 @@
+.ScrollerButton
+{
+  color: rgb(7, 7, 7);
+  transition:0.2s;
+  font-size: 20px;
+  border-radius: 0px;
+  background-color: whitesmoke;
+  font-family: Next Art;
+  font-weight: 700;
+  width:100%;
+  align-items: left;
+  text-align: left;
+  line-height: 0.8;
+  white-space: pre;
+}
+.ScrollerButton:hover
+{
+  background-color: rgba(1,1,1, 0.1);
+}

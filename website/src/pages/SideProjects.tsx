@@ -1,14 +1,13 @@
 
 import './MainPage.css'
 import '../components/Collapsible.css'
-import { motion } from "framer-motion";
 import PageTemplate from "./BasicPageTemplate";
 import { ContentBlock } from "./BasicPageTemplate";
 import './BasicPageTemplate.css'
 import Carousel from '../components/Carousel'
 import OverlayWindow from '../components/OverlayWindow'
 import { OverlayTarget } from '../components/OverlayWindow';
-
+import ScrollerButton from '../components/ScrollerButton';
 import { type ReactNode } from "react";
 import './SideProjects.css'
 import CodeSample from '../components/CodeSample';
@@ -17,48 +16,98 @@ interface Props {
   children?: ReactNode
 }
 
-function scrollfunc(value="") {
-  const element = document.getElementById(value);
-  if(element !== null)
-    element.scrollIntoView();
-}
-
-function ScrollerButton({titleID=""})
-{
-  return <motion.button className="ScrollerButton" onClick={() => scrollfunc(titleID)}>▪ {titleID}</motion.button>
-}
-
 
 const title = "SIDE PROJECTS"
 const loremipsum = "lorem ipsum dolor sit amet consectetur adipiscing elit aliqua cupiditate omnis cillum corrupti elit minim at autem in est deserunt harum sit ducimus mollitia consequatur consequat officia officia corrupti sint officia et fugiat nulla consequat ipsum officia ad voluptas at lorem in qui molestias vel quis et dolor nulla aute do officia ut fugiat soluta eiusmod distinctio est deserunt quis quod nam voluptatum accusamus dolore ut ad est in cupidatat animi pariatur eu id repellendus similique quidem praesentium nobis similique ut occaecat et duis odio repellendus dignissimos qui officia distinctio cum fugiat at eos illum cumque repellendus autem dolore dolorum irure tempore qui id qui fugiat omnis dolores et atque ducimus in dolor molestias et cum et qui magna qui nulla soluta voluptas minus libero deserunt in iusto provident enim iusto voluptas omnis occaecat qui dolorum facilis cillum culpa officia ut occaecat nam ipsum aute commodo excepturi quo quis animi mollitia laborum quos deserunt voluptate et exercitation praesentium corrupti consequat dolor provident laboris veniam sunt lorem ipsum dolor sit amet consectetur adipiscing elit aliqua cupiditate omnis cillum corrupti elit minim at autem in est deserunt harum sit ducimus mollitia consequatur consequat officia officia corrupti sint officia et fugiat nulla consequat ipsum officia ad voluptas at lorem in qui molestias vel quis et dolor nulla aute do officia ut fugiat soluta eiusmod distinctio est deserunt quis quod nam voluptatum accusamus dolore ut ad est in cupidatat animi pariatur eu id repellendus similique quidem praesentium nobis similique ut occaecat et duis odio repellendus dignissimos qui officia distinctio cum fugiat at eos illum cumque repellendus autem dolore dolorum irure tempore qui id qui fugiat omnis dolores et atque ducimus in dolor molestias et cum et qui magna qui nulla soluta voluptas minus libero deserunt in iusto provident enim iusto voluptas omnis occaecat qui dolorum facilis cillum culpa officia ut occaecat nam ipsum aute commodo excepturi quo quis animi mollitia laborum quos deserunt voluptate et exercitation praesentium corrupti consequat dolor provident laboris veniam sunt"
 
 const triplanarP = 'Since I level design a lot, a while back I figured the best thing I could do was to make my life easier. \
 \n\
-While I generally don\'t have the time to make my levels look as snazzy as they deserve, I found there were ways to get more from less. This Triplanar & Stochastic Texture makes it very easy to add visual variety to large scenes without needing to spend undue time.'
+While I generally don\'t have the time to make my levels look as snazzy as they deserve, I found there were ways to get more from less. This Triplanar Texturing material makes it very easy to add visual variety to large scenes without needing to spend undue time. Not very optimized, as it is meant as a development stopgap tool rather than a game-ready shader\n\
+I will eventually spend a few more hours on it to optimize it & make it fullystochastic as well.'
 
-const triplanar_code = `  
-using system; 
-    void LoremIpsumCode(LoremIpsumVar loremipsum)
-    { 
-        if (loremipsum == null) 
-        { 
-            Print(\"lorem ipsum\"); 
-            return; 
-        } 
-        loremipsum = false; 
-        loremipsum.loremipsum = loremipsum; 
-        loremipsum = false; 
-        loremipsum = false; 
-              loremipsum = false; 
-          loremipsum = false; 
-        loremipsum = false; 
+const triplanar_code = `shader_type spatial;
  
-    }
-        `
+const float detile_multiple = 0.5;
+
+uniform vec3 blending_coefficient = vec3(1.0);
+uniform sampler2D base_texture: source_color, repeat_enable;
+uniform sampler2D detiling_noise: source_color, repeat_enable;
+uniform vec2 base_texture_scaling = vec2(1.0,1.0);
+uniform float triplane_alpha = 1.0;
+ 
+group_uniforms X_Axis;
+uniform bool axis_x_active = true;
+uniform bool axis_x_swizzle = false;
+uniform float axis_x_detiling = 0.0;
+uniform vec2 axis_x_dualsided = vec2(1.0);
+uniform sampler2D texture_x : repeat_enable, source_color;
+uniform vec2 texture_scaling_x = vec2(1.0,1.0);
+uniform vec2 texture_offset_x;
+uniform vec4 tint_x: source_color = vec4(1.0);
+group_uniforms;
+ 
+group_uniforms Y_Axis;
+uniform bool axis_y_active = true;
+uniform bool axis_y_swizzle = false;
+uniform float axis_y_detiling = 0.0;
+uniform vec2 axis_y_dualsided = vec2(1.0);
+uniform sampler2D texture_y : repeat_enable, source_color;
+uniform vec2 texture_scaling_y = vec2(1.0,1.0);
+uniform vec2 texture_offset_y;
+uniform vec4 tint_y: source_color = vec4(1.0);
+group_uniforms;
+ 
+group_uniforms Z_Axis;
+uniform bool axis_z_active = true;
+uniform bool axis_z_swizzle = false;
+uniform float axis_z_detiling = 0.0;
+uniform vec2 axis_z_dualsided = vec2(1.0);
+uniform sampler2D texture_z : repeat_enable, source_color;
+uniform vec2 texture_scaling_z = vec2(1.0,1.0);
+uniform vec2 texture_offset_z;
+uniform vec4 tint_z: source_color = vec4(1.0);
+group_uniforms;
+ 
+void fragment() {
+	vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0);
+	vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz);
+	vec3 adjustedNormal = pow(abs(normal), blending_coefficient);
+	vec3 weights = (adjustedNormal / (adjustedNormal.x + adjustedNormal.y + adjustedNormal.z)) * 3.0;
+	
+	vec2 vert_x = (axis_x_swizzle ? vertex.yz : vertex.zy);
+	vec2 vert_y = (axis_y_swizzle ? vertex.xz : vertex.zx);
+	vec2 vert_z = (axis_z_swizzle ? vertex.xy : vertex.yx);
+	
+	vec2 uv_x = (vert_x) * texture_scaling_x + texture_offset_x;
+	vec2 uv_y = (vert_y) * texture_scaling_y + texture_offset_y; 
+	vec2 uv_z = (vert_z) * texture_scaling_z + texture_offset_z; 
+	
+	float x_detile = texture(detiling_noise, vert_x).r * axis_x_detiling * detile_multiple / length(texture_scaling_x);
+	float y_detile = texture(detiling_noise, vert_y).r * axis_y_detiling * detile_multiple  / length(texture_scaling_y);
+	float z_detile = texture(detiling_noise, vert_z).r * axis_z_detiling * detile_multiple  / length(texture_scaling_z);
+	
+	vec3 color_x = texture(texture_x, uv_x + vec2(-sin(x_detile), -sin(x_detile))).rgb * weights.x * tint_x.rgb * float(axis_x_active);
+	vec3 color_y = texture(texture_y, uv_y + y_detile).rgb * weights.y * tint_y.rgb * float(axis_y_active);
+	vec3 color_z = texture(texture_z, uv_z + z_detile).rgb * weights.z * tint_z.rgb * float(axis_z_active);
+	vec3 colorAverage = (color_x + color_y + color_z) / 3.0;
+
+	//float colorDistance_x = distance(color_x, colorAverage);
+	//float colorDistance_y = distance(color_y, colorAverage);
+	//float colorDistance_z = distance(color_z, colorAverage);
+	//
+	//float min_distance = min(colorDistance_x, colorDistance_y);
+	//min_distance = min(min_distance, colorDistance_z);
+
+	vec3 closest_color = colorAverage;
+
+	ALBEDO = mix(texture(base_texture, UV * base_texture_scaling), vec4(closest_color, 1.0), triplane_alpha).rgb;
+	NORMAL_MAP = mix(texture(base_texture, UV * base_texture_scaling), vec4(closest_color, 1.0), triplane_alpha).rgb;
+}
+`
 
 const HK47P = "As part of the Kipper Project I'm working on presently, \
-I found the need to learn 3D modeling/rigging/UVing to understand the exact process from a non-programmatic or design perspective.\n\
-Kept some various progress shots of the experimentation process and the results of ~90 hours of work so far.\n\
+I found the need to learn 3D modeling/rigging/UVing from scratch to understand the exact process from a non-programmatic or design perspective.\n\
+Kept some various progress shots of the experimentation process and the results of ~90 hours of work & learning so far.\n\
 I'll eventually return to the project to fix the topology & finish UV mapping."
 
 const action_channels = "While working on some school projects, I was required to build an ActionList system to coordinate simultaneous UI. \
@@ -120,25 +169,24 @@ function SideProjects() {
           <div className="ContentTextHolder">
             <div className="ContentText"><h1>{title}</h1>
             <h2>Select below:</h2>
-            <ScrollerButton titleID="Triplanar / Stochastic Texture"/>
+            <ScrollerButton titleID="Triplanar Texture"/>
             <ScrollerButton titleID="HK-47 Modeling"/>
             <ScrollerButton titleID="Additive Action Channels"/>
             <ScrollerButton titleID="ALAMUT Fortress"/>
-            <OverlayTarget targetID="testtarget"><img width="100%" height="100%" src="Wake/WAKE_gif.gif"/></OverlayTarget>
-            <OverlayTarget targetID="testtarget2"><img width="100%" height="100%" src="AvagardsStudy/stairsgif.gif"/></OverlayTarget>
+            
             </div>
           </div>
           <SideProjectScroller>
             <div>
               <section className="ContentRow">
-                <div className="ScrollerTextHolder"id='Triplanar / Stochastic Texture'>
+                <div className="ScrollerTextHolder"id='Triplanar Texture'>
                   <div className="ScrollHeader">Triplanar Stochastic Material</div>
                   {triplanarP}
                   <div className='TextSpacer'/>
-                  <CodeSample code={triplanar_code}/>
+                  <OverlayTarget targetID="triplanar_code"><CodeSample code={triplanar_code}/></OverlayTarget>
                 </div>
-                <div className="ScrollerTextHolder">
-                  {loremipsum}
+                <div className="ScrollerVideoHolder">
+                  <video className="resizeVid"  src="Triplanar/triplanarmaterial.mp4" no-controls autoPlay muted loop/>
                 </div>
               </section>
               <section className='ContentSpacer'/>
@@ -148,10 +196,12 @@ function SideProjects() {
                 </div>
                 <div className="ScrollerCarouselHolder">
                     <Carousel carouselID="HKCarousel" widthSet="100%">
-                    <div className="TestSlide1">stuff here</div>
-                    <div className="TestSlide2">stuff here</div>
-                    <div className="TestSlide3">stuff here</div>
-                    <div className="TestSlide3">stuff here</div>
+                    <div className="TestSlide1"><img width="100%" height="100%" src="HK47/partialrough.png"/></div>
+                    <div className="TestSlide2"><img width="100%" height="100%" src="HK47/completedrough.png"/></div>
+                    <div className="TestSlide3"><img width="100%" height="100%" src="HK47/headinprogress.png"/></div>
+                    <div className="TestSlide3"><img width="100%" height="100%" src="HK47/completedcleanup.png"/></div>
+                    <div className="TestSlide3"><img width="100%" height="100%" src="HK47/finalizedmodel.png"/></div>
+                    <div className="TestSlide3"><video no-controls autoPlay muted loop width="100%" height="100%" src="HK47/riggingtest.mp4" /></div>
                   </Carousel>
                 </div>
               </section>
@@ -159,7 +209,7 @@ function SideProjects() {
                 <div className="ScrollerTextHolder"id='Additive Action Channels'>
                   <div className="ScrollHeader">Additive 'ActionChannels'</div> {action_channels}
                   <div className='TextSpacer'/>
-                  <CodeSample code={channels_code}/>
+                  <OverlayTarget targetID="channels_code"><CodeSample code={channels_code}/></OverlayTarget>
                 </div>
                 <div className="ScrollerTextHolder">
                   {loremipsum}
@@ -178,14 +228,11 @@ function SideProjects() {
 
               <section className="ContentRow">
                 <div className="ScrollerTextHolder">
-                  {loremipsum}
                 </div>
                 <div className="ScrollerTextHolder" id='Stochastic Texture'>
-                  {loremipsum}
                 </div>
               </section>
             </div>
-            
           </SideProjectScroller>
         </section>
   </ContentBlock>

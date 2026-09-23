@@ -8,7 +8,6 @@
   text-wrap: wrap;
   font-weight:600;
   padding-top:0px;
-  max-width: 50rem;
   width: 100%;
   color: rgb(0, 201, 167);
   border-radius: 0px;
@@ -19,12 +18,40 @@
   background-color: rgb(104, 140, 172);
   background-color:rgb(78, 105, 129);
   transition: filter 0.2s ease-out;
+  scrollbar-width: none;
 }
 .CodeSample:hover
 {
     filter:contrast(160%);
     transition:0.2s
 }
+
+.smallCodeSample
+{
+  white-space: nowrap;
+  width:fit-content;
+  overflow-x: auto;
+  text-align: left;
+  font-family: SFT Schrifted Sans TRIAL;
+  font-size: 12px;
+  text-wrap: wrap;
+  font-weight:600;
+  padding-top:0px;
+  width: 100%;
+  color: rgb(0, 201, 167);
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-width: 2px;
+  border-color: rgb(13,13,13);
+  background-color: rgb(104, 140, 172);
+  background-color:rgb(78, 105, 129);
+  transition: filter 0.2s ease-out;
+  scrollbar-width: none;
+}
+
+
+
 
 .code-block {
   counter-reset: line-numb;

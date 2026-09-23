@@ -5,6 +5,7 @@ import * as motion from "motion/react-client"
 
 import { createRoot } from 'react-dom/client';
 import { flushSync } from 'react-dom';
+import CodeSample from './CodeSample';
 
 /**
  * Converts a ReactNode into a native browser DOM Node
@@ -39,19 +40,31 @@ interface Target{
 
 function OpenOverlay(targetID:string)
 {
-  const target = document.getElementById(targetID);
   const w = document.getElementById("overlaywindow");
-  const subw = document.getElementById("suboverlaywindow");
   const button = document.getElementById("overlayClose");
-
-  if(w != null && target != null && subw != null && button != null)
+  var subw = document.getElementById("suboverlaywindow");
+  if(w != null && subw != null && button != null)
   {
+    if(targetID.endsWith("code"))
+    {
+      const newCodeSample =<CodeSample></CodeSample>
+      return;
+    }
     button.style.display = "block";
     w.style.display = "block";
     w.focus();
-    const windowcontent = target.cloneNode(true);
-    subw.replaceChildren(windowcontent)
+    const target = document.getElementById(targetID);
+    if(target != null)
+    {
+
+      const windowcontent = target.cloneNode(true);
+      subw.replaceChildren(windowcontent)
+    }
   }
+
+
+
+
 }
 function CloseOverlay()
 {
