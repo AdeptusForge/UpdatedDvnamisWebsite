@@ -7,8 +7,9 @@ import { LastButton, NextButton } from "../../components/NextLastButton";
 const title = "CODENAME: Blazer"
 const introductionDetails = "May 2015 - May 2018 \n Unity Engine"
 const introduction = 'Built as my first large solo project, CODENAME:Blazer \
-was a side-scrolling rogue-lite with a large overarching narrative. I worked \
-on the project while working on a number of other Unity projects.'
+was a investigation mystery game married with a side-scrolling action rogue-lite through a large overarching narrative. \n\
+I worked on the project while working on a number of other Unity projects, though it never reached fruition and I \
+ended up permanently shelving the project.'
 
 // const roles = "Level Design"
 
@@ -16,7 +17,7 @@ on the project while working on a number of other Unity projects.'
 const paragraph1 = 'Back in 2015, the big names in rogue-lite games were Binding \
 of Isaac, Risk of Rain, FTL, and Spelunky. These games had their own unique \
 merits, but one problem they all seemed to share was that their gameplay loop \
-necessarily drawn-out narrative cycle. Information was provided to the player on \
+necessarily stretched the narrative to untenable levels. Information was provided to the player on \
 either random or progression-based events, and progression would often be tied to \
 randomness as well.'
 const header1= "Narrative Solutions through Gestalt Systems"

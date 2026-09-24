@@ -2,10 +2,11 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
+import ScrollerButton from "../../components/ScrollerButton";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Dragon Ball FighterZ KAI"
-const introductionDetails = "November 2019 - June 2020 \n Modding DBFZ"
+const introductionDetails = "November 2019 - June 2020 \n Modded Dragon Ball FighterZ"
 const introduction = 'A 1v1 variant mod for the immensely popular fighting \
 game Dragon Ball FighterZ. DBFZ:KAI spawned from equal parts my frustration \
 and love of the original game. At the time, I was particularly disillusioned \
@@ -24,8 +25,7 @@ proprietary scripting language for designers to modify character abilities \
 that Arc System Works had been using for every game(including DBFZ) since the \
 original BlazBlue Calamity Trigger. I developed my own program to modify the \
 BBScript to be writable in Python, making it possible to modify any character \
-in Dragon Ball Fighter Z. \n\nBelow is an in-development look at several of \
-the changes coming together to alter the combo structure of Goku:'
+in Dragon Ball Fighter Z.'
 const header1= "Design Constraints"
 const paragraph2 = 'Kai was developed with clear design goals and limitations \
 due to the limitations of my BBScript modification, and my own scope \
@@ -83,8 +83,6 @@ into Vegeta Blue\'s hitgrabs in midair being the most notable examples. I learne
 about controlling disparate implications of rule changes, and how to better conduct \
 playtests of instrumental games.'
 
-
-
 //Player behavior can usually be boiled down to far fewer options because of the circumstances they are put in.
 
 export default function KaiPage()
@@ -101,23 +99,20 @@ export default function KaiPage()
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
+          <div>
+            <h2>Highlights</h2>
+            <ScrollerButton titleID="Design Constraints"/>
+            <ScrollerButton titleID="Challenges for the new ruleset"/>
+            <ScrollerButton titleID="Solution Through Innovation"/>
+            <ScrollerButton titleID="Video Demo"/>
+          </div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%" src="Kai/websitekai.png" />
         </div>
       </section>
-
-      
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
-        </div>
-      </section>
-      <section className="ContentRow">
-        <video  width="92%" height="90%" src="Kai/kai_showcase.mp4" controls/>
-      </section>
-      <TextOnlySection header = {header1} paragraph={paragraph2}/>
-      <TextOnlySection header = {challenges} paragraph={''}/>
+      <TextOnlySection scrollID="Design Constraints" header = {header1} paragraph={paragraph2}/>
+      <TextOnlySection scrollID="Challenges for the new ruleset" header = {challenges} paragraph={''}/>
       <section className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
           <Expandable title="Removing Assists Reduces Possibility Gamestates" text = "Assists in the base game serve a wide variety of purposes and expand the design space of the game in myriad ways. They allowed for both diversity in playstyle and diversity of outcome, as Assists would drastically change in function & effectiveness depending on the situational use."></Expandable>
@@ -135,7 +130,7 @@ export default function KaiPage()
           <Expandable title="Less Points of Attention on Offense/Defense" text = "Characters at the time were balanced around having assists, meaning their frame data was slower than normal to compensate, and attacks generally had longer periods of downtime to allow for wider openings in a more chaotic space. Reducing the points of attention during gameplay lowered mental effort far too much, and make defense far more powerful."></Expandable>
         </div>
       </section>
-      <TextOnlySection header = {header2} paragraph={paragraph3}/>
+      <TextOnlySection scrollID="Solution Through Innovation" header = {header2} paragraph={paragraph3}/>
       <section className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
           <Expandable title="Kai Cancels" text = "Every character in the game has a ‘Ki Special’ move alongside their ‘Normal Special’ moves. These usually create unique projectiles or perform unique functions. To solve the character diversity problem, I allowed every character to cancel Normal Special moves while performing Ki Special moves. "></Expandable>
@@ -148,6 +143,9 @@ export default function KaiPage()
         </div>
       </section>
       <TextOnlySection header = {header3} paragraph={paragraph4}/>
+      <section id = "Video Demo"className="ContentRow">
+        <video  width="92%" height="90%" src="Kai/kai_showcase.mp4" controls/>
+      </section>
       <TextOnlySection header = {header4} paragraph={paragraph5}/>
     </ContentBlock>
   </PageTemplate>

@@ -19,10 +19,11 @@ h1
   font-family: Next Art;
   font-size: 50px;
   text-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 00px;
   margin-bottom: 20px;
-  margin-left:-20px;
+  margin-left:-25px;
   color: rgb(7, 7, 7);
+  line-height: 100%;
 }
 h2
 {
@@ -30,7 +31,7 @@ h2
   font-family: SFT Schrifted Sans TRIAL;
   font-size: 34px;
   text-wrap: wrap;
-  margin-left:-20px;
+  margin-left:-25px;
   line-height: 1.1;
   color: rgb(7, 7, 7);
   margin-top: 0;
@@ -45,6 +46,7 @@ p
   line-height:1.4;
   color: rgb(7, 7, 7);
   margin:0;
+  margin-bottom: 20px;
 }
 
 embed
