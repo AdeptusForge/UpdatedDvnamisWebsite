@@ -37,8 +37,8 @@ thresholds also allowed each ingredient to have unique behavior: \
 const header1= "Thermal Implementation"
 // const paragraph2 = ""
 
-const header2D = "2D Original"
-const paragraph2D =""
+// const header2D = "2D Original"
+// const paragraph2D =""
 
 const header2 = "Post Mortem"
 const paragraph3 = 'This project was very fun overall, but I found it difficult \

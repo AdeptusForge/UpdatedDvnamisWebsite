@@ -15,7 +15,7 @@ tools development, as well as managing the programming department.'
 const responsibilities = "> Architectural Programming\n> Graphics Pipeline Development\n> Technical Documentation \n> Animation Tools\n> Team Management and Organization\n> Feature Timelining"
 // const roles = "Level Design"
 
-const paragraph1 = ""
+//const paragraph1 = ""
 const header1= "Building a Game (Engine)"
 const paragraph2 = 'Together, we constructed the engine from scratch using OpenGL. \
 My main concerns were with architecture, simulating the games internal physics, \
