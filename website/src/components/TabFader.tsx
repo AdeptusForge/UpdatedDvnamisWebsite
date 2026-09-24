@@ -1,7 +1,7 @@
 import "./TabFader.css";
 import "./Carousel.css";
 import * as motion from "motion/react-client"
-import { type ReactNode, useState, memo, useRef, Children} from "react";
+import { type ReactNode, useState} from "react";
 
 interface Props {
   faderID: string

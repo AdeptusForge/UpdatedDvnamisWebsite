@@ -4,19 +4,12 @@ import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 import CodeSample  from "../../components/CodeSample";
-import Carousel from "../../components/Carousel";
+//import Carousel from "../../components/Carousel";
 import TabFader from "../../components/TabFader";
 import ScrollerButton from "../../components/ScrollerButton";
 import { OverlayTarget } from "../../components/OverlayWindow";
 import OverlayWindow from "../../components/OverlayWindow";
 
-
-
-function scrollfunc() {
-  const element = document.getElementById("bigbigapple");
-  if(element !== null)
-    element.scrollIntoView();
-}
 const title = "Descent Into HELLForge"
 const introductionDetails = "January 2024 \n DOOM 2016 SnapMap"
 const introduction = 'Descent Into HELLForge was a level I made as a short 2 week experiment \

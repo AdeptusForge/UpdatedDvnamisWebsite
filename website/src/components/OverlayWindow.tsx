@@ -1,11 +1,11 @@
 import '../components/OverlayWindow.css'
 
-import { type ReactNode, useEffect, Children, cloneElement} from "react";
+import { type ReactNode} from "react";
 import * as motion from "motion/react-client"
 
 import { createRoot } from 'react-dom/client';
 import { flushSync } from 'react-dom';
-import CodeSample from './CodeSample';
+//import CodeSample from './CodeSample';
 
 /**
  * Converts a ReactNode into a native browser DOM Node
@@ -26,12 +26,6 @@ export function reactNodeToDOMNode(reactNode: ReactNode): Node {
   return container.firstChild || container;
 }
 
-interface Props {
-  children?: ReactNode
-}
-interface Pass{
-  children?: ReactNode
-}
 
 interface Target{
   targetID: string
@@ -47,7 +41,7 @@ function OpenOverlay(targetID:string)
   {
     if(targetID.endsWith("code"))
     {
-      const newCodeSample =<CodeSample></CodeSample>
+      //const newCodeSample =<CodeSample></CodeSample>
       return;
     }
     button.style.display = "block";

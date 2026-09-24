@@ -70,6 +70,7 @@ function Carousel({carouselID, children, widthSet}:Props) {
     })
     const progressButtons: ReactNode[] = [];
     Children.forEach(children, (child, index) => {
+      child;
     progressButtons.push(<ProgressButton carouselID={carouselID} slideNum={index}/>);
       
   });
