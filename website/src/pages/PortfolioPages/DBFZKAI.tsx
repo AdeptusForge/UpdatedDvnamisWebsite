@@ -19,13 +19,13 @@ mechanics.'
 // const roles = "Level Design"
 
 
-const paragraph1 = 'After liberal research into the game’s code and study \
-of older Arc System Works games, I found BlazBlue Script. BBScript was a \
-proprietary scripting language for designers to modify character abilities \
-that Arc System Works had been using for every game(including DBFZ) since the \
-original BlazBlue Calamity Trigger. I developed my own program to modify the \
-BBScript to be writable in Python, making it possible to modify any character \
-in Dragon Ball Fighter Z.'
+// const paragraph1 = 'After liberal research into the game’s code and study \
+// of older Arc System Works games, I found BlazBlue Script. BBScript was a \
+// proprietary scripting language for designers to modify character abilities \
+// that Arc System Works had been using for every game(including DBFZ) since the \
+// original BlazBlue Calamity Trigger. I developed my own program to modify the \
+// BBScript to be writable in Python, making it possible to modify any character \
+// in Dragon Ball Fighter Z.'
 const header1= "Design Constraints"
 const paragraph2 = 'Kai was developed with clear design goals and limitations \
 due to the limitations of my BBScript modification, and my own scope \

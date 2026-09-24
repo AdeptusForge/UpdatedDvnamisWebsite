@@ -2,6 +2,7 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 // import Expandable from "../../components/Expandable";
+import ScrollerButton from "../../components/ScrollerButton";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "CODENAME: Blazer"
@@ -20,7 +21,7 @@ merits, but one problem they all seemed to share was that their gameplay loop \
 necessarily stretched the narrative to untenable levels. Information was provided to the player on \
 either random or progression-based events, and progression would often be tied to \
 randomness as well.'
-const header1= "Narrative Solutions through Gestalt Systems"
+const header1= "Investigation & Narrative"
 const paragraph2 = 'The random drip-feed of rogue-lite games at the time made it \
 hard to engage with them on anything more than an instrumental level. To me this \
 meant that the simplest solution would be to tie the narrative to an intellectual \
@@ -73,6 +74,12 @@ export default function BlazerPage()
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
+          <div>
+            <h2>Highlights</h2>
+            <ScrollerButton titleID="Investigation & Narrative"/>
+            <ScrollerButton titleID="Action in the Roguelike"/>
+            <ScrollerButton titleID="The Needs of Design"/>
+          </div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%"src="CodenameBlazer/evidencegif.gif" />
@@ -85,7 +92,7 @@ export default function BlazerPage()
           <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
         </div>
       </section>
-      <TextOnlySection header = {header1} paragraph={paragraph2}/>
+      <TextOnlySection scrollID="Investigation & Narrative" header = {header1} paragraph={paragraph2}/>
       <TextOnlySection header = {header2} paragraph={paragraph3}/>
       <TextOnlySection header = {header3} paragraph={paragraph4}/>
     </ContentBlock>

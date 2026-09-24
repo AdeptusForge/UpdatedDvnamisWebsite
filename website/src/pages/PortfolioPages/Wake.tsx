@@ -2,6 +2,7 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
+import ScrollerButton from "../../components/ScrollerButton";
 import { NextButton } from "../../components/NextLastButton";
 
 const title = "WAKE"
@@ -13,28 +14,21 @@ level, in addition to supervising and documenting the work of other designers.'
 
 const responsibilities = "> Mechanical Combat Design\n> Camera & Character Controller Development\n> UX Iteration \n> Player & AI Behavior Patterning\n> Prototyping\n> Designer Management\n> Playtesting & Research Data Analysis\n> Encounter & Environment Blockouts"
 
-const paragraph1 = 'Our ideation of WAKE was a grand, brutal, cold world. \
-Set in a decrepit fishing hamlet off a forgotten cliffside coast somewhere \
-in europe, players would explore and fight their way through humans and \
-horrors alike. A large portion of the design was informed by the artistic \
-direction our team had decide upon: a PSX visual style with high color \
-contrast and saturation.'
-const header1= "Constructing A Sandbox out of a Shoebox"
+const paragraph1 = 'Our ideation of WAKE was a grand, brutal, cold world with a PSX style. \
+Players would explore and fight their way through horrors in a decrepit fishing hamlet off \
+a forgotten cliffside coast somewhere in Europe.'
+
+const header1= "Design Approach"
 const paragraph2 = 'My first major task was to determine how players would \
 be able to interact inside of the World of WAKE, while keeping the project \
 scope as small as possible throughout the entire process. Our scope was quite \
-small, as while the project was ostensibly 8 months long, the actual time \
-we had to work was closer to 4 concentrated weeks. The shortened timescale \
-of the project necessitated simplifying world and combat interaction to \
-the point where major storytelling devices were inaccessible due to their \
-programming constraints.\
-\n\n\
+small; while the project timeline was 8 months, the manhours  \
+we had to work with was closer to 4 concentrated weeks with school running parallel. The shortened timescale \
+of the project meant simplifying everything.\n \
+\n\
 Without more nuanced narrative and gameplay tools, I decided it best to \
-focus my and my other designer\’s efforts wholly on the battle \
-mechanics/dynamics. To make up for the missing design nuance, \
-I made efforts to allow players to interact with the world by using combat \
-mechanics in non-offensive ways as I built the core tenants of the game’s \
-structure.'
+focus on a concrete vision of what the player was, and sell that vision \
+more than anything:'
 
 const header2 = "Giving Players Tools, not Weapons"
 const paragraph3 = 'Starting with the player\’s weapons, I began by \
@@ -81,26 +75,24 @@ export default function WakePage()
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/><Expandable title="My Responsibilities" text={responsibilities}></Expandable></div>
+          <div>
+            <h2>Highlights</h2>
+            <ScrollerButton titleID="Design Approach & Pillars"/>
+            <ScrollerButton titleID="Combat Sandbox & Encounter Design"/>
+            <ScrollerButton titleID="Agent Navigation"/>
+            <ScrollerButton titleID="Environmental Manipulation"/>
+          </div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%" src="Wake/WAKE_gif.gif" />
         </div>
       </section>
-
-      
-      <section className="ContentRow">
+      <section className="ContentRow" id="Design Approach & Pillars">
         <div className="ContentTextHolder">
+          <div className="ContentText"><h1>{header1}</h1>
           <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
-        </div>
-      </section>
-      {/* <section className="ContentRow">
-        <div className="ContentImageHolder">
-          <img className="ContentImage" src="descent.jpg"/>
-        </div>
-      </section> */}
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header1}</h1><p dangerouslySetInnerHTML={{__html: paragraph2}}/><h1>Key Design Pillars</h1></div>
+          <p dangerouslySetInnerHTML={{__html: paragraph2}}/>
+          <h1>Key Design Pillars</h1></div>
         </div>
       </section>
       <section className="ContentExpandableRow">

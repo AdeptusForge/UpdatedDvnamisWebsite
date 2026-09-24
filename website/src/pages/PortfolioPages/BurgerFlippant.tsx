@@ -2,6 +2,7 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 // import Expandable from "../../components/Expandable";
+import ScrollerButton from "../../components/ScrollerButton";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Burger Flippant"
@@ -33,10 +34,11 @@ thresholds also allowed each ingredient to have unique behavior: \
 \n\n> Lettuce would turn black and char\
 \n> Meat would eventually burst into flames\
 \n> Spices would release flavor particles'
-const header1= "Implementation"
+const header1= "Thermal Implementation"
 // const paragraph2 = ""
 
-
+const header2D = "2D Original"
+const paragraph2D =""
 
 const header2 = "Post Mortem"
 const paragraph3 = 'This project was very fun overall, but I found it difficult \
@@ -65,12 +67,18 @@ export default function BurgerFlippantPage()
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
+            <div>
+            <h2>Highlights</h2>
+            <ScrollerButton titleID="Thermal Implementation"/>
+            <ScrollerButton titleID="2D Original"/>
+          </div>
         </div>
         <div className="ContentImageHolder">
           <img width="100%" height="100%" src="BurgerFlippant/BurgerFlippant.gif" />
         </div>
       </section>
-      <TextOnlySection header = {header1} paragraph={paragraph1}/>
+
+      <TextOnlySection scrollID="Thermal Implementation" header = {header1} paragraph={paragraph1}/>
       <TextOnlySection header = {header2} paragraph={paragraph3}/>
       <TextOnlySection header = {header3} paragraph={paragraph4}/>
     </ContentBlock>

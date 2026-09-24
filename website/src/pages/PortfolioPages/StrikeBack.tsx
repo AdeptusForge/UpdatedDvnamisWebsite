@@ -2,6 +2,7 @@ import PageTemplate from "../BasicPageTemplate";
 import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
+import ScrollerButton from "../../components/ScrollerButton";
 import { LastButton, NextButton } from "../../components/NextLastButton";
 
 const title = "Strike Back"
@@ -78,26 +79,32 @@ export default function StrikeBackPage()
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/> <Expandable title="My Responsibilities" text={responsibilities}></Expandable></div>
+            <div>
+              <h2>Highlights</h2>
+              <ScrollerButton titleID="Building a game (engine)"/>
+              <ScrollerButton titleID="The Grand Animation Machine"/>
+              <ScrollerButton titleID="Post Mortem"/>
+            </div>
         </div>
         <div className="ContentImageHolder">
           <embed src="https://www.youtube.com/embed/d7UgyWLVeNI?si=UKlCPoa-Ap5VM4vp" />
         </div>
       </section>
 
-      
+{/*       
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
         </div>
-      </section>
+      </section> */}
       <section className="ContentRow">
         <div className="ContentImageHolder">
           <img className="ContentImage" src="StrikeBack/Screenshot_02.png"/>
         </div>
       </section>
-      <TextOnlySection header = {header1} paragraph={paragraph2}/>
-      <TextOnlySection header = {header2} paragraph={paragraph3}/>
-      <TextOnlySection header = {header3} paragraph={paragraph4}/>
+      <TextOnlySection scrollID="Building a game (engine)" header = {header1} paragraph={paragraph2}/>
+      <TextOnlySection scrollID="The Grand Animation Machine" header = {header2} paragraph={paragraph3}/>
+      <TextOnlySection scrollID="post Mortem" header = {header3} paragraph={paragraph4}/>
     </ContentBlock>
   </PageTemplate>
   </>
