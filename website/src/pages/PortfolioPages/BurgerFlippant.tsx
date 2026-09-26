@@ -68,7 +68,7 @@ export default function BurgerFlippantPage()
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
             <div>
-            <h2>Highlights</h2>
+            <h2>Select Section:</h2>
             <ScrollerButton titleID="Thermal Implementation"/>
             <ScrollerButton titleID="2D Original"/>
           </div>

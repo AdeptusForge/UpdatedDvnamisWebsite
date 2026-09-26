@@ -75,7 +75,7 @@ export default function BlazerPage()
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
           <div>
-            <h2>Highlights</h2>
+            <h2>Select Section:</h2>
             <ScrollerButton titleID="Investigation & Narrative"/>
             <ScrollerButton titleID="Action in the Roguelike"/>
             <ScrollerButton titleID="The Needs of Design"/>

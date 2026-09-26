@@ -48,13 +48,13 @@ function MainPage() {
           </div><Item title="Burger Flippant" subtitle="Systems Design & Programmer" image="BurgerFlippant/BurgerFlippant.gif" destination="burger_flippant"/></div>
         <Item title="DBFZ: KAI" subtitle="Systems Design & Programmer" image="Kai/websitekai.png"  destination="dbfz_kai"/>
       </section>
-      <section className="PortfolioRow">
+      {/* <section className="PortfolioRow">
         <div className="LeftHolder"><div className="LeftOffset"></div>
         <Item title="Omegatech: Aspen's Story" subtitle="Level Design" image="OmegaTech/omegatech.png" destination="omegatech"/></div>
           <div className="MiddleHolder"><div className="MiddleOffset">
           </div><Item title="Avagard's Study"  subtitle="Level Design & Graphics/Physics Programmer" image="AvagardsStudy/LevelDesignProject.png" destination="avagards_study"/></div>
         <Item title="Under Red Sun Sands" subtitle="Level Design" image="RedSun/redsun.png" destination="red_sun"/>
-      </section>
+      </section> */}
       </div>
       {/* <FooterBar/> */}
       </div>

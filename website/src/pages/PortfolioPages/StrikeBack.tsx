@@ -4,6 +4,7 @@ import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
 import ScrollerButton from "../../components/ScrollerButton";
 import { LastButton, NextButton } from "../../components/NextLastButton";
+import AnimationMachineDiagram from "/StrikeBack/AnimationMachineDiagram.svg"
 
 const title = "Strike Back"
 const introductionDetails = "August 2022 - April 2024 \n FOWL Custom Engine (C++)"
@@ -33,25 +34,29 @@ const header2 = "The Grand 'Animation Machine'"
 const paragraph3 = 'The heart and soul of any fighting game is its animation system; \
 how it works, what it can do, and how easy it is to work with. Designers working on \
 fighting games need the ability to almost instantly change character movesets, as \
-fighting games are highly iterative. There is also a need for an extremely rigorous \
+fighting games are highly iterative. There is also a need for an extremely robust \
 system: professional-grade fighting games should have nearly non-existent or invisible \
-bugs.\n\nThis leads naturally to a conundrum where giving designers behavior editing \
+bugs.\n\nThis leads naturally to a conundrum where giving designers direct behavior editing \
 access can cause a codebase to rapidly become unmanageable, as every time a character \
 changes, potential bugs are introduced.\n\nThe solution is what I dubbed the Animation \
-Machine: a full JSON-based scripting language that is interpretted into a list of \
-sequential AnimationFrames. Our custom engine then uses these AnimationFrames to construct \
-animations during runtime using preset draw calls and event triggers.\
+Machine: a full JSON-based markdown language that is interpretted into a list of \
+sequential AnimationFrames by the engine. A custom Animator class then uses these AnimationFrames to construct \
+animations during runtime that will be read during gameplay into texture swap calls and event triggers.'
+
+const paragraph4 = 'This system provides several uniquely powerful benefits:\
 \n\n\
-This system provides several uniquely powerful benefits:\
+1 ) Human readable animation files make for easy debugging by both designers and programmers\n\
+2)  Streamlines the character animation workflow by staying in-engine the entire time\n\
+3)  The capability to reuse animation frames from any currently loaded fighterdata during runtime allows more design freedom\n\
+4)  It allows designer to tailor animations for gameplay without needing to request re-animation from the art department\
 \n\n\
-> Human readable animation files for easy debugging\n\
-> Ability to reuse animation frames from anywhere on the disk\n\
-> Streamlines designer iteration multiple times while staying in the engine\n\
-> Allows artistic iteration without needing to request re-animation from the art department'
+The Animation Machine I built streamlined the entire development process, despite the time it took to setup and test from conception. \
+Without it, I don\'t think the game would have been half as good as it ended up becoming.'
+
+
 
 const header3 = "Post Mortem"
-const paragraph4 = 'The project goal being relatively inflexible technically speaking was \
-double-edged sword. One on hand, it meant that the entire tech team had a concise idea of \
+const paragraph5 = 'The project goal was relatively inflexible, technically speaking. One on hand, it meant that the entire tech team had a concise idea of \
 what we were doing and why we were doing it. On the other, it meant that whenever something \
 became difficult to complete, it could have potentially blocked parts of the project.\
 \n\n\
@@ -60,9 +65,8 @@ have very easily derailed. A single point of failure like that could have very e
 the project, and the only good solution is to keep better documentation of individual \
 requirements.\
 \n\n\
-I am overall happy with the project based on the time we had, but I am also frustrated by our \
-lack of ability to polish elements of the game partly due to my own leadership abilities at \
-the time.'
+I am overall supremely happy with the project, but I am equally frustrated by how \
+unpolished some elements of the game ended up being.'
 
 
 export default function StrikeBackPage()
@@ -80,7 +84,7 @@ export default function StrikeBackPage()
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/> <Expandable title="My Responsibilities" text={responsibilities}></Expandable></div>
             <div>
-              <h2>Highlights</h2>
+              <h2>Select Section:</h2>
               <ScrollerButton titleID="Building a game (engine)"/>
               <ScrollerButton titleID="The Grand Animation Machine"/>
               <ScrollerButton titleID="Post Mortem"/>
@@ -99,12 +103,14 @@ export default function StrikeBackPage()
       </section> */}
       <section className="ContentRow">
         <div className="ContentImageHolder">
-          <img className="ContentImage" src="StrikeBack/Screenshot_02.png"/>
+          <img width="100%" src="StrikeBack/Screenshot_02.png"/>
         </div>
       </section>
       <TextOnlySection scrollID="Building a game (engine)" header = {header1} paragraph={paragraph2}/>
       <TextOnlySection scrollID="The Grand Animation Machine" header = {header2} paragraph={paragraph3}/>
-      <TextOnlySection scrollID="post Mortem" header = {header3} paragraph={paragraph4}/>
+      <img width="60%" height="100%" src={AnimationMachineDiagram} role="img"/>
+      <TextOnlySection paragraph={paragraph4}/>
+      <TextOnlySection scrollID="post Mortem" header = {header3} paragraph={paragraph5}/>
     </ContentBlock>
   </PageTemplate>
   </>

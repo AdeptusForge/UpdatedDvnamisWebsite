@@ -3,11 +3,9 @@ import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
 import { LastButton, NextButton } from "../../components/NextLastButton";
-import CodeSample  from "../../components/CodeSample";
 //import Carousel from "../../components/Carousel";
-import TabFader from "../../components/TabFader";
+// import TabFader from "../../components/TabFader";
 import ScrollerButton from "../../components/ScrollerButton";
-import { OverlayTarget } from "../../components/OverlayWindow";
 import OverlayWindow from "../../components/OverlayWindow";
 
 const title = "Descent Into HELLForge"
@@ -33,12 +31,8 @@ design space of the game. Some major things I noted down: \
 
 
 const header1= "Dynamic Sub Encounters  "
-const paragraph2 = "A thematic motif I used throughout this process was constructing encounters \
-as gestalt such that individual encounter elements could be experienced in multiple ways. These \
-subencounters are experienced in multiple unique ways dependent on player prioritization and \
-temperment. Subencounters are blocked out to provide recontextualization to a given level piece \
-without creating overly complex level geometry. Below are some example encounters that made the \
-best usage of this principal."
+const paragraph2 = "I build my encounters to be approachable from multiple angles, and \
+to be tackled in the order of the player's choosing. Shrewd players and aggressive players will treat each of the following encounters drastically differently."
 
 
 
@@ -63,26 +57,6 @@ closely. The map is very 'condensed', and doesn't have much exploration through 
 or visual artistry, which I usually like to incorporate into my level design. My prior projects are \
 far more open-ended than anything I got to do with this project."
 
-const block1 = `  
-using system; 
-    void LoremIpsumCode(LoremIpsumVar loremipsum)
-    { 
-        if (loremipsum == null) 
-        { 
-            Print(\"lorem ipsum\"); 
-            return; 
-        } 
-        loremipsum = false; 
-        loremipsum.loremipsum = loremipsum; 
-        loremipsum = false; 
-        loremipsum = false; 
-              loremipsum = false; 
-          loremipsum = false; 
-        loremipsum = false; 
-
-    }
-        `
-
 //Player behavior can usually be boiled down to far fewer options because of the circumstances they are put in.
 
 export default function HellforgePage()
@@ -102,8 +76,8 @@ export default function HellforgePage()
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/>
           <div>
-            <h2>Highlights</h2>
-            <ScrollerButton titleID="Layout & Design Goals"/>
+            <h2>Select Section:</h2>
+            <ScrollerButton titleID="Layout & Design Process"/>
             <ScrollerButton titleID="Dynamic SubEncounters"/>
             <ScrollerButton titleID="Blobular Encounter Methodology"/>
           </div>
@@ -113,15 +87,10 @@ export default function HellforgePage()
           <embed src="https://www.youtube.com/embed/whzmQB-cFZs?si=FaWFVnfZGKzVwi4U" />
         </div>
       </section>
-      <section className="ContentRow">
-        <div className="ContentTextHolder">
-          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
-          
-        </div>
-      </section>
+    <TextOnlySection scrollID="Layout & Design Process" header={"Layout & Design Process"} paragraph={paragraph1} />
       <section className="ContentRow" >
         <div className="ContentImageHolder">
-          <img className="ContentImage" src="Hellforge/descent.jpg"/>
+          <img width="auto" height="680vh" src="Hellforge/HellforgeLevel.svg"/>
         </div>
       </section>
       <TextOnlySection scrollID="Dynamic SubEncounters" header={header1} paragraph={paragraph2}/>
@@ -137,12 +106,11 @@ export default function HellforgePage()
         </div>
       </section >
       <section  className="ContentExpandableRow">
-        <TabFader faderID="testFader">
+        {/* <TabFader faderID="testFader">
           <div></div>
-        </TabFader>
+        </TabFader> */}
       </section >
       <TextOnlySection scrollID="Blobular Encounter Methodology" header={header2} paragraph={paragraph3} />
-      <OverlayTarget targetID="codeTarget1"><CodeSample code={block1}></CodeSample></OverlayTarget>
       
       {/* <section  className="ContentExpandableRow">
         <ContentPicker titles={["test1","test2"] as string[]}/>
@@ -158,9 +126,16 @@ export default function HellforgePage()
           <Expandable title="HELLForge Core" image="Hellforge/HellforgeCore.jpg" text = "This fight follows my earlier Blobular Design principles, essentially squeezing the player into positions where they are forced to relieve the pressure themselves and in predictable ways. The player could kill the Revenants, the Cacodemon, or the Pinkies. Regardless of which they pick, a path will open up and the remaining demons will force the player to move into it or to continually dodge. Inevitably, this results in some circle strafing with the last few demons, with the central platform acting as a shortcut should the player desire it."></Expandable>
         </div>
       </section>
+
+
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{header3}</h1><p dangerouslySetInnerHTML={{__html: paragraph4}}/></div>
+        </div>
+      </section>
+      <section className="ContentRow" >
+        <div className="ContentImageHolder">
+          <img width="100%" src="Hellforge/descent.jpg"/>
         </div>
       </section>
     </ContentBlock>

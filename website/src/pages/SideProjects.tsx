@@ -18,92 +18,21 @@ interface Props {
 
 
 const title = "SIDE PROJECTS"
-const loremipsum = "lorem ipsum dolor sit amet consectetur adipiscing elit aliqua cupiditate omnis cillum corrupti elit minim at autem in est deserunt harum sit ducimus mollitia consequatur consequat officia officia corrupti sint officia et fugiat nulla consequat ipsum officia ad voluptas at lorem in qui molestias vel quis et dolor nulla aute do officia ut fugiat soluta eiusmod distinctio est deserunt quis quod nam voluptatum accusamus dolore ut ad est in cupidatat animi pariatur eu id repellendus similique quidem praesentium nobis similique ut occaecat et duis odio repellendus dignissimos qui officia distinctio cum fugiat at eos illum cumque repellendus autem dolore dolorum irure tempore qui id qui fugiat omnis dolores et atque ducimus in dolor molestias et cum et qui magna qui nulla soluta voluptas minus libero deserunt in iusto provident enim iusto voluptas omnis occaecat qui dolorum facilis cillum culpa officia ut occaecat nam ipsum aute commodo excepturi quo quis animi mollitia laborum quos deserunt voluptate et exercitation praesentium corrupti consequat dolor provident laboris veniam sunt lorem ipsum dolor sit amet consectetur adipiscing elit aliqua cupiditate omnis cillum corrupti elit minim at autem in est deserunt harum sit ducimus mollitia consequatur consequat officia officia corrupti sint officia et fugiat nulla consequat ipsum officia ad voluptas at lorem in qui molestias vel quis et dolor nulla aute do officia ut fugiat soluta eiusmod distinctio est deserunt quis quod nam voluptatum accusamus dolore ut ad est in cupidatat animi pariatur eu id repellendus similique quidem praesentium nobis similique ut occaecat et duis odio repellendus dignissimos qui officia distinctio cum fugiat at eos illum cumque repellendus autem dolore dolorum irure tempore qui id qui fugiat omnis dolores et atque ducimus in dolor molestias et cum et qui magna qui nulla soluta voluptas minus libero deserunt in iusto provident enim iusto voluptas omnis occaecat qui dolorum facilis cillum culpa officia ut occaecat nam ipsum aute commodo excepturi quo quis animi mollitia laborum quos deserunt voluptate et exercitation praesentium corrupti consequat dolor provident laboris veniam sunt"
+// const loremipsum = "lorem ipsum dolor sit amet consectetur adipiscing elit aliqua cupiditate omnis cillum corrupti elit minim at autem in est deserunt harum sit ducimus mollitia consequatur consequat officia officia corrupti sint officia et fugiat nulla consequat ipsum officia ad voluptas at lorem in qui molestias vel quis et dolor nulla aute do officia ut fugiat soluta eiusmod distinctio est deserunt quis quod nam voluptatum accusamus dolore ut ad est in cupidatat animi pariatur eu id repellendus similique quidem praesentium nobis similique ut occaecat et duis odio repellendus dignissimos qui officia distinctio cum fugiat at eos illum cumque repellendus autem dolore dolorum irure tempore qui id qui fugiat omnis dolores et atque ducimus in dolor molestias et cum et qui magna qui nulla soluta voluptas minus libero deserunt in iusto provident enim iusto voluptas omnis occaecat qui dolorum facilis cillum culpa officia ut occaecat nam ipsum aute commodo excepturi quo quis animi mollitia laborum quos deserunt voluptate et exercitation praesentium corrupti consequat dolor provident laboris veniam sunt lorem ipsum dolor sit amet consectetur adipiscing elit aliqua cupiditate omnis cillum corrupti elit minim at autem in est deserunt harum sit ducimus mollitia consequatur consequat officia officia corrupti sint officia et fugiat nulla consequat ipsum officia ad voluptas at lorem in qui molestias vel quis et dolor nulla aute do officia ut fugiat soluta eiusmod distinctio est deserunt quis quod nam voluptatum accusamus dolore ut ad est in cupidatat animi pariatur eu id repellendus similique quidem praesentium nobis similique ut occaecat et duis odio repellendus dignissimos qui officia distinctio cum fugiat at eos illum cumque repellendus autem dolore dolorum irure tempore qui id qui fugiat omnis dolores et atque ducimus in dolor molestias et cum et qui magna qui nulla soluta voluptas minus libero deserunt in iusto provident enim iusto voluptas omnis occaecat qui dolorum facilis cillum culpa officia ut occaecat nam ipsum aute commodo excepturi quo quis animi mollitia laborum quos deserunt voluptate et exercitation praesentium corrupti consequat dolor provident laboris veniam sunt"
 
 const triplanarP = 'Since I level design a lot, a while back I figured the best thing I could do was to make my life easier. \
 \n\
 While I generally don\'t have the time to make my levels look as snazzy as they deserve, I found there were ways to get more from less. This Triplanar Texturing material makes it very easy to add visual variety to large scenes without needing to spend undue time. Not very optimized, as it is meant as a development stopgap tool rather than a game-ready shader\n\
-I will eventually spend a few more hours on it to optimize it & make it fullystochastic as well.'
+I will eventually spend a few more hours on it to optimize it & make it fully stochastic as well.'
 
-const triplanar_code = `shader_type spatial;
- 
-const float detile_multiple = 0.5;
-
-uniform vec3 blending_coefficient = vec3(1.0);
-uniform sampler2D base_texture: source_color, repeat_enable;
-uniform sampler2D detiling_noise: source_color, repeat_enable;
-uniform vec2 base_texture_scaling = vec2(1.0,1.0);
-uniform float triplane_alpha = 1.0;
- 
-group_uniforms X_Axis;
-uniform bool axis_x_active = true;
-uniform bool axis_x_swizzle = false;
-uniform float axis_x_detiling = 0.0;
-uniform vec2 axis_x_dualsided = vec2(1.0);
-uniform sampler2D texture_x : repeat_enable, source_color;
-uniform vec2 texture_scaling_x = vec2(1.0,1.0);
-uniform vec2 texture_offset_x;
-uniform vec4 tint_x: source_color = vec4(1.0);
-group_uniforms;
- 
-group_uniforms Y_Axis;
-uniform bool axis_y_active = true;
-uniform bool axis_y_swizzle = false;
-uniform float axis_y_detiling = 0.0;
-uniform vec2 axis_y_dualsided = vec2(1.0);
-uniform sampler2D texture_y : repeat_enable, source_color;
-uniform vec2 texture_scaling_y = vec2(1.0,1.0);
-uniform vec2 texture_offset_y;
-uniform vec4 tint_y: source_color = vec4(1.0);
-group_uniforms;
- 
-group_uniforms Z_Axis;
-uniform bool axis_z_active = true;
-uniform bool axis_z_swizzle = false;
-uniform float axis_z_detiling = 0.0;
-uniform vec2 axis_z_dualsided = vec2(1.0);
-uniform sampler2D texture_z : repeat_enable, source_color;
-uniform vec2 texture_scaling_z = vec2(1.0,1.0);
-uniform vec2 texture_offset_z;
-uniform vec4 tint_z: source_color = vec4(1.0);
-group_uniforms;
- 
-void fragment() {
-	vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0);
-	vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz);
-	vec3 adjustedNormal = pow(abs(normal), blending_coefficient);
-	vec3 weights = (adjustedNormal / (adjustedNormal.x + adjustedNormal.y + adjustedNormal.z)) * 3.0;
+// const triplanar_code = `void fragment() {
+// 	vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0);
+// 	vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz);
+// 	vec3 adjustedNormal = pow(abs(normal), blending_coefficient);
+// 	vec3 weights = (adjustedNormal / (adjustedNormal.x + adjustedNormal.y + adjustedNormal.z)) * 3.0;
 	
-	vec2 vert_x = (axis_x_swizzle ? vertex.yz : vertex.zy);
-	vec2 vert_y = (axis_y_swizzle ? vertex.xz : vertex.zx);
-	vec2 vert_z = (axis_z_swizzle ? vertex.xy : vertex.yx);
-	
-	vec2 uv_x = (vert_x) * texture_scaling_x + texture_offset_x;
-	vec2 uv_y = (vert_y) * texture_scaling_y + texture_offset_y; 
-	vec2 uv_z = (vert_z) * texture_scaling_z + texture_offset_z; 
-	
-	float x_detile = texture(detiling_noise, vert_x).r * axis_x_detiling * detile_multiple / length(texture_scaling_x);
-	float y_detile = texture(detiling_noise, vert_y).r * axis_y_detiling * detile_multiple  / length(texture_scaling_y);
-	float z_detile = texture(detiling_noise, vert_z).r * axis_z_detiling * detile_multiple  / length(texture_scaling_z);
-	
-	vec3 color_x = texture(texture_x, uv_x + vec2(-sin(x_detile), -sin(x_detile))).rgb * weights.x * tint_x.rgb * float(axis_x_active);
-	vec3 color_y = texture(texture_y, uv_y + y_detile).rgb * weights.y * tint_y.rgb * float(axis_y_active);
-	vec3 color_z = texture(texture_z, uv_z + z_detile).rgb * weights.z * tint_z.rgb * float(axis_z_active);
-	vec3 colorAverage = (color_x + color_y + color_z) / 3.0;
-
-	//float colorDistance_x = distance(color_x, colorAverage);
-	//float colorDistance_y = distance(color_y, colorAverage);
-	//float colorDistance_z = distance(color_z, colorAverage);
-	//
-	//float min_distance = min(colorDistance_x, colorDistance_y);
-	//min_distance = min(min_distance, colorDistance_z);
-
-	vec3 closest_color = colorAverage;
-
-	ALBEDO = mix(texture(base_texture, UV * base_texture_scaling), vec4(closest_color, 1.0), triplane_alpha).rgb;
-	NORMAL_MAP = mix(texture(base_texture, UV * base_texture_scaling), vec4(closest_color, 1.0), triplane_alpha).rgb;
-}
-`
+// 	vec2 vert_x = (axis_x_swizzle ? vertex.yz : vertex.zy);
+// 	vec2 vert_y = (axis_y_swizzle ? vertex.xz : vertex.zx);`
 
 const HK47P = "As part of the Kipper Project I'm working on presently, \
 I found the need to learn 3D modeling/rigging/UVing from scratch to understand the exact process from a non-programmatic or design perspective.\n\
@@ -132,14 +61,14 @@ using system;
     }
         `
 
-const alamut_level ="Back in 2025, I was particularly enamored by the art of Mike Franchina, particularly his work on/with Trench Crusade. \
-I latched onto the story of Alamut, an assassin's mystic castle defended for centuries through secrecy, deception, and guile. The castle itself \
-was based around Turkish & Middle Eastern fortresses, and shared a name with the real life Alamut fortress in. \n\
-Still, I did plan out a large number of the interior & exterior structure, with significant amounts of creative liberty taken. \
-I had a large amount of room to flex creative muscles; an assassin's castle can have any number of secret passage ways, tricks, \
-traps and alternative pathways to traverse through for the enterprising or perceptive player.\n\
-I bit off significantly more than I could chew with this one, and never got beyond the planning stages, as I realized that without \
-mechanics to back it up, the level would serve no purpose, and have limited interactivity."
+// const alamut_level ="Back in 2025, I was particularly enamored by the art of Mike Franchina, particularly his work on/with Trench Crusade. \
+// I latched onto the story of Alamut, an assassin's mystic castle defended for centuries through secrecy, deception, and guile. The castle itself \
+// was based around Turkish & Middle Eastern fortresses, and shared a name with the real life Alamut fortress in. \n\
+// Still, I did plan out a large number of the interior & exterior structure, with significant amounts of creative liberty taken. \
+// I had a large amount of room to flex creative muscles; an assassin's castle can have any number of secret passage ways, tricks, \
+// traps and alternative pathways to traverse through for the enterprising or perceptive player.\n\
+// I bit off significantly more than I could chew with this one, and never got beyond the planning stages, as I realized that without \
+// mechanics to back it up, the level would serve no purpose, and have limited interactivity."
 
 function SideProjectScroller({ children }: Props)
 {
@@ -178,19 +107,20 @@ function SideProjects() {
           </div>
           <SideProjectScroller>
             <div>
-              <section className="ContentRow">
+              <section className="ScrollerRow">
                 <div className="ScrollerTextHolder"id='Triplanar Texture'>
                   <div className="ScrollHeader">Triplanar Stochastic Material</div>
                   {triplanarP}
                   <div className='TextSpacer'/>
-                  <OverlayTarget targetID="triplanar_code"><CodeSample code={triplanar_code}/></OverlayTarget>
+                  
                 </div>
                 <div className="ScrollerVideoHolder">
                   <video className="resizeVid"  src="Triplanar/triplanarmaterial.mp4" no-controls autoPlay muted loop/>
+                  
                 </div>
               </section>
               <section className='ContentSpacer'/>
-              <section className="ContentRow">
+              <section className="ScrollerRow">
                 <div className="ScrollerTextHolder"id='HK-47 Modeling'>
                   <div className="ScrollHeader">3D Modeling HK-47</div> {HK47P} 
                 </div>
@@ -205,17 +135,17 @@ function SideProjects() {
                   </Carousel>
                 </div>
               </section>
-              <section className="ContentRow">
+              <section className="ScrollerRow">
                 <div className="ScrollerTextHolder"id='Additive Action Channels'>
                   <div className="ScrollHeader">Additive 'ActionChannels'</div> {action_channels}
                   <div className='TextSpacer'/>
-                  <OverlayTarget targetID="channels_code"><CodeSample code={channels_code}/></OverlayTarget>
+                  
                 </div>
                 <div className="ScrollerTextHolder">
-                  {loremipsum}
+                  <OverlayTarget targetID="channels_code"><CodeSample code={channels_code}/></OverlayTarget>
                 </div>
               </section>
-              <section className="ContentRow">
+              {/* <section className="ScrollerRow">
                 <div className="ScrollerTextHolder"id='ALAMUT Fortress'>
                   <div className="ScrollHeader">Alamut Fortress Level</div>
                   {alamut_level}
@@ -224,9 +154,9 @@ function SideProjects() {
                 <div className="ScrollerTextHolder">
                   {loremipsum}
                 </div>
-              </section>
+              </section> */}
 
-              <section className="ContentRow">
+              <section className="ScrollerRow">
                 <div className="ScrollerTextHolder">
                 </div>
                 <div className="ScrollerTextHolder" id='Stochastic Texture'>

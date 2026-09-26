@@ -42,11 +42,13 @@
 }
 .ScrollerTextHolder
 {
-  max-width: 60%;
+  max-width: 50%;
   padding-top:40px;
   padding-left:20px;
   text-align: left;
   flex-shrink:1;
+  align-items: center;
+  justify-content: center;
 }
 .ScrollerCarouselHolder
 {

@@ -13,7 +13,7 @@ function ResumePage()
   </head>
   <PageTemplate>
       <section className="ContentSection">
-        <embed className="resumeEmbed" src="/Programming Resume.pdf#view=FitH" type="application/pdf"/>
+        <embed className="resumeEmbed" src="/Gameplay & Systems Programming Resume.pdf#view=FitH" type="application/pdf"/>
         <div className="ContentBlock">
         </div>
       </section>

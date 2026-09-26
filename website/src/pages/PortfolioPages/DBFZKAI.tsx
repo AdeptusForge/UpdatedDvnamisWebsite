@@ -3,7 +3,7 @@ import { ContentBlock, TextOnlySection } from "../BasicPageTemplate";
 import '../BasicPageTemplate.css'
 import Expandable from "../../components/Expandable";
 import ScrollerButton from "../../components/ScrollerButton";
-import { LastButton, NextButton } from "../../components/NextLastButton";
+import { LastButton } from "../../components/NextLastButton";
 
 const title = "Dragon Ball FighterZ KAI"
 const introductionDetails = "November 2019 - June 2020 \n Modded Dragon Ball FighterZ"
@@ -94,13 +94,14 @@ export default function KaiPage()
     <title>| DVNAMIS | DBFZ: Kai</title>
   </head>
   <PageTemplate>
-    <LastButton buttonText="LAST" destination="burger_flippant"/><NextButton buttonText="NEXT" destination="omegatech"/>
+    <LastButton buttonText="LAST" destination="burger_flippant"/>
+    {/* <NextButton buttonText="NEXT" destination="omegatech"/> */}
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
           <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
           <div>
-            <h2>Highlights</h2>
+            <h2>Select Section:</h2>
             <ScrollerButton titleID="Design Constraints"/>
             <ScrollerButton titleID="Challenges for the new ruleset"/>
             <ScrollerButton titleID="Solution Through Innovation"/>
