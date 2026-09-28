@@ -2,7 +2,9 @@
 //import { useState } from 'react'
 import './MainPage.css'
 //import * as motion from "motion/react-client"
+import { VideoItem } from '../components/Scroll'
 import Item from '../components/Scroll'
+
 //import { Example } from '../components/Collapsible'
 import '../components/Collapsible.css'
 //import Expandable from '../components/Expandable'
@@ -45,7 +47,7 @@ function MainPage() {
         <div className="LeftHolder"><div className="LeftOffset"></div>
         <Item title="CODENAME: Blazer" subtitle="Systems & Level Design & Programmer" image="CodenameBlazer/evidencegif.gif" destination="codename_blazer"/></div>
           <div className="MiddleHolder"><div className="MiddleOffset">
-          </div><Item title="Burger Flippant" subtitle="Systems Design & Programmer" image="BurgerFlippant/BurgerFlippant.gif" destination="burger_flippant"/></div>
+          </div><VideoItem title="Burger Flippant" subtitle="Systems Design & Programmer" video="BurgerFlippant/PortfolioBurgerFlippant.mp4" destination="burger_flippant"/></div>
         <Item title="DBFZ: KAI" subtitle="Systems Design & Programmer" image="Kai/websitekai.png"  destination="dbfz_kai"/>
       </section>
       {/* <section className="PortfolioRow">

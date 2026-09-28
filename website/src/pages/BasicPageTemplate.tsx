@@ -28,7 +28,7 @@ export function TextOnlySection({scrollID="", header='', paragraph=''})
   return <>
       <section className="ContentRow" id={scrollID}>
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header}</h1><p dangerouslySetInnerHTML={{__html: paragraph}}/></div>
+          <div className="FullText"><h1>{header}</h1><p dangerouslySetInnerHTML={{__html: paragraph}}/></div>
           
         </div>
       </section>

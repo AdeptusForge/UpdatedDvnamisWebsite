@@ -61,6 +61,34 @@ export default function Item({title = "", subtitle = "", image="", destination =
     )
 }
 
+
+export function VideoItem({title = "", subtitle = "", video="", destination = "https://www.dvnamis.games"}) {
+    const ref = useRef(null)
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "0.6 1"],
+    })
+    return (
+        <div className="BixFilter">
+      <motion.button className="Bix" 
+      ref={ref} 
+      style={{ scaleY: scrollYProgress }} 
+      animate={{rotateX: 0}}
+      onClick={() => window.open("#/"+ destination,"_self")}>
+        <div className="PortfolioTextCard">
+            <div className="PortfolioTitle"><b>{title}</b> 
+            <br/>
+            <div className="PortfolioSubtitle">{subtitle}</div>
+            </div>
+        </div>
+        <video background-color="black" no-controls autoPlay muted loop src={video} hidden={video==""} className="PortfolioThumbnail"/>
+      </motion.button>
+        </div>
+
+    )
+}
+
 /**
  * ==============   Styles   ================
  */
