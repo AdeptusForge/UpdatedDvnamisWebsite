@@ -15,9 +15,9 @@ I wanted to see what I could accomplish in the same time with the same goals by 
 '
 
 const header2D ="The 2D Original"
-const paragraph2D=' To understand the scope of the improvements, let\'s go back to the original first.\
-Burger Flippant started life in 2D. Back then I lacked a large amount of knowledge about game engines, \
-and was coming fresh off of my very earliest game experiments making various 2D platformers and minor action games.\
+const paragraph2D=' To understand the scope of the improvements, let\'s go back to the original first. \
+Burger Flippant started life in Unity, in 2D. Back then, I lacked a large amount of knowledge about game engines \
+and was coming fresh off of my very earliest game experiments making various 2D platformers and minor action games. \
 Working with my friend Joel at the time, I was focused primarily on design & visuals, while he was strictly programming.\n\n\
 The main system I designed for the game was the cooking \
 mechanics. Ingredients needed to gradually cook while in contact with the \
@@ -37,12 +37,7 @@ and would recieve heat from the grill and store it as an integer. Every node \
 would transfer heat to its designated neighbors at different, modifiable rates. \
 Increased heat in each node would change the nodes\' color and alter its \
 elasticity and physical properties, as well as a \'done-ness\' stat, which was \
-used in calculating the final meal\'s score. Reaching certain objective scores \
-would grant the player new ingredients and another goal to reach. Done-ness \
-thresholds also allowed each ingredient to have unique behavior: \
-\n\n> Lettuce would turn black and char\
-\n> Meat would eventually burst into flames\
-\n> Spices would release flavor particles'
+used in calculating the final meal\'s score.'
 const header1= "Thermal Implementation"
 // const paragraph2 = ""
 
@@ -60,7 +55,7 @@ Finally, after getting it running smoothly, I eventually moved onto modeling & r
 const headerPost = "Post Mortem & The Future"
 const paragraphPostMortem = 'Both time handling this project, I was supremely happy with the results. I never got around to the scoring systems of either project, \
 which prevented it from ever becoming a full \'game\', but each time I learned a massive amount both times. \n\n\If I was to improve the base of the project again, I \
-would fundamentally change the way the thermal system works to be more mathematically driven, using a sampling style instead of a voxel-style grid.'
+would fundamentally change the way the thermal system works to be more mathematically driven, using a sampling style instead of a voxel-style grid to remove the hefty processing costs. I would also probably spend a lot more time on the visuals of the project, as I have come to quite enjoy VFX.'
 
 //Player behavior can usually be boiled down to far fewer options because of the circumstances they are put in.
 
@@ -84,14 +79,13 @@ export default function BurgerFlippantPage()
             <ScrollerButton titleID="Thermal Implementation"/>
             <ScrollerButton titleID="Transition to 3D"/>
             <ScrollerButton titleID="Post Mortem & The Future"/>
-            
           </div>
         </div>
         <div className="ContentImageHolder">
           <video no-controls autoPlay muted loop width="100%" height="100%" src="BurgerFlippant/PortfolioBurgerFlippant.mp4" />
         </div>
       </section>
-      <section className="ContentRow">
+      <section className="ContentRow" id="The 2D Original">
         <div className="ContentText">
           <h1>{header2D}</h1><p dangerouslySetInnerHTML={{__html: paragraph2D}} />
         </div>
@@ -103,18 +97,18 @@ export default function BurgerFlippantPage()
       <section className="ContentRow">
         <div className="ContentImageHolder">
           <img width="100%" height="800vw" object-fit="fill" src="BurgerFlippant/BurgerFlippantImplementation.svg"/>
-          <p>{'\nThis system came with some unique benefits:'}</p>
+          <p>{'\nThis system came with several unique benefits:'}</p>
         </div>
       </section>
       <section className="ContentExpandableRow">
         <div className="ContentExpandableHolder">
-          <Expandable title="Custom Conductivity" text = "Most solid foods aren't uniform through. Best example would be a T-Bone Steak. The bone doesn't conduct heat the same way the meat does. With this system, handling that is as trivial as creating a new ConductivityGrid."></Expandable>
+          <Expandable title="Custom Conductivity" text = "Most solid foods aren't uniform throughout; best example being a T-Bone Steak. The bone doesn't conduct heat the same way the meat does. With this system, handling that is as trivial as creating a new ConductivityGrid. with non-uniform distribution. Also lets 'searing' take place by letting the outer skin spread laterally faster."></Expandable>
         </div>
         <div className="ContentExpandableHolder">
-          <Expandable title="Physics Agnostic" text = "By separating the rigidbodies from the actual thermal calculations, the precision of the thermal calculation can be increased without increasing the physics overhead & vice versa."></Expandable>
+          <Expandable title="Physics Agnostic" text = "By separating the rigidbodies from the actual thermal calculations, the precision of the thermal calculation can be increased without increasing the physics overhead & vice versa. The system can also be completely decoupled in sitations where one is needed but not the other, such as in scoring."></Expandable>
         </div>
         <div className="ContentExpandableHolder">
-          <Expandable title="Universal Player Understanding" text = "While in recent years I have started to want to stretch player's mental faculties, it can't be understated how powerful it is to have a mechanic be entirely intuitive to anyone who picks up the game, regardless of age or nationality. Making a system that is both complex and easily understood by anyone who tries it is invaluable to a designer, since it lets us focus our efforts elsewhere."></Expandable>
+          <Expandable title="Universal Player Understanding" text = "While in recent years I have started to want to stretch player's mental faculties, it can't be understated how powerful having an entirely intuitive mechanic is. A system that is both complex and easily understood is invaluable to a designer, since it lets us focus our efforts elsewhere."></Expandable>
         </div>
       </section>
 
