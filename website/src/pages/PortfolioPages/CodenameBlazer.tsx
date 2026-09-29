@@ -73,7 +73,7 @@ export default function BlazerPage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
+          <div className="IntroText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
           <div>
             <h2>Select Section:</h2>
             <ScrollerButton titleID="Investigation & Narrative"/>
@@ -89,7 +89,7 @@ export default function BlazerPage()
       
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
+          <div className="FullText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
         </div>
       </section>
       <TextOnlySection scrollID="Investigation & Narrative" header = {header1} paragraph={paragraph2}/>

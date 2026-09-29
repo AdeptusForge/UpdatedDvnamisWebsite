@@ -120,7 +120,7 @@ export default function WakePage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
+          <div className="IntroContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
           {/* <Expandable title="My Responsibilities" text={responsibilities}></Expandable> */}
           <div>
             <h2>Select Section:</h2>
@@ -137,8 +137,8 @@ export default function WakePage()
       </section>
       <section className="ContentRow" id="Design Approach & Pillars">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{header1}</h1>
-          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
+          <div className="FullText"><h1>{header1}</h1>
+          <div className="FullText"><p dangerouslySetInnerHTML={{__html: paragraph1}}/></div>
           <p dangerouslySetInnerHTML={{__html: paragraph2}}/>
           <h1>Key Design Pillars</h1></div>
         </div>
@@ -158,8 +158,8 @@ export default function WakePage()
       <TextOnlySection header = {header3} paragraph={paragraph4}/>
       <section className="ContentRow" id="Agent Navigation">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{navHeader}</h1>
-          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: navParagraph}}/></div>
+          <div className="FullText"><h1>{navHeader}</h1>
+          <div className="FullText"><p dangerouslySetInnerHTML={{__html: navParagraph}}/></div>
           </div>
         </div>
         <div className="ContentImageHolder">
@@ -168,8 +168,8 @@ export default function WakePage()
       </section>
       <section className="ContentRow" >
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{projectileHeader}</h1>
-          <div className="ContentText"><p dangerouslySetInnerHTML={{__html: projectileParagraph}}/></div>
+          <div className="FullText"><h1>{projectileHeader}</h1>
+          <div className="FullText"><p dangerouslySetInnerHTML={{__html: projectileParagraph}}/></div>
           </div>
         </div>
         <div className="ContentTextHolder">

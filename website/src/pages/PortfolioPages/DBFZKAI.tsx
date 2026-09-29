@@ -99,7 +99,7 @@ export default function KaiPage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
+          <div className="IntroText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/></div>
           <div>
             <h2>Select Section:</h2>
             <ScrollerButton titleID="Design Constraints"/>

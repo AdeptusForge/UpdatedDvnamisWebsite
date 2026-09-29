@@ -74,7 +74,7 @@ export default function HellforgePage()
     <ContentBlock>
       <section className="ContentRow">
         <div className="ContentTextHolder">
-          <div className="ContentText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/>
+          <div className="IntroText"><h1>{title}</h1><h2>{introductionDetails}</h2><p dangerouslySetInnerHTML={{__html: introduction}}/>
           <div>
             <h2>Select Section:</h2>
             <ScrollerButton titleID="Layout & Design Process"/>
